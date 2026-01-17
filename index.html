@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maicol Vera | Desarrollador de Software</title>
+  
+  <!-- Fuente moderna 'Inter' -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" />
+  <!-- Librería para generar PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+  <!-- Barra de navegación simple -->
+  <nav class="navbar">
+    <div class="logo">MV.</div>
+    <ul class="nav-links">
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    
+    <!-- Hero Section -->
+    <header class="hero">
+      <span class="greeting">Hola, soy</span>
+      <h1>Maicol Vera Cuervo</h1>
+      <h2>Desarrollador de Software en formación</h2>
+      <p class="hero-text">
+        Especializado en soporte técnico y desarrollo. Transformo problemas complejos en soluciones simples y efectivas.
+      </p>
+      <div class="buttons">
+        <a href="#projects" class="btn primary">Ver proyectos</a>
+        <button onclick="generatePDF()" class="btn outline">Descargar CV</button>
+      </div>
+    </header>
+
+    <!-- Sobre mí -->
+    <section id="about" class="section about">
+      <h3 class="section-title">Sobre mí</h3>
+      <div class="about-content">
+        <p>
+          Soy estudiante de <strong>Tecnología en Análisis y Desarrollo de Software</strong> en el SENA. 
+          Me apasiona la tecnología y tengo experiencia en atención al cliente y soporte. 
+          Busco oportunidades donde pueda aplicar mis habilidades de resolución de problemas y seguir aprendiendo cada día.
+        </p>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="section skills">
+      <h3 class="section-title">Habilidades</h3>
+      <div class="skills-grid">
+        <div class="skill-tag">Java</div>
+        <div class="skill-tag">HTML5</div>
+        <div class="skill-tag">CSS3</div>
+        <div class="skill-tag">JavaScript</div>
+        <div class="skill-tag">Git & GitHub</div>
+        <div class="skill-tag">Soporte Técnico</div>
+        <div class="skill-tag">Atención al Cliente</div>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="projects" class="section projects">
+      <h3 class="section-title">Proyectos Destacados</h3>
+      <div class="projects-grid">
+        
+        <article class="project-card">
+          <div class="project-top">
+            <div class="folder-icon">📂</div>
+            <div class="project-links">
+              <!-- Enlaces vacíos por ahora -->
+              <a href="#" target="_blank" title="Ver código">🔗</a>
+            </div>
+          </div>
+          <h4>Contrato Financiero</h4>
+          <p>Sistema robusto para la gestión y administración de contratos financieros básicos.</p>
+          <ul class="project-tech">
+            <li>Java</li>
+            <li>POO</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <div class="folder-icon">📂</div>
+            <div class="project-links">
+              <a href="#" target="_blank">🔗</a>
+            </div>
+          </div>
+          <h4>Gestor de Citas</h4>
+          <p>Aplicación web para optimizar la administración de citas en una barbería local.</p>
+          <ul class="project-tech">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <div class="folder-icon">📂</div>
+            <div class="project-links">
+              <a href="#" target="_blank">🔗</a>
+            </div>
+          </div>
+          <h4>E-commerce</h4>
+          <p>Tienda en línea en desarrollo con catálogo de productos y carrito de compras.</p>
+          <ul class="project-tech">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact" class="section contact">
+      <h3 class="section-title">Contacto</h3>
+      <p class="contact-text">¿Tienes una oportunidad o proyecto en mente? ¡Hablemos!</p>
+      <a href="mailto:tuemail@ejemplo.com" class="btn primary big-btn">Enviar Correo</a>
+      
+      <div class="social-links">
+        <p>📍 Armenia, Colombia</p>
+        <p>💼 LinkedIn | 🧑‍💻 GitHub</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Diseñado y construido por Maicol Vera.</p>
+  </footer>
+
+  <!-- CV Template (Oculto visualmente pero disponible para PDF) -->
+  <div id="cv-hidden" style="position: fixed; left: -9999px; top: 0;">
+    <div id="cv-document" class="cv-page">
+      
+      <!-- Columna Izquierda (Oscura) -->
+      <aside class="cv-sidebar">
+        <section class="cv-section">
+          <h3 class="cv-sidebar-title">SOBRE MÍ</h3>
+          <p class="cv-text-light">
+            Estudiante de Análisis y Desarrollo de Software con sólida orientación a la atención al cliente, soporte remoto y call center. 
+            Cuento con buen manejo de herramientas tecnológicas, comunicación clara y capacidad para resolver problemas de forma eficiente. 
+            Me caracterizo por ser una persona responsable, autónoma, con excelente trabajo en equipo y alta disposición para aprender y adaptarme a nuevos entornos.
+          </p>
+        </section>
+
+        <section class="cv-section">
+          <h3 class="cv-sidebar-title">IDIOMAS</h3>
+          <div class="cv-skill-item">
+            <span>ESPAÑOL</span>
+            <div class="cv-bar-bg"><div class="cv-bar-fill" style="width: 100%;"></div></div>
+          </div>
+          <div class="cv-skill-item">
+            <span>INGLÉS</span>
+            <div class="cv-bar-bg"><div class="cv-bar-fill" style="width: 40%;"></div></div>
+          </div>
+        </section>
+      </aside>
+
+      <!-- Columna Derecha (Clara) -->
+      <main class="cv-main">
+        <header class="cv-header">
+          <h1 class="cv-name">MAICOL<br>VERA CUERVO</h1>
+          <div class="cv-contact-info">
+            <p>Armenia, Quindío - Colombia <span class="cv-icon">📍</span></p>
+            <p>3219395309 <span class="cv-icon">📞</span></p>
+            <p>veramichael617@gmail.com <span class="cv-icon">✉️</span></p>
+          </div>
+        </header>
+
+        <section class="cv-section-main">
+          <h3 class="cv-main-title">EDUCACIÓN</h3>
+          
+          <div class="cv-item">
+            <div class="cv-bullet"></div>
+            <div class="cv-item-content">
+              <strong>SENA</strong>
+              <p>Tecnología en Análisis y Desarrollo de Software</p>
+              <span class="cv-date">• En curso</span>
+            </div>
+          </div>
+
+          <div class="cv-item">
+            <div class="cv-bullet"></div>
+            <div class="cv-item-content">
+              <strong>INSTITUTO TECNICO INDUSTRIAL ITI</strong>
+              <p>Bachiller Académico</p>
+              <span class="cv-date">Armenia, Quindío | 2023</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="cv-section-main">
+          <h3 class="cv-main-title">HABILIDADES</h3>
+          
+          <div class="cv-skills-grid">
+            <!-- Columna 1 -->
+            <div class="cv-skills-col">
+              <div class="cv-skill-bar-item">
+                <span class="cv-skill-name">ATENCIÓN AL CLIENTE REMOTO</span>
+                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 100%;"></div></div>
+              </div>
+              <div class="cv-skill-bar-item">
+                <span class="cv-skill-name">COMUNICACIÓN EFECTIVA</span>
+                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 100%;"></div></div>
+              </div>
+              <div class="cv-skill-bar-item">
+                <span class="cv-skill-name">TRABAJO BAJO PRESIÓN</span>
+                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 100%;"></div></div>
+              </div>
+              <div class="cv-skill-bar-item">
+                <span class="cv-skill-name">JAVA (BÁSICO)</span>
+                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 45%;"></div></div>
+              </div>
+              <div class="cv-skill-bar-item">
+                <span class="cv-skill-name">CSS</span>
+                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 70%;"></div></div>
+              </div>
+              <div class="cv-skill-bar-item">
+                <span class="cv-skill-name">GIT</span>
+                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 70%;"></div></div>
+              </div>
+              <div class="cv-skill-bar-item">
+                <span class="cv-skill-name">MANEJO AVANZADO DE PC E INTERNET</span>
+                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 100%;"></div></div>
+              </div>
+            </div>
+
+            <!-- Columna 2 -->
+             <div class="cv-skills-col">
+              <div class="cv-skill-bar-item">
+                <span class="cv-skill-name">SOPORTE TÉCNICO BÁSICO</span>
+                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 100%;"></div></div>
+              </div>
+              <div class="cv-skill-bar-item">
+                <span class="cv-skill-name">RESOLUCIÓN DE PROBLEMAS</span>
+                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 100%;"></div></div>
+              </div>
+              <div class="cv-skill-bar-item">
+                <span class="cv-skill-name">ORIENTACIÓN A RESULTADOS</span>
+                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 100%;"></div></div>
+              </div>
+              <div class="cv-skill-bar-item">
+                <span class="cv-skill-name">HTML</span>
+                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 80%;"></div></div>
+              </div>
+              <div class="cv-skill-bar-item">
+                <span class="cv-skill-name">JAVASCRIPT (BÁSICO)</span>
+                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 30%;"></div></div>
+              </div>
+              <div class="cv-skill-bar-item">
+                <span class="cv-skill-name">GITHUB</span>
+                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 70%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    function generatePDF() {
+      const element = document.getElementById('cv-document');
+      const opt = {
+        margin:       0,
+        filename:     'CV_Maicol_Vera_Cuervo.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+
+      // Simular botón de carga
+      const btn = document.querySelector('button[onclick="generatePDF()"]');
+      const originalText = btn.innerText;
+      btn.innerText = "Generando PDF...";
+      btn.disabled = true;
+
+      html2pdf().set(opt).from(element).save().then(() => {
+        btn.innerText = originalText;
+        btn.disabled = false;
+      });
+    }
+  </script>
+
+</body>
+</html>
