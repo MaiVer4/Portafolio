@@ -5,24 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Maicol Vera | Desarrollador de Software</title>
   
-  <!-- Fuente moderna 'Inter' -->
+  <!-- Fuente moderna 'Inter' y 'Poppins' para títulos -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
   
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
   <!-- Librería para generar PDF -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
 
-  <!-- Barra de navegación simple -->
+  <!-- Fondo animado -->
+  <div class="background-globes">
+    <div class="globe globe-1"></div>
+    <div class="globe globe-2"></div>
+  </div>
+
+  <!-- Barra de navegación -->
   <nav class="navbar">
-    <div class="logo">MV.</div>
-    <ul class="nav-links">
-      <li><a href="#about">Sobre mí</a></li>
+    <div class="logo">MV<span class="dot">.</span></div>
+    
+    <div class="nav-toggle" id="navToggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="active">Sobre mí</a></li>
+      <li><a href="#skills">Habilidades</a></li>
       <li><a href="#projects">Proyectos</a></li>
       <li><a href="#contact">Contacto</a></li>
+      <li><button onclick="generatePDF()" class="btn-small"><i class="fas fa-download"></i> CV</button></li>
     </ul>
   </nav>
 
@@ -30,95 +49,205 @@
     
     <!-- Hero Section -->
     <header class="hero">
-      <span class="greeting">Hola, soy</span>
-      <h1>Maicol Vera Cuervo</h1>
-      <h2>Desarrollador de Software en formación</h2>
-      <p class="hero-text">
-        Especializado en soporte técnico y desarrollo. Transformo problemas complejos en soluciones simples y efectivas.
-      </p>
-      <div class="buttons">
-        <a href="#projects" class="btn primary">Ver proyectos</a>
-        <button onclick="generatePDF()" class="btn outline">Descargar CV</button>
+      <div class="hero-content" data-aos="fade-up">
+        <span class="greeting">Hola, soy</span>
+        <h1>Maicol Vera</h1>
+        <h2>Desarrollador de Software <span class="highlight">Full Stack</span></h2>
+        <p class="hero-text">
+          Estudiante de Tecnología en Análisis y Desarrollo de Software. Transformo ideas complejas en código limpio y soluciones digitales efectivas.
+        </p>
+        <div class="buttons">
+          <a href="#contact" class="btn primary">Contáctame <i class="fas fa-arrow-right"></i></a>
+          <a href="#projects" class="btn secondary">Ver Portafolio</a>
+        </div>
+        
+        <div class="social-hero">
+          <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:veramichael617@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="hero-visual" data-aos="fade-left">
+        <div class="code-card">
+          <div class="card-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="card-body">
+            <code>
+              <span class="keyword">class</span> <span class="class-name">Developer</span> {<br>
+              &nbsp;&nbsp;<span class="keyword">constructor</span>() {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="this">this</span>.name = <span class="string">"Maicol Vera"</span>;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="this">this</span>.role = <span class="string">"Software Dev"</span>;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="this">this</span>.passion = <span class="boolean">true</span>;<br>
+              &nbsp;&nbsp;}<br>
+              }
+            </code>
+          </div>
+        </div>
       </div>
     </header>
 
     <!-- Sobre mí -->
     <section id="about" class="section about">
-      <h3 class="section-title">Sobre mí</h3>
-      <div class="about-content">
-        <p>
-          Soy estudiante de <strong>Tecnología en Análisis y Desarrollo de Software</strong> en el SENA. 
-          Me apasiona la tecnología y tengo experiencia en atención al cliente y soporte. 
-          Busco oportunidades donde pueda aplicar mis habilidades de resolución de problemas y seguir aprendiendo cada día.
-        </p>
+      <div class="section-header" data-aos="fade-up">
+        <h3 class="section-title">Sobre mí</h3>
+        <p class="section-subtitle">Conoce un poco más de mi trayectoria</p>
+      </div>
+      
+      <div class="about-grid">
+        <div class="about-text" data-aos="fade-right">
+          <p>
+            Soy estudiante de <strong>Tecnología en Análisis y Desarrollo de Software</strong> en el SENA. 
+            Me apasiona la tecnología y cuento con experiencia sólida en atención al cliente y soporte técnico, 
+            lo que me permite entender las necesidades del usuario final.
+          </p>
+          <p>
+            Busco oportunidades, prácticas o proyectos donde pueda aplicar mis habilidades de resolución 
+            de problemas (backend & frontend) y seguir aprendiendo cada día en un entorno real.
+          </p>
+          
+          <div class="stats">
+            <div class="stat-item">
+              <span class="stat-number">2+</span>
+              <span class="stat-label">Años estudiando</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Proyectos</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-cards" data-aos="fade-left">
+          <div class="info-card">
+            <i class="fas fa-code"></i>
+            <h4>Desarrollo</h4>
+            <p>Creación de sitios y aplicaciones web.</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-headset"></i>
+            <h4>Soporte</h4>
+            <p>Resolución de problemas técnicos.</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-users"></i>
+            <h4>Trabajo en Equipo</h4>
+            <p>Colaboración y comunicación efectiva.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Habilidades -->
-    <section class="section skills">
-      <h3 class="section-title">Habilidades</h3>
-      <div class="skills-grid">
-        <div class="skill-tag">Java</div>
-        <div class="skill-tag">HTML5</div>
-        <div class="skill-tag">CSS3</div>
-        <div class="skill-tag">JavaScript</div>
-        <div class="skill-tag">Git & GitHub</div>
-        <div class="skill-tag">Soporte Técnico</div>
-        <div class="skill-tag">Atención al Cliente</div>
+    <section id="skills" class="section skills">
+      <div class="section-header" data-aos="fade-up">
+        <h3 class="section-title">Mis Habilidades</h3>
+        <p class="section-subtitle">Tecnologías y herramientas que domino</p>
+      </div>
+
+      <div class="skills-container">
+        
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+          <h4>Frontend</h4>
+          <div class="skills-grid">
+            <div class="skill-item"><i class="fab fa-html5"></i> HTML5</div>
+            <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS3</div>
+            <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
+            <div class="skill-item"><i class="fab fa-react"></i> React (Básico)</div>
+          </div>
+        </div>
+
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+          <h4>Backend</h4>
+          <div class="skills-grid">
+            <div class="skill-item"><i class="fab fa-java"></i> Java</div>
+            <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+            <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
+          </div>
+        </div>
+
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+          <h4>Herramientas</h4>
+          <div class="skills-grid">
+            <div class="skill-item"><i class="fab fa-git-alt"></i> Git</div>
+            <div class="skill-item"><i class="fab fa-github"></i> GitHub</div>
+            <div class="skill-item"><i class="fas fa-terminal"></i> VS Code</div>
+          </div>
+        </div>
+
       </div>
     </section>
 
     <!-- Proyectos -->
     <section id="projects" class="section projects">
-      <h3 class="section-title">Proyectos Destacados</h3>
+      <div class="section-header" data-aos="fade-up">
+        <h3 class="section-title">Proyectos Destacados</h3>
+        <p class="section-subtitle">Una selección de mis trabajos recientes</p>
+      </div>
+
       <div class="projects-grid">
         
-        <article class="project-card">
-          <div class="project-top">
-            <div class="folder-icon">📂</div>
-            <div class="project-links">
-              <!-- Enlaces vacíos por ahora -->
-              <a href="#" target="_blank" title="Ver código">🔗</a>
-            </div>
+        <article class="project-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card-content">
+            <header>
+              <div class="folder-icon"><i class="far fa-folder"></i></div>
+              <div class="project-links">
+                <a href="#" target="_blank" title="Ver código"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" title="Demo en vivo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </header>
+            <h4>Contrato Financiero</h4>
+            <p>Sistema robusto para la gestión y administración de contratos financieros básicos. Implementa principios de POO y persistencia de datos.</p>
+            <footer>
+              <ul class="project-tech">
+                <li>Java</li>
+                <li>POO</li>
+                <li>MySQL</li>
+              </ul>
+            </footer>
           </div>
-          <h4>Contrato Financiero</h4>
-          <p>Sistema robusto para la gestión y administración de contratos financieros básicos.</p>
-          <ul class="project-tech">
-            <li>Java</li>
-            <li>POO</li>
-          </ul>
         </article>
 
-        <article class="project-card">
-          <div class="project-top">
-            <div class="folder-icon">📂</div>
-            <div class="project-links">
-              <a href="#" target="_blank">🔗</a>
-            </div>
+        <article class="project-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card-content">
+            <header>
+              <div class="folder-icon"><i class="far fa-folder"></i></div>
+              <div class="project-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </header>
+            <h4>Gestor de Citas Barbería</h4>
+            <p>Aplicación web full responsive para optimizar la administración de citas y agenda en una barbería local.</p>
+            <footer>
+              <ul class="project-tech">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </footer>
           </div>
-          <h4>Gestor de Citas</h4>
-          <p>Aplicación web para optimizar la administración de citas en una barbería local.</p>
-          <ul class="project-tech">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JS</li>
-          </ul>
         </article>
 
-        <article class="project-card">
-          <div class="project-top">
-            <div class="folder-icon">📂</div>
-            <div class="project-links">
-              <a href="https://maiver4.github.io/Landig-Ventas/" target="_blank">🔗</a>
-            </div>
+        <article class="project-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="card-content">
+            <header>
+              <div class="folder-icon"><i class="far fa-folder"></i></div>
+              <div class="project-links">
+                <a href="https://maiver4.github.io/Landig-Ventas/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </header>
+            <h4>E-commerce Simple</h4>
+            <p>Tienda en línea en desarrollo con catálogo de productos dinámicos y carrito de compras funcional.</p>
+            <footer>
+              <ul class="project-tech">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+              </ul>
+            </footer>
           </div>
-          <h4>E-commerce</h4>
-          <p>Tienda en línea en desarrollo con catálogo de productos y carrito de compras.</p>
-          <ul class="project-tech">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JS</li>
-          </ul>
         </article>
 
       </div>
@@ -126,176 +255,124 @@
 
     <!-- Contacto -->
     <section id="contact" class="section contact">
-      <h3 class="section-title">Contacto</h3>
-      <p class="contact-text">¿Tienes una oportunidad o proyecto en mente? ¡Hablemos!</p>
-      <a href="mailto:tuemail@ejemplo.com" class="btn primary big-btn">Enviar Correo</a>
-      
-      <div class="social-links">
-        <p>📍 Armenia, Colombia</p>
-        <p>💼 LinkedIn | 🧑‍💻 GitHub</p>
+      <div class="contact-container" data-aos="flip-up">
+        <h3 class="section-title">¿Listo para comenzar?</h3>
+        <p class="contact-text">Busco oportunidades para unirme a equipos de desarrollo. ¡Hablemos!</p>
+        
+        <a href="mailto:veramichael617@gmail.com" class="btn primary big-btn">
+          <i class="fas fa-paper-plane"></i> Enviar Hola
+        </a>
+        
+        <div class="footer-socials">
+          <a href="#" class="footer-icon"><i class="fab fa-github"></i></a>
+          <a href="#" class="footer-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="footer-icon"><i class="fab fa-twitter"></i></a>
+        </div>
       </div>
     </section>
 
   </main>
 
   <footer>
-    <p>Diseñado y construido por Maicol Vera.</p>
+    <p>Diseñado y desarrollado por <span class="highlight">Maicol Vera</span> © 2026</p>
   </footer>
 
-  <!-- CV Template (Oculto visualmente pero disponible para PDF) -->
-  <div id="cv-hidden" style="position: fixed; left: -9999px; top: 0;">
+  <!-- CV Hidden Template for PDF -->
+  <div id="cv-hidden">
     <div id="cv-document" class="cv-page">
-      
-      <!-- Columna Izquierda (Oscura) -->
       <aside class="cv-sidebar">
+        <div class="cv-profile-pic">MV</div>
         <section class="cv-section">
           <h3 class="cv-sidebar-title">SOBRE MÍ</h3>
           <p class="cv-text-light">
-            Estudiante de Análisis y Desarrollo de Software con sólida orientación a la atención al cliente, soporte remoto y call center. 
-            Cuento con buen manejo de herramientas tecnológicas, comunicación clara y capacidad para resolver problemas de forma eficiente. 
-            Me caracterizo por ser una persona responsable, autónoma, con excelente trabajo en equipo y alta disposición para aprender y adaptarme a nuevos entornos.
+            Estudiante de Análisis y Desarrollo de Software con sólida orientación a la atención al cliente. 
+            Gran capacidad para resolver problemas de forma eficiente y trabajar en equipo.
           </p>
         </section>
-
+        <section class="cv-section">
+          <h3 class="cv-sidebar-title">CONTACTO</h3>
+          <p>📞 3219395309</p>
+          <p>✉️ veramichael617@gmail.com</p>
+          <p>📍 Armenia, Quindío</p>
+        </section>
         <section class="cv-section">
           <h3 class="cv-sidebar-title">IDIOMAS</h3>
-          <div class="cv-skill-item">
-            <span>ESPAÑOL</span>
-            <div class="cv-bar-bg"><div class="cv-bar-fill" style="width: 100%;"></div></div>
-          </div>
-          <div class="cv-skill-item">
-            <span>INGLÉS</span>
-            <div class="cv-bar-bg"><div class="cv-bar-fill" style="width: 40%;"></div></div>
-          </div>
+          <p>Español (Nativo)</p>
+          <p>Inglés (Básico A2)</p>
         </section>
       </aside>
 
-      <!-- Columna Derecha (Clara) -->
       <main class="cv-main">
         <header class="cv-header">
-          <h1 class="cv-name">MAICOL<br>VERA CUERVO</h1>
-          <div class="cv-contact-info">
-            <p>Armenia, Quindío - Colombia <span class="cv-icon">📍</span></p>
-            <p>3219395309 <span class="cv-icon">📞</span></p>
-            <p>veramichael617@gmail.com <span class="cv-icon">✉️</span></p>
-          </div>
+          <h1 class="cv-name">MAICOL VERA</h1>
+          <h2 class="cv-role">Tecnólogo en Análisis y Desarrollo de Software</h2>
         </header>
 
         <section class="cv-section-main">
           <h3 class="cv-main-title">EDUCACIÓN</h3>
-          
           <div class="cv-item">
-            <div class="cv-bullet"></div>
-            <div class="cv-item-content">
-              <strong>SENA</strong>
-              <p>Tecnología en Análisis y Desarrollo de Software</p>
-              <span class="cv-date">• En curso</span>
-            </div>
+            <strong>SENA</strong> - En curso<br>
+            <em>Tecnología en Análisis y Desarrollo de Software</em>
           </div>
-
           <div class="cv-item">
-            <div class="cv-bullet"></div>
-            <div class="cv-item-content">
-              <strong>INSTITUTO TECNICO INDUSTRIAL ITI</strong>
-              <p>Bachiller Académico</p>
-              <span class="cv-date">Armenia, Quindío | 2023</span>
-            </div>
+            <strong>ITI</strong><br>
+            <em>Bachiller Académico</em>
           </div>
         </section>
 
         <section class="cv-section-main">
-          <h3 class="cv-main-title">HABILIDADES</h3>
-          
-          <div class="cv-skills-grid">
-            <!-- Columna 1 -->
-            <div class="cv-skills-col">
-              <div class="cv-skill-bar-item">
-                <span class="cv-skill-name">ATENCIÓN AL CLIENTE REMOTO</span>
-                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 100%;"></div></div>
-              </div>
-              <div class="cv-skill-bar-item">
-                <span class="cv-skill-name">COMUNICACIÓN EFECTIVA</span>
-                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 100%;"></div></div>
-              </div>
-              <div class="cv-skill-bar-item">
-                <span class="cv-skill-name">TRABAJO BAJO PRESIÓN</span>
-                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 100%;"></div></div>
-              </div>
-              <div class="cv-skill-bar-item">
-                <span class="cv-skill-name">JAVA (BÁSICO)</span>
-                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 45%;"></div></div>
-              </div>
-              <div class="cv-skill-bar-item">
-                <span class="cv-skill-name">CSS</span>
-                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 70%;"></div></div>
-              </div>
-              <div class="cv-skill-bar-item">
-                <span class="cv-skill-name">GIT</span>
-                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 70%;"></div></div>
-              </div>
-              <div class="cv-skill-bar-item">
-                <span class="cv-skill-name">MANEJO AVANZADO DE PC E INTERNET</span>
-                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 100%;"></div></div>
-              </div>
-            </div>
-
-            <!-- Columna 2 -->
-             <div class="cv-skills-col">
-              <div class="cv-skill-bar-item">
-                <span class="cv-skill-name">SOPORTE TÉCNICO BÁSICO</span>
-                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 100%;"></div></div>
-              </div>
-              <div class="cv-skill-bar-item">
-                <span class="cv-skill-name">RESOLUCIÓN DE PROBLEMAS</span>
-                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 100%;"></div></div>
-              </div>
-              <div class="cv-skill-bar-item">
-                <span class="cv-skill-name">ORIENTACIÓN A RESULTADOS</span>
-                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 100%;"></div></div>
-              </div>
-              <div class="cv-skill-bar-item">
-                <span class="cv-skill-name">HTML</span>
-                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 80%;"></div></div>
-              </div>
-              <div class="cv-skill-bar-item">
-                <span class="cv-skill-name">JAVASCRIPT (BÁSICO)</span>
-                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 30%;"></div></div>
-              </div>
-              <div class="cv-skill-bar-item">
-                <span class="cv-skill-name">GITHUB</span>
-                <div class="cv-bar-bg-main"><div class="cv-bar-fill-main" style="width: 70%;"></div></div>
-              </div>
-            </div>
+          <h3 class="cv-main-title">HABILIDADES TÉCNICAS</h3>
+          <div class="cv-skills-list">
+            <span>Java</span>, <span>Python</span>, <span>HTML/CSS</span>, <span>JavaScript</span>, <span>Git</span>, <span>SQL</span>
           </div>
-
         </section>
       </main>
     </div>
   </div>
 
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    // Mobile Menu Toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // PDF Generation
     function generatePDF() {
+      // Elemento a convertir
       const element = document.getElementById('cv-document');
+      const cvContainer = document.getElementById('cv-hidden');
+      
+      // Hacemos visible el contenedor temporalmente
+      cvContainer.style.display = 'block';
+      cvContainer.style.left = '0';
+      cvContainer.style.top = '0';
+      cvContainer.style.zIndex = '9999'; // Asegurar que esté encima para que se renderice bien
+      
       const opt = {
         margin:       0,
-        filename:     'CV_Maicol_Vera_Cuervo.pdf',
+        filename:     'CV_Maicol_Vera.pdf',
         image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2 },
-        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        html2canvas:  { scale: 2, useCORS: true, scrollY: 0 }, 
+        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
       };
 
-      // Simular botón de carga
-      const btn = document.querySelector('button[onclick="generatePDF()"]');
-      const originalText = btn.innerText;
-      btn.innerText = "Generando PDF...";
-      btn.disabled = true;
-
+      // Generar PDF
       html2pdf().set(opt).from(element).save().then(() => {
-        btn.innerText = originalText;
-        btn.disabled = false;
+        // Restaurar estado oculto
+        cvContainer.style.left = '-9999px';
+        cvContainer.style.zIndex = '-1';
       });
     }
   </script>
-
 </body>
 </html>
