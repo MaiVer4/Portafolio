@@ -158,6 +158,11 @@ ul {
   background: rgba(100, 255, 218, 0.1);
 }
 
+.translate-btn {
+  padding: 4px 8px;
+  font-size: 0.8rem;
+}
+
 .nav-toggle {
   display: none;
   font-size: 1.5rem;
