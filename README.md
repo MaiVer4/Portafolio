@@ -1,5 +1,8 @@
 # Portafolio Maicol Vera
 
+## Visualizacion
+- **DEPLOY**: [Deploy](maiver4.github.io/Portafolio/)
+
 ## Descripción
 
 Este es mi portafolio personal como estudiante de Tecnología en Análisis y Desarrollo de Software en el SENA. El sitio web muestra mis habilidades, proyectos destacados y información de contacto.
@@ -20,12 +23,6 @@ Este es mi portafolio personal como estudiante de Tecnología en Análisis y Des
 - Traducción interna entre español e inglés
 - Generación de CV en PDF
 - Navegación móvil optimizada
-
-## Visualizacion
-- **DEPLOY**: (maiver4.github.io/Portafolio/)
-
-
-
 
 ## Contacto
 
