@@ -1,0 +1,667 @@
+# HOJA DE VIDA – MAICOL VERA CUERVO
+
+## 1. TITULAR PROFESIONAL
+
+### Opción recomendada
+
+**Aprendiz de Desarrollo de Software | Java | Spring Boot | JavaScript | TypeScript | Angular | SQL**
+
+### Otras opciones
+
+**Desarrollador de Software Junior | Java | Spring Boot | Angular | APIs REST**
+
+**Aprendiz SENA ADSO | Desarrollo Web y Backend | Java | JavaScript | SQL**
+
+**Desarrollador Junior en Formación | Full Stack | Java | Angular | APIs REST**
+
+**Tecnólogo en Formación – Análisis y Desarrollo de Software | Desarrollo Web**
+
+Para Computrabajo utilizaría principalmente la primera o segunda.
+
+---
+
+# 2. PERFIL PROFESIONAL
+
+## Versión recomendada
+
+Aprendiz del programa Tecnólogo en Análisis y Desarrollo de Software (ADSO) del SENA, orientado al desarrollo de aplicaciones web y soluciones de software. Cuento con experiencia práctica adquirida mediante proyectos académicos y personales utilizando Java, Spring Boot, JavaScript, TypeScript, Angular, React, PHP, Laravel, HTML, CSS y bases de datos SQL.
+
+He desarrollado aplicaciones con consumo e integración de APIs REST, operaciones CRUD, autenticación, persistencia de datos y conexión con bases de datos como MySQL y PostgreSQL. También tengo conocimientos en Git/GitHub, Linux, Docker, Supabase y Firebase.
+
+Me interesa participar en equipos de desarrollo donde pueda aportar mis conocimientos técnicos, continuar fortaleciendo mis habilidades y adquirir experiencia profesional en desarrollo de software. Tengo especial interés en el desarrollo backend, frontend y en la construcción de soluciones Full Stack.
+
+---
+
+# 3. PERFIL MÁS CORTO
+
+Si Computrabajo te limita el espacio:
+
+Aprendiz SENA del programa Tecnólogo en Análisis y Desarrollo de Software, con formación práctica en desarrollo web y backend. Conocimientos en Java, Spring Boot, JavaScript, TypeScript, Angular, React, PHP, Laravel, HTML, CSS, SQL y APIs REST. Experiencia en proyectos académicos y personales utilizando bases de datos, Git/GitHub, Linux y herramientas de desarrollo modernas. Interesado en oportunidades como desarrollador junior, aprendiz de desarrollo de software o desarrollador Full Stack en formación.
+
+---
+
+# 4. OBJETIVO PROFESIONAL
+
+Busco una oportunidad como aprendiz o desarrollador de software junior que me permita aplicar mis conocimientos en desarrollo web y backend, participar en proyectos reales y continuar fortaleciendo mis competencias técnicas y profesionales.
+
+Mi objetivo es crecer profesionalmente en el área de desarrollo de software, especialmente en tecnologías como Java, Spring Boot, JavaScript, TypeScript, Angular, APIs REST y bases de datos.
+
+---
+
+# 5. FORMACIÓN ACADÉMICA
+
+**Servicio Nacional de Aprendizaje – SENA**
+
+**Tecnólogo en Análisis y Desarrollo de Software (ADSO)**
+
+Estado: **En formación**
+
+Área: Desarrollo de Software
+
+Formación relacionada con:
+
+* Análisis de requerimientos
+* Diseño de software
+* Programación orientada a objetos
+* Desarrollo web
+* Bases de datos
+* Desarrollo frontend
+* Desarrollo backend
+* APIs
+* Git y control de versiones
+* Metodologías ágiles
+* Scrum
+* Pruebas y depuración
+* Documentación de software
+
+---
+
+# 6. EXPERIENCIA
+
+## IMPORTANTE
+
+No recomiendo que coloques una empresa ficticia ni que presentes tus proyectos académicos como empleo.
+
+En Computrabajo puedes utilizar una sección como:
+
+**Experiencia en proyectos / Experiencia práctica**
+
+Esto permite demostrar lo que sabes hacer sin afirmar que trabajaste para una empresa cuando no ha sido así.
+
+---
+
+# 7. PROYECTO – APLICACIÓN WEB DE PELÍCULAS
+
+**Proyecto académico / personal**
+
+Desarrollo de aplicación web para consulta de información de películas mediante integración con una API externa.
+
+### Actividades realizadas
+
+* Consumo de APIs mediante solicitudes HTTP.
+* Obtención y procesamiento de información de películas.
+* Implementación de búsqueda y consulta de información.
+* Visualización de títulos, año, idioma y sinopsis.
+* Manipulación dinámica del DOM.
+* Implementación de paginación.
+* Depuración de errores mediante herramientas de desarrollo del navegador.
+* Análisis de errores desde la consola.
+* Pruebas de diferentes bloques de código para identificar fallos.
+* Organización de la interfaz utilizando HTML y CSS.
+* Desarrollo de funcionalidades mediante JavaScript.
+
+### Tecnologías
+
+**HTML | CSS | JavaScript | API REST | Git**
+
+---
+
+# 8. PROYECTO – SISTEMA DE GESTIÓN DE PRODUCTOS
+
+**Proyecto académico**
+
+Desarrollo de aplicación CRUD para administración de productos utilizando Angular y TypeScript.
+
+### Funcionalidades
+
+* Registro de productos.
+* Consulta de productos.
+* Actualización de información.
+* Eliminación de registros.
+* Manejo de formularios.
+* Validación de información.
+* Organización de componentes.
+* Manejo de datos en el frontend.
+* Persistencia mediante almacenamiento local.
+* Implementación de interfaz web.
+
+### Tecnologías
+
+**Angular | TypeScript | HTML | CSS | LocalStorage | Git**
+
+---
+
+# 9. PROYECTO – TERRITORIO DE NIÑOS
+
+**Proyecto académico / desarrollo de software**
+
+Desarrollo conceptual de una solución de software orientada a la gestión de operaciones en parques infantiles.
+
+La solución contempla un sistema para administración de ventas y operaciones, junto con funcionalidades destinadas al personal operativo.
+
+### Actividades
+
+* Análisis de necesidades del sistema.
+* Identificación de usuarios y roles.
+* Levantamiento y organización de requerimientos.
+* Diseño de funcionalidades.
+* Diseño de operaciones CRUD.
+* Modelado de información.
+* Trabajo bajo metodología Scrum.
+* Participación en análisis y diseño de la solución.
+* Desarrollo de componentes de software.
+* Organización de tareas y funcionalidades.
+
+### Competencias relacionadas
+
+**Análisis de requerimientos | Diseño de software | CRUD | Bases de datos | Scrum | Desarrollo web**
+
+---
+
+# 10. PROYECTO – SMARTLEDGER
+
+**Proyecto personal**
+
+Desarrollo de una aplicación de gestión financiera mediante Java orientada al registro y organización de transacciones.
+
+### Funcionalidades trabajadas
+
+* Registro de transacciones.
+* Manejo de usuarios.
+* Organización de categorías.
+* Autenticación.
+* Estructuras de datos.
+* Programación orientada a objetos.
+* Manejo de colecciones.
+* Integración con servicios externos de inteligencia artificial.
+* Generación de resúmenes de información.
+
+### Tecnologías
+
+**Java 21 | POO | HashMap | APIs | OpenRouter**
+
+---
+
+# 11. PROYECTO – MENTOR-IA
+
+**Proyecto personal – Python / RAG**
+
+Desarrollo de una arquitectura de recuperación de información orientada a construir un sistema de consulta sobre una base de conocimiento.
+
+### Trabajo realizado
+
+* Integración con Notion API.
+* Ingestión de información.
+* Extracción y procesamiento de texto.
+* Reconstrucción jerárquica de documentos.
+* Normalización y validación de documentos.
+* División de documentos mediante chunking.
+* Generación de embeddings.
+* Almacenamiento vectorial.
+* Implementación de búsqueda semántica.
+* Ranking de resultados.
+* Construcción de prompts.
+* Desarrollo de servicios de indexación y consulta.
+* Implementación de CLI.
+* Sistema de diagnóstico.
+* Estadísticas del índice.
+* Benchmark y evaluación del sistema.
+
+### Tecnologías
+
+**Python | Notion API | Embeddings | ChromaDB | RAG | APIs | CLI**
+
+Este proyecto es especialmente bueno para diferenciarte porque demuestra que no solamente haces CRUDs: también has trabajado con **procesamiento de información, arquitectura de software y sistemas basados en recuperación semántica**.
+
+---
+
+# 12. HABILIDADES TÉCNICAS
+
+## Lenguajes
+
+* Java
+* JavaScript
+* TypeScript
+* Python
+* PHP
+* HTML
+* CSS
+* SQL
+
+## Backend
+
+* Java
+* Spring Boot
+* APIs REST
+* JPA
+* Hibernate
+* PHP
+* Laravel
+* Arquitectura por capas
+
+## Frontend
+
+* HTML5
+* CSS3
+* JavaScript
+* TypeScript
+* Angular
+* React
+
+## Bases de datos
+
+* MySQL
+* PostgreSQL
+* Supabase
+* Firebase
+* SQL
+
+## Herramientas
+
+* Git
+* GitHub
+* Docker
+* Linux
+* VS Code
+* Neovim
+* Terminal
+
+## Tecnologías adicionales
+
+* APIs REST
+* CRUD
+* JSON
+* LocalStorage
+* Notion API
+* ChromaDB
+* Embeddings
+* RAG
+* Integración con servicios de IA
+
+---
+
+# 13. CONOCIMIENTOS DE PROGRAMACIÓN
+
+Puedes agregar una sección de conocimientos:
+
+* Programación orientada a objetos.
+* Encapsulamiento.
+* Clases y objetos.
+* Constructores.
+* Métodos.
+* Getters y setters.
+* Estructuras de control.
+* Arreglos.
+* Matrices.
+* Colecciones.
+* Manejo de excepciones.
+* Consumo de APIs.
+* Manipulación de datos JSON.
+* CRUD.
+* Persistencia de información.
+* Arquitectura por capas.
+* Depuración de aplicaciones.
+* Análisis de errores.
+* Control de versiones con Git.
+
+---
+
+# 14. METODOLOGÍAS
+
+**Scrum**
+
+Conocimientos en:
+
+* Sprint.
+* Product Backlog.
+* Historias de usuario.
+* Requerimientos.
+* Priorización de tareas.
+* Seguimiento de actividades.
+* Trabajo colaborativo.
+* Reuniones de seguimiento.
+
+---
+
+# 15. HABILIDADES PROFESIONALES
+
+* Resolución de problemas.
+* Pensamiento lógico.
+* Capacidad de análisis.
+* Aprendizaje autónomo.
+* Depuración de código.
+* Investigación técnica.
+* Adaptación a nuevas tecnologías.
+* Trabajo colaborativo.
+* Organización de tareas.
+* Comunicación técnica.
+* Atención al detalle.
+* Capacidad para investigar y solucionar errores.
+
+---
+
+# 16. CÓMO DESCRIBIR TU EXPERIENCIA EN DEBUGGING
+
+Esta habilidad tuya vale la pena destacarla porque la has utilizado realmente:
+
+**Depuración y resolución de errores:** análisis de errores mediante consola y herramientas de desarrollo, revisión del código fuente, ejecución de pruebas sobre diferentes bloques de código y aislamiento progresivo del problema hasta identificar su causa.
+
+Es mucho mejor que escribir simplemente:
+
+"Buen manejo de errores."
+
+---
+
+# 17. COMPETENCIAS QUE PUEDES PONER EN COMPUTRABAJO
+
+Prioridad alta:
+
+1. Java
+2. JavaScript
+3. TypeScript
+4. Angular
+5. Spring Boot
+6. APIs REST
+7. SQL
+8. Git
+9. HTML
+10. CSS
+11. MySQL
+12. Desarrollo web
+13. Desarrollo de software
+14. Programación orientada a objetos
+15. CRUD
+
+Prioridad media:
+
+16. React
+17. Python
+18. PHP
+19. Laravel
+20. PostgreSQL
+21. Docker
+22. Linux
+23. Firebase
+24. Supabase
+25. JPA
+26. Hibernate
+
+Especializadas:
+
+27. RAG
+28. Embeddings
+29. ChromaDB
+30. Notion API
+31. Integración de APIs
+32. Sistemas de recuperación de información
+
+---
+
+# 18. PALABRAS CLAVE PARA PASAR FILTROS ATS
+
+Incluye naturalmente estas palabras en tu perfil y experiencia:
+
+**Desarrollo de software, desarrollador junior, desarrollo web, Java, Spring Boot, JavaScript, TypeScript, Angular, React, Python, PHP, Laravel, HTML, CSS, SQL, MySQL, PostgreSQL, APIs REST, Git, GitHub, Docker, Linux, CRUD, programación orientada a objetos, bases de datos, frontend, backend, Full Stack, Scrum, metodologías ágiles, debugging, pruebas de software, mantenimiento de aplicaciones, integración de APIs, desarrollo de aplicaciones web.**
+
+No necesitas meterlas todas en un solo párrafo. Deben distribuirse entre perfil, habilidades, proyectos y formación.
+
+---
+
+# 19. CARGOS A LOS QUE PUEDES POSTULARTE
+
+Busca principalmente:
+
+### Desarrollo
+
+* Aprendiz de desarrollo de software
+* Aprendiz desarrollador
+* Desarrollador Junior
+* Desarrollador de software Junior
+* Desarrollador Web Junior
+* Desarrollador Frontend Junior
+* Desarrollador Backend Junior
+* Desarrollador Full Stack Junior
+* Programador Junior
+* Analista de desarrollo de software
+* Auxiliar de desarrollo de software
+
+### Java
+
+* Desarrollador Java Junior
+* Programador Java Junior
+* Aprendiz Java
+* Desarrollador Spring Boot Junior
+
+### Web
+
+* Desarrollador Web
+* Desarrollador Frontend
+* Desarrollador Backend
+* Desarrollador Full Stack
+* Programador Web
+
+### Aprendiz SENA
+
+* Aprendiz de sistemas
+* Aprendiz de desarrollo de software
+* Aprendiz de programación
+* Aprendiz de TI
+* Aprendiz tecnológico
+* Aprendiz de soporte y desarrollo
+
+---
+
+# 20. SOBRE TU EXPERIENCIA LABORAL
+
+Si Computrabajo te pregunta:
+
+**¿Tiene experiencia laboral?**
+
+No debes inventar una empresa.
+
+Si todavía no tienes experiencia laboral formal, tu estrategia debe ser:
+
+**Experiencia práctica → Proyectos académicos → Proyectos personales → Formación SENA**
+
+Esto permite demostrar competencias sin mentir.
+
+---
+
+# 21. PORTAFOLIO
+
+Para ti es especialmente importante tener un GitHub bien organizado.
+
+Los proyectos que más te conviene mostrar son:
+
+### Proyecto 1
+
+**Mentor-IA**
+
+### Proyecto 2
+
+**Territorio de Niños**
+
+### Proyecto 3
+
+**CRUD de gestión de productos**
+
+### Proyecto 4
+
+**Aplicación de películas mediante API**
+
+### Proyecto 5
+
+**SmartLedger**
+
+En cada repositorio deberías tener:
+
+* README.
+* Descripción.
+* Tecnologías.
+* Instalación.
+* Capturas.
+* Funcionalidades.
+* Arquitectura cuando aplique.
+* Instrucciones para ejecutar.
+* Problemas conocidos.
+* Mejoras futuras.
+
+---
+
+# 22. DESCRIPCIÓN CORTA PARA GITHUB
+
+**Desarrollador de software en formación enfocado en desarrollo web y backend. Trabajo principalmente con Java, Spring Boot, JavaScript, TypeScript, Angular, Python, APIs REST y bases de datos SQL. Actualmente desarrollo proyectos académicos y personales para fortalecer mis competencias en arquitectura, desarrollo y resolución de problemas de software.**
+
+---
+
+# 23. INFORMACIÓN QUE NO TE RECOMIENDO PONER
+
+Evita llenar Computrabajo con cosas que no aportan directamente al proceso de selección.
+
+No pondría:
+
+* Una lista interminable de tecnologías que apenas has tocado.
+* "Experto" en tecnologías que estás aprendiendo.
+* Experiencia laboral inventada.
+* Proyectos presentados como empleos.
+* Información personal innecesaria.
+* Una descripción demasiado larga de cada proyecto.
+* Todas las distribuciones Linux que has utilizado.
+* Herramientas de hacking/pentesting si la vacante no está relacionada con ciberseguridad.
+* Tecnologías solamente porque alguna vez ejecutaste un tutorial.
+
+La regla debería ser:
+
+**"Puedo defender técnicamente esta tecnología si el entrevistador me pregunta por ella."**
+
+---
+
+# 24. TU POSICIONAMIENTO PROFESIONAL
+
+Por lo que has trabajado, yo te posicionaría actualmente así:
+
+**Desarrollador de software junior en formación, con mayor fortaleza en Java/backend y desarrollo web, pero con capacidad Full Stack.**
+
+Tu stack principal debería ser:
+
+**Java → Spring Boot → APIs REST → SQL → JavaScript/TypeScript → Angular → Git**
+
+Y como stack secundario:
+
+**Python → PHP/Laravel → React → PostgreSQL → Docker → Linux → Supabase/Firebase**
+
+Esto es más convincente que intentar venderte como experto en 20 tecnologías.
+
+---
+
+# 25. PERFIL FINAL QUE YO UTILIZARÍA
+
+Aprendiz del Tecnólogo en Análisis y Desarrollo de Software del SENA, con experiencia práctica en proyectos académicos y personales de desarrollo de software. Cuento con conocimientos en Java, Spring Boot, JavaScript, TypeScript, Angular, React, Python, PHP, Laravel, HTML, CSS, SQL y desarrollo de APIs REST.
+
+He desarrollado aplicaciones web, sistemas CRUD, integraciones con APIs, soluciones con bases de datos y proyectos utilizando arquitectura por capas, programación orientada a objetos y metodologías ágiles como Scrum. También cuento con experiencia práctica utilizando Git/GitHub, Linux, Docker, Supabase y Firebase.
+
+Me caracterizo por mi capacidad para analizar problemas, depurar código, investigar errores y aprender nuevas tecnologías de manera autónoma. Busco una oportunidad como aprendiz o desarrollador junior donde pueda aportar mis conocimientos, adquirir experiencia profesional y continuar creciendo en el desarrollo de software.
+
+---
+
+# 26. OBJETIVO A MEDIANO PLAZO
+
+Tu hoja de vida debería empezar a construir una narrativa coherente:
+
+**SENA ADSO → Aprendiz de desarrollo → Junior → Full Stack → Backend/Arquitectura**
+
+No necesitas aparentar que ya eres senior. Lo que tienes que demostrar es:
+
+**"Estoy suficientemente preparado para entrar a un equipo y aprender rápidamente mientras produzco código útil."**
+
+Ese posicionamiento es mucho más creíble para tu etapa actual.
+
+
+
+
+
+1. Cargo o Título Profesional (Titular)
+
+El titular debe ser directo y contener las palabras clave más buscadas por los reclutadores.
+
+Desarrollador Full Stack | Angular & Spring Boot | Estudiante ADSO - SENA
+(Alternativa: Desarrollador de Software Junior | Java, Node.js, React)
+2. Perfil Profesional (Descripción o Presentación)
+
+Este párrafo es tu "Elevator Pitch". Debe resumir qué haces, qué tecnologías dominas y qué metodologías aplicas.
+
+    Estudiante de Análisis y Desarrollo de Software (ADSO) con sólida experiencia práctica en la arquitectura y desarrollo de aplicaciones Full Stack. Especializado en la creación de servicios backend robustos con Java (Spring Boot) y Node.js, y en la construcción de interfaces dinámicas con Angular (v17+) y React. Experiencia comprobada en el ciclo de vida del software, desde el levantamiento de requerimientos y diagramación UML hasta el despliegue mediante contenedores (Docker). Acostumbrado a trabajar bajo el marco de trabajo Scrum y metodologías ágiles, integrando bases de datos relacionales y soluciones con agentes de Inteligencia Artificial. En constante perfeccionamiento del inglés técnico orientado al entorno TI.
+
+3. Conocimientos y Habilidades (Tags / Palabras Clave)
+
+Computrabajo permite agregar habilidades. Asegúrate de incluir todas estas para aparecer en las búsquedas:
+
+    Frontend: Angular (Standalone components, Reactive forms), React, JavaScript, TypeScript, HTML, CSS.
+
+    Backend: Java (OOP, Collections, JDBC), Spring Boot (RESTful APIs, JWT), Node.js, Express.js.
+
+    Bases de Datos: MySQL, PostgreSQL, MariaDB, SQLite, DBeaver, consultas SQL complejas, vistas e índices.
+
+    DevOps & Herramientas: Docker, Docker Compose, Distrobox, Git, GitHub, Postman, Swagger, Arch Linux (Bash scripting, terminales personalizadas).
+
+    Metodologías & Diseño: Scrum, Arquitectura de 3 capas, Patrones de Diseño, UML, Casos de Uso.
+
+    Innovación: Integración de APIs, RAG (Retrieval-Augmented Generation), uso de LLMs locales (Ollama, DeepSeek).
+
+4. Experiencia Laboral / Proyectos Destacados
+
+Si aún no tienes experiencia laboral formal en empresas, en Computrabajo puedes registrar tus proyectos más robustos como "Experiencia Freelance" o "Proyectos de Desarrollo". Redáctalos orientados a logros.
+
+Sistema de Gestión Empresarial Unificado | Proyecto Full Stack
+
+    Diseñé y desarrollé una plataforma integral para la gestión empresarial.
+
+    Implementé el backend con Spring Boot y el frontend con Angular v17+ de manera modular.
+
+    Configuré la persistencia de datos en MySQL y orquesté el despliegue del entorno completo utilizando Docker Compose mediante builds multi-etapa.
+
+Territorio de Niños (Sistema de Gestión de Parque de Diversiones) | Desarrollo Ágil
+
+    Lideré la especificación de requerimientos del sistema y la creación del Product Backlog utilizando Scrum.
+
+    Desarrollé el módulo de administración e integré un agente inteligente con validación RAG utilizando herramientas de IA locales.
+
+    Documenté fichas técnicas de casos de uso y artefactos de los Sprints.
+
+App de Registro de Gimnasio & Plataforma Barber Network | Backend & Arquitectura
+
+    Construí una aplicación de registro en TypeScript, Node.js y Express, optimizando la base de datos MySQL mediante el uso de campos ENUM y SET.
+
+    Simulé el Roadmap y la planeación de Sprints (Gantt) para una red de barberías, definiendo historias de usuario y requerimientos técnicos.
+
+Movie Explorer & SmartLedger | Desarrollo de Software Aplicado
+
+    Movie Explorer: Desarrollé una SPA (Single Page Application) consumiendo la API de TVMaze, implementando paginación del lado del cliente, filtrado por géneros y persistencia en Local Storage.
+
+    SmartLedger: Creé un sistema de gestión financiera en Java, utilizando programación orientada a objetos y componentes de interfaz gráfica (Swing), respaldado por diagramas UML.
+
+Pedidos Express | Arquitectura de Software
+
+    Diseñé la arquitectura y especificación para una aplicación móvil de delivery basada en 3 roles distintos, definiendo los requerimientos de negocio y técnicos.
+
+5. Educación e Idiomas
+
+    Educación: Tecnólogo en Análisis y Desarrollo de Software (ADSO) - SENA (En curso).
+
+    Idiomas: Español (Nativo) | Inglés (Intermedio - Lectura técnica y comunicación fluida en entornos de desarrollo).
+
+Consejos extra para tu perfil en Computrabajo:
+
+    Portafolio: En tu información de contacto o en el perfil, asegúrate de poner un enlace a tu GitHub. Los reclutadores técnicos querrán ver el código de SmartLedger o tus contenedores de Docker Compose.
+
+    Pruebas de Computrabajo: Realiza los test de competencias que ofrece la plataforma (lógica, programación, etc.). Suma muchos puntos para los algoritmos de recomendación.
