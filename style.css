@@ -858,6 +858,12 @@ button {
   color: var(--accent-amber);
 }
 
+.pillar-icon.red {
+  background: rgba(244, 63, 94, 0.08);
+  border-color: rgba(244, 63, 94, 0.25);
+  color: #f43f5e;
+}
+
 .pillar-info h4 {
   font-family: var(--font-title);
   color: var(--text-primary);

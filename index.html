@@ -70,10 +70,10 @@
 
         <span class="greeting" data-i18n="hero.greeting">Hola, soy</span>
         <h1 data-i18n="hero.name">Maicol Vera</h1>
-        <h2 data-i18n="hero.title">Desarrollador de Software <span class="highlight" data-i18n="hero.highlight">Full Stack & Backend</span></h2>
+        <h2 data-i18n="hero.title">Desarrollador <span class="highlight" data-i18n="hero.highlight">Full Stack &amp; Pentester Jr. Avanzado</span></h2>
         
         <p class="hero-text" data-i18n="hero.description">
-          Aprendiz de <strong>Tecnología en Análisis y Desarrollo de Software (ADSO)</strong> en el SENA. Construyo arquitecturas backend sólidas con <strong>Java & Spring Boot</strong>, interfaces ágiles con <strong>Angular & TypeScript</strong>, y soluciones eficientes integradas con bases de datos SQL e Inteligencia Artificial.
+          Aprendiz de <strong>Tecnología en Análisis y Desarrollo de Software (ADSO)</strong> en el SENA y <strong>Pentester / Hacker Ético Junior Avanzado</strong>. Construyo arquitecturas backend robustas y blindadas con <strong>Java &amp; Spring Boot</strong>, interfaces ágiles con <strong>Angular &amp; TypeScript</strong>, integraciones con IA y flujos de auditoría ofensiva/defensiva en <strong>Kali Linux</strong> bajo directrices <strong>OWASP Top 10</strong>.
         </p>
 
         <div class="hero-actions">
@@ -128,13 +128,16 @@
           <div class="code-body">
             <pre id="codeSnippet"><code><span class="keyword">public class</span> <span class="class-name">Developer</span> {
   <span class="type">String</span> name = <span class="string">"Maicol Vera"</span>;
-  <span class="type">String</span> role = <span class="string">"Full Stack & Backend"</span>;
+  <span class="type">String</span> role = <span class="string">"Full Stack & Jr. Adv. Pentester"</span>;
   <span class="type">String</span> education = <span class="string">"Tecnólogo ADSO - SENA"</span>;
   <span class="type">String</span>[] coreStack = {
-    <span class="string">"Java"</span>, <span class="string">"Spring Boot"</span>,
-    <span class="string">"TypeScript"</span>, <span class="string">"Angular"</span>, <span class="string">"SQL"</span>
+    <span class="string">"Java"</span>, <span class="string">"Spring Boot"</span>, <span class="string">"Angular"</span>,
+    <span class="string">"TypeScript"</span>, <span class="string">"SQL"</span>, <span class="string">"Kali Linux"</span>
   };
-  <span class="type">boolean</span> eagerToLearn = <span class="boolean">true</span>;
+  <span class="type">String</span>[] securityFocus = {
+    <span class="string">"OWASP Top 10"</span>, <span class="string">"Burp Suite"</span>, <span class="string">"Nmap"</span>
+  };
+  <span class="type">boolean</span> securityFirst = <span class="boolean">true</span>;
   <span class="type">boolean</span> methodicalDebugging = <span class="boolean">true</span>;
 }</code></pre>
           </div>
@@ -185,6 +188,9 @@
           <p data-i18n="about.text3">
             Mi experiencia previa en atención al cliente y soporte técnico complementa mi perfil, brindándome una gran empatía hacia las necesidades del usuario final y facilidad para comunicarme eficazmente en equipos ágiles.
           </p>
+          <p data-i18n="about.text4">
+            Paralelamente, cuento con formación y práctica activa en <strong>Ciberseguridad y Hacking Ético en nivel Junior Avanzado</strong>, desenvolviéndome con soltura en entornos de auditoría como <strong>Kali Linux</strong>. Domino herramientas de reconocimiento, intercepción y análisis de vulnerabilidades como <strong>Burp Suite, Nmap, Wireshark y Metasploit</strong>, aplicando las directrices del <strong>OWASP Top 10</strong>. Esta perspectiva me permite adoptar un enfoque <em>Security-First</em>, blindando APIs y arquitecturas contra vectores de ataque comunes desde su concepción.
+          </p>
 
           <div class="highlight-box">
             <h5><i class="fas fa-bug"></i> <span data-i18n="about.debugTitle">Filosofía de Depuración & Resolución</span></h5>
@@ -232,6 +238,16 @@
             <div class="pillar-info">
               <h4 data-i18n="about.pillar4.title">Metodologías Ágiles & Scrum</h4>
               <p data-i18n="about.pillar4.desc">Planificación de Sprints, Product Backlog, historias de usuario, diagramas UML y control con Git/GitHub.</p>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon red">
+              <i class="fas fa-user-secret"></i>
+            </div>
+            <div class="pillar-info">
+              <h4 data-i18n="about.pillar5.title">Ciberseguridad & Pentesting Jr. Avanzado</h4>
+              <p data-i18n="about.pillar5.desc">Seguridad ofensiva y defensiva en Kali Linux, auditorías con Burp Suite, reconocimiento con Nmap y mitigación OWASP Top 10.</p>
             </div>
           </div>
         </div>
@@ -324,6 +340,26 @@
             <span class="skill-chip"><i class="fas fa-cube"></i> Distrobox</span>
             <span class="skill-chip"><i class="fas fa-heart-pulse"></i> Spring Actuator</span>
             <span class="skill-chip"><i class="fab fa-github"></i> GitHub Pages</span>
+          </div>
+        </div>
+
+        <!-- Ciberseguridad & Pentesting -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="260">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-shield-halved"></i></div>
+            <h4 data-i18n="skills.security">Ciberseguridad & Pentesting</h4>
+          </div>
+          <div class="skills-grid">
+            <span class="skill-chip featured"><i class="fab fa-linux"></i> Kali Linux</span>
+            <span class="skill-chip featured"><i class="fas fa-user-secret"></i> Pentester / Hacker Ético (Jr. Av.)</span>
+            <span class="skill-chip featured"><i class="fas fa-bug-slash"></i> OWASP Top 10</span>
+            <span class="skill-chip"><i class="fas fa-spider"></i> Burp Suite (Proxy & Intercepción)</span>
+            <span class="skill-chip"><i class="fas fa-network-wired"></i> Nmap (Reconocimiento & Puertos)</span>
+            <span class="skill-chip"><i class="fas fa-ethernet"></i> Wireshark (Análisis de Tráfico)</span>
+            <span class="skill-chip"><i class="fas fa-terminal"></i> Metasploit Framework</span>
+            <span class="skill-chip"><i class="fas fa-lock"></i> Seguridad en APIs & JWT Hardening</span>
+            <span class="skill-chip"><i class="fas fa-shield-virus"></i> Análisis de Vulnerabilidades</span>
+            <span class="skill-chip"><i class="fas fa-code"></i> Sanitización & Validación Estricta</span>
           </div>
         </div>
 
@@ -1102,9 +1138,9 @@
         'hero.status': '🟢 Disponible para Prácticas SENA / Oportunidades Junior',
         'hero.greeting': 'Hola, soy',
         'hero.name': 'Maicol Vera',
-        'hero.title': 'Desarrollador de Software ',
-        'hero.highlight': 'Full Stack & Backend',
-        'hero.description': 'Aprendiz de <strong>Tecnología en Análisis y Desarrollo de Software (ADSO)</strong> en el SENA. Construyo arquitecturas backend sólidas con <strong>Java & Spring Boot</strong>, interfaces ágiles con <strong>Angular & TypeScript</strong>, y soluciones eficientes integradas con bases de datos SQL e Inteligencia Artificial.',
+        'hero.title': 'Desarrollador ',
+        'hero.highlight': 'Full Stack & Pentester Jr. Avanzado',
+        'hero.description': 'Aprendiz de <strong>Tecnología en Análisis y Desarrollo de Software (ADSO)</strong> en el SENA y <strong>Pentester / Hacker Ético Junior Avanzado</strong>. Construyo arquitecturas backend robustas y blindadas con <strong>Java & Spring Boot</strong>, interfaces ágiles con <strong>Angular & TypeScript</strong>, integraciones con IA y flujos de auditoría ofensiva/defensiva en <strong>Kali Linux</strong> bajo directrices <strong>OWASP Top 10</strong>.',
         'hero.portfolio': '<i class="fas fa-folder-open"></i> Ver Proyectos',
         'hero.contact': '<i class="fas fa-paper-plane"></i> Contáctame',
         'hero.cvBtn': '<i class="fas fa-download"></i> Descargar CV',
@@ -1120,6 +1156,7 @@
         'about.text1': 'Soy aprendiz del programa <strong>Tecnólogo en Análisis y Desarrollo de Software (ADSO)</strong> del <strong>SENA</strong>. Cuento con una sólida formación práctica en la arquitectura y desarrollo de aplicaciones web y servicios backend.',
         'about.text2': 'Me destaco por mi capacidad para analizar requerimientos técnicos, estructurar bases de datos relacionales, diseñar APIs REST bajo arquitecturas por capas y construir interfaces frontend modulares. Además, he explorado proyectos de innovación integrando <strong>RAG (Retrieval-Augmented Generation)</strong> y modelos de Inteligencia Artificial.',
         'about.text3': 'Mi experiencia previa en atención al cliente y soporte técnico complementa mi perfil, brindándome una gran empatía hacia las necesidades del usuario final y facilidad para comunicarme eficazmente en equipos ágiles.',
+        'about.text4': 'Paralelamente, cuento con formación y práctica activa en <strong>Ciberseguridad y Hacking Ético en nivel Junior Avanzado</strong>, desenvolviéndome con soltura en entornos de auditoría como <strong>Kali Linux</strong>. Domino herramientas de reconocimiento, intercepción y análisis de vulnerabilidades como <strong>Burp Suite, Nmap, Wireshark y Metasploit</strong>, aplicando las directrices del <strong>OWASP Top 10</strong>. Esta perspectiva me permite adoptar un enfoque <em>Security-First</em>, blindando APIs y arquitecturas contra vectores de ataque comunes desde su concepción.',
         'about.debugTitle': 'Filosofía de Depuración & Resolución',
         'about.debugDesc': 'Afronto los errores de forma metódica: análisis riguroso mediante DevTools y consola, pruebas sobre bloques de código y aislamiento progresivo hasta erradicar la causa raíz.',
         
@@ -1131,6 +1168,8 @@
         'about.pillar3.desc': 'Desarrollo de pipelines RAG, bases vectoriales (ChromaDB), Notion API e integración con LLMs.',
         'about.pillar4.title': 'Metodologías Ágiles & Scrum',
         'about.pillar4.desc': 'Planificación de Sprints, Product Backlog, historias de usuario, diagramas UML y control con Git/GitHub.',
+        'about.pillar5.title': 'Ciberseguridad & Pentesting Jr. Avanzado',
+        'about.pillar5.desc': 'Seguridad ofensiva y defensiva en Kali Linux, auditorías con Burp Suite, reconocimiento con Nmap y mitigación OWASP Top 10.',
 
         'skills.tag': '<i class="fas fa-laptop-code"></i> Stack & Tecnologías',
         'skills.title': 'Habilidades Técnicas',
@@ -1139,6 +1178,7 @@
         'skills.frontend': 'Frontend Moderno',
         'skills.databases': 'Bases de Datos & Cloud',
         'skills.tools': 'DevOps & Herramientas',
+        'skills.security': 'Ciberseguridad & Pentesting',
         'skills.ai': 'Innovación & IA (RAG)',
         'skills.practices': 'Metodologías & Prácticas',
 
@@ -1257,8 +1297,8 @@
         'hero.greeting': 'Hi, I am',
         'hero.name': 'Maicol Vera',
         'hero.title': 'Software Developer ',
-        'hero.highlight': 'Full Stack & Backend',
-        'hero.description': 'Student of <strong>Software Analysis and Development (ADSO)</strong> at SENA. I build robust backend architectures with <strong>Java & Spring Boot</strong>, dynamic interfaces with <strong>Angular & TypeScript</strong>, and efficient solutions backed by SQL databases and AI integrations.',
+        'hero.highlight': 'Full Stack & Jr. Adv. Pentester',
+        'hero.description': 'Student of <strong>Software Analysis and Development (ADSO)</strong> at SENA and <strong>Junior Advanced Pentester / Ethical Hacker</strong>. I build robust and secure backend architectures with <strong>Java & Spring Boot</strong>, dynamic interfaces with <strong>Angular & TypeScript</strong>, AI integrations, and offensive/defensive auditing workflows in <strong>Kali Linux</strong> adhering to <strong>OWASP Top 10</strong>.',
         'hero.portfolio': '<i class="fas fa-folder-open"></i> View Projects',
         'hero.contact': '<i class="fas fa-paper-plane"></i> Contact Me',
         'hero.cvBtn': '<i class="fas fa-download"></i> Download CV',
@@ -1274,6 +1314,7 @@
         'about.text1': 'I am a student of the <strong>Software Analysis and Development (ADSO)</strong> program at <strong>SENA</strong>, with solid practical training in software architecture, web applications, and backend services.',
         'about.text2': 'I stand out for my ability to analyze technical requirements, model relational databases, design REST APIs using layered architectures, and build modular frontend interfaces. I have also built innovation projects integrating <strong>RAG (Retrieval-Augmented Generation)</strong> and AI models.',
         'about.text3': 'My previous background in customer service and technical support complements my technical skills, giving me strong empathy for end users and clear communication in agile teams.',
+        'about.text4': 'Additionally, I hold solid training and active practice in <strong>Cybersecurity and Ethical Hacking at a Junior Advanced level</strong>, operating with agility in audit environments like <strong>Kali Linux</strong>. I leverage specialized tools such as <strong>Burp Suite, Nmap, Wireshark, and Metasploit</strong> for web audits, packet inspection, and ethical exploitation under <strong>OWASP Top 10</strong> standards, bringing a <em>Security-First</em> perspective to every architectural layer.',
         'about.debugTitle': 'Systematic Debugging Philosophy',
         'about.debugDesc': 'I tackle bugs methodically: rigorous DevTools and console analysis, modular code inspection, and progressive isolation until eliminating the root cause.',
 
@@ -1285,6 +1326,8 @@
         'about.pillar3.desc': 'RAG pipelines, vector databases (ChromaDB), Notion API, and integration with LLM providers.',
         'about.pillar4.title': 'Agile & Scrum Practices',
         'about.pillar4.desc': 'Sprint planning, Product Backlog management, user stories, UML diagramming, and Git/GitHub version control.',
+        'about.pillar5.title': 'Cybersecurity & Jr. Adv. Pentesting',
+        'about.pillar5.desc': 'Offensive & defensive security in Kali Linux, Burp Suite auditing, Nmap reconnaissance, and OWASP Top 10 mitigation.',
 
         'skills.tag': '<i class="fas fa-laptop-code"></i> Tech Stack',
         'skills.title': 'Technical Skills',
@@ -1293,6 +1336,7 @@
         'skills.frontend': 'Modern Frontend',
         'skills.databases': 'Databases & Cloud',
         'skills.tools': 'DevOps & Tools',
+        'skills.security': 'Cybersecurity & Pentesting',
         'skills.ai': 'Innovation & AI (RAG)',
         'skills.practices': 'Methodologies & Practices',
 
@@ -1503,13 +1547,16 @@
         codeFileName.textContent = 'Developer.java';
         codeSnippet.innerHTML = `<span class="keyword">public class</span> <span class="class-name">Developer</span> {
   <span class="type">String</span> name = <span class="string">"Maicol Vera"</span>;
-  <span class="type">String</span> role = <span class="string">"Full Stack & Backend"</span>;
+  <span class="type">String</span> role = <span class="string">"Full Stack & Jr. Adv. Pentester"</span>;
   <span class="type">String</span> education = <span class="string">"Tecnólogo ADSO - SENA"</span>;
   <span class="type">String</span>[] coreStack = {
-    <span class="string">"Java"</span>, <span class="string">"Spring Boot"</span>,
-    <span class="string">"TypeScript"</span>, <span class="string">"Angular"</span>, <span class="string">"SQL"</span>
+    <span class="string">"Java"</span>, <span class="string">"Spring Boot"</span>, <span class="string">"Angular"</span>,
+    <span class="string">"TypeScript"</span>, <span class="string">"SQL"</span>, <span class="string">"Kali Linux"</span>
   };
-  <span class="type">boolean</span> eagerToLearn = <span class="boolean">true</span>;
+  <span class="type">String</span>[] securityFocus = {
+    <span class="string">"OWASP Top 10"</span>, <span class="string">"Burp Suite"</span>, <span class="string">"Nmap"</span>
+  };
+  <span class="type">boolean</span> securityFirst = <span class="boolean">true</span>;
   <span class="type">boolean</span> methodicalDebugging = <span class="boolean">true</span>;
 }`;
       } else if (lang === 'ts') {
@@ -1518,6 +1565,7 @@
         codeSnippet.innerHTML = `<span class="keyword">interface</span> <span class="class-name">DevStack</span> {
   backend: <span class="type">string</span>[];
   frontend: <span class="type">string</span>[];
+  security: <span class="type">string</span>[];
   mobile: <span class="type">string</span>[];
   database: <span class="type">string</span>[];
   devops: <span class="type">string</span>[];
@@ -1526,6 +1574,7 @@
 <span class="keyword">const</span> <span class="class-name">myProfile</span>: <span class="type">DevStack</span> = {
   backend: [<span class="string">"Java"</span>, <span class="string">"Spring Boot"</span>, <span class="string">"Node.js"</span>],
   frontend: [<span class="string">"Angular"</span>, <span class="string">"React"</span>, <span class="string">"Next.js"</span>],
+  security: [<span class="string">"Kali Linux"</span>, <span class="string">"Burp Suite"</span>, <span class="string">"OWASP Top 10"</span>, <span class="string">"Nmap"</span>],
   mobile: [<span class="string">"React Native"</span>, <span class="string">"Expo"</span>],
   database: [<span class="string">"PostgreSQL"</span>, <span class="string">"MySQL"</span>, <span class="string">"ChromaDB"</span>],
   devops: [<span class="string">"Docker"</span>, <span class="string">"Linux"</span>, <span class="string">"Git"</span>]
