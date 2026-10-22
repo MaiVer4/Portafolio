@@ -41,7 +41,7 @@ Bienvenido al repositorio de mi portafolio web personal como **Desarrollador de 
 - **Nombre**: Maicol Vera
 - **Email**: [veramichael617@gmail.com](mailto:veramichael617@gmail.com)
 - **GitHub**: [@MaiVer4](https://github.com/MaiVer4)
-- **WhatsApp / Celular**: +57 321 939 5309
+- **WhatsApp / Celular**: +57 324 612 7856
 - **Ubicación**: Armenia, Quindío, Colombia
 
 ---

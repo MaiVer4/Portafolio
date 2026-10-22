@@ -6,10 +6,10 @@
   <title>Maicol Vera | Desarrollador de Software Full Stack & Backend</title>
   <meta name="description" content="Portafolio profesional de Maicol Vera. Desarrollador de Software Full Stack & Backend (ADSO SENA). Java, Spring Boot, TypeScript, Angular, SQL, Docker y soluciones con IA/RAG." />
   
-  <!-- Google Fonts: Inter, Poppins & Fira Code -->
+  <!-- Google Fonts: Inter, Space Grotesk, Poppins & Fira Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -63,6 +63,17 @@
     <header class="hero" id="hero">
       <div class="hero-content" data-aos="fade-up">
         
+        <!-- Engineering HUD Telemetry -->
+        <div class="hud-telemetry">
+          <span class="hud-tag"><span class="hud-dot"></span> SYS.ONLINE</span>
+          <span class="hud-divider">//</span>
+          <span class="hud-item">ADSO SENA</span>
+          <span class="hud-divider">//</span>
+          <span class="hud-item">ARMENIA, CO</span>
+          <span class="hud-divider">//</span>
+          <span class="hud-item">LATENCY: ~12ms</span>
+        </div>
+
         <div class="badge-status">
           <span class="status-pulse"></span>
           <span data-i18n="hero.status">🟢 Disponible para Prácticas SENA / Oportunidades Junior</span>
@@ -92,7 +103,7 @@
           <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
           <a href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           <a href="mailto:veramichael617@gmail.com" title="Enviar correo"><i class="fas fa-envelope"></i></a>
-          <a href="https://wa.me/573219395309" target="_blank" rel="noopener noreferrer" title="WhatsApp (+57 3219395309)"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://wa.me/573246127856" target="_blank" rel="noopener noreferrer" title="WhatsApp (+57 3246127856)"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
 
@@ -106,8 +117,11 @@
               <span class="dot green"></span>
             </div>
             <div class="window-title">
-              <i class="fas fa-code"></i> <span id="codeFileName">Developer.java</span>
+              <i class="fas fa-terminal"></i> <span id="codeFileName">Developer.java</span>
             </div>
+            <button class="window-copy-btn" id="copyCodeBtn" onclick="copySnippet()" title="Copiar código al portapapeles" aria-label="Copiar código">
+              <i class="far fa-copy"></i>
+            </button>
           </div>
           
           <div class="window-tabs">
@@ -116,6 +130,9 @@
             </button>
             <button class="tab-btn" onclick="switchCodeTab('ts')">
               <i class="fab fa-js-square"></i> stack.ts
+            </button>
+            <button class="tab-btn" onclick="switchCodeTab('sh')">
+              <i class="fas fa-play"></i> pipeline.sh
             </button>
           </div>
 
@@ -139,18 +156,22 @@
     <!-- Metrics Quick Strip -->
     <section class="metrics-strip" data-aos="fade-up">
       <div class="metric-box">
+        <span class="metric-idx">// 01</span>
         <span class="metric-num">ADSO</span>
         <span class="metric-label" data-i18n="metrics.adso">SENA en Formación</span>
       </div>
       <div class="metric-box">
-        <span class="metric-num">+6</span>
+        <span class="metric-idx">// 02</span>
+        <span class="metric-num">+12</span>
         <span class="metric-label" data-i18n="metrics.projects">Proyectos Construidos</span>
       </div>
       <div class="metric-box">
+        <span class="metric-idx">// 03</span>
         <span class="metric-num">Core</span>
         <span class="metric-label" data-i18n="metrics.stack">Java • Spring • Angular</span>
       </div>
       <div class="metric-box">
+        <span class="metric-idx">// 04</span>
         <span class="metric-num">100%</span>
         <span class="metric-label" data-i18n="metrics.commitment">Compromiso & Clean Code</span>
       </div>
@@ -246,10 +267,14 @@
           </div>
           <div class="skills-grid">
             <span class="skill-chip featured"><i class="fab fa-java"></i> Java 21 (POO)</span>
-            <span class="skill-chip featured"><i class="fas fa-leaf"></i> Spring Boot</span>
+            <span class="skill-chip featured"><i class="fas fa-leaf"></i> Spring Boot 3 / 4</span>
             <span class="skill-chip"><i class="fas fa-network-wired"></i> APIs RESTful</span>
+            <span class="skill-chip"><i class="fas fa-user-shield"></i> Spring Security + JWT</span>
             <span class="skill-chip"><i class="fas fa-database"></i> JPA / Hibernate</span>
-            <span class="skill-chip"><i class="fab fa-node-js"></i> Node.js / Express</span>
+            <span class="skill-chip"><i class="fas fa-code-branch"></i> Flyway (Migraciones)</span>
+            <span class="skill-chip"><i class="fas fa-book-open"></i> OpenAPI / Swagger</span>
+            <span class="skill-chip"><i class="fab fa-node-js"></i> Node.js / Express (TS)</span>
+            <span class="skill-chip"><i class="fas fa-shapes"></i> Prisma ORM</span>
             <span class="skill-chip"><i class="fab fa-php"></i> PHP / Laravel</span>
             <span class="skill-chip"><i class="fas fa-layer-group"></i> Arquitectura en Capas</span>
           </div>
@@ -262,12 +287,17 @@
             <h4 data-i18n="skills.frontend">Frontend Moderno</h4>
           </div>
           <div class="skills-grid">
-            <span class="skill-chip featured"><i class="fab fa-angular"></i> Angular (v17+)</span>
+            <span class="skill-chip featured"><i class="fab fa-angular"></i> Angular (v17 – v21)</span>
             <span class="skill-chip featured"><i class="fab fa-js"></i> TypeScript</span>
+            <span class="skill-chip featured"><i class="fab fa-react"></i> React + Vite</span>
+            <span class="skill-chip"><i class="fas fa-n"></i> Next.js (App Router)</span>
             <span class="skill-chip"><i class="fab fa-js-square"></i> JavaScript (ES6+)</span>
-            <span class="skill-chip"><i class="fab fa-react"></i> React</span>
+            <span class="skill-chip"><i class="fas fa-water"></i> RxJS</span>
+            <span class="skill-chip"><i class="fas fa-palette"></i> Angular Material</span>
+            <span class="skill-chip"><i class="fas fa-wind"></i> Tailwind CSS</span>
             <span class="skill-chip"><i class="fab fa-html5"></i> HTML5 Semántico</span>
             <span class="skill-chip"><i class="fab fa-css3-alt"></i> CSS3 / Flexbox / Grid</span>
+            <span class="skill-chip"><i class="fas fa-chart-line"></i> Chart.js / Recharts</span>
             <span class="skill-chip"><i class="fas fa-mobile-alt"></i> Diseño Responsive</span>
           </div>
         </div>
@@ -284,7 +314,8 @@
             <span class="skill-chip"><i class="fas fa-code"></i> Consultas SQL / CRUD</span>
             <span class="skill-chip"><i class="fas fa-bolt"></i> Supabase</span>
             <span class="skill-chip"><i class="fas fa-fire"></i> Firebase</span>
-            <span class="skill-chip"><i class="fas fa-table"></i> MariaDB / SQLite</span>
+            <span class="skill-chip"><i class="fas fa-table"></i> MariaDB / SQLite / H2</span>
+            <span class="skill-chip"><i class="fas fa-box-archive"></i> MinIO (Object Storage)</span>
             <span class="skill-chip"><i class="fas fa-project-diagram"></i> Modelado Relacional</span>
           </div>
         </div>
@@ -302,6 +333,26 @@
             <span class="skill-chip"><i class="fas fa-paper-plane"></i> Postman / Swagger</span>
             <span class="skill-chip"><i class="fas fa-code"></i> VS Code & Neovim</span>
             <span class="skill-chip"><i class="fas fa-cube"></i> Distrobox</span>
+            <span class="skill-chip"><i class="fas fa-heart-pulse"></i> Spring Actuator</span>
+            <span class="skill-chip"><i class="fab fa-github"></i> GitHub Pages</span>
+          </div>
+        </div>
+
+        <!-- Mobile & Tiempo Real -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="275">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-mobile-screen-button"></i></div>
+            <h4 data-i18n="skills.mobile">Mobile, PWA &amp; Tiempo Real</h4>
+          </div>
+          <div class="skills-grid">
+            <span class="skill-chip featured"><i class="fab fa-react"></i> React Native + Expo</span>
+            <span class="skill-chip"><i class="fas fa-route"></i> Expo Router / React Navigation</span>
+            <span class="skill-chip"><i class="fas fa-plug"></i> WebSockets (STOMP / SockJS)</span>
+            <span class="skill-chip"><i class="fas fa-bolt"></i> Pusher (Realtime)</span>
+            <span class="skill-chip"><i class="fas fa-bell"></i> PWA + Web Push</span>
+            <span class="skill-chip"><i class="fas fa-key"></i> OAuth / Google Sign-In</span>
+            <span class="skill-chip"><i class="fas fa-qrcode"></i> QR (generación y escaneo)</span>
+            <span class="skill-chip"><i class="fas fa-map-location-dot"></i> Leaflet (Mapas)</span>
           </div>
         </div>
 
@@ -312,12 +363,14 @@
             <h4 data-i18n="skills.ai">Innovación & IA (RAG)</h4>
           </div>
           <div class="skills-grid">
-            <span class="skill-chip featured"><i class="fas fa-search-nodes"></i> RAG Pipelines</span>
+            <span class="skill-chip featured"><i class="fas fa-diagram-project"></i> RAG Pipelines</span>
             <span class="skill-chip featured"><i class="fas fa-database"></i> ChromaDB (Vector DB)</span>
             <span class="skill-chip"><i class="fab fa-python"></i> Python</span>
+            <span class="skill-chip"><i class="fas fa-link"></i> LangChain / LangGraph</span>
+            <span class="skill-chip"><i class="fas fa-vector-square"></i> Sentence-Transformers</span>
             <span class="skill-chip"><i class="fas fa-file-lines"></i> Notion API</span>
-            <span class="skill-chip"><i class="fas fa-robot"></i> Integración LLMs</span>
-            <span class="skill-chip"><i class="fas fa-vector-square"></i> Text Embeddings</span>
+            <span class="skill-chip"><i class="fas fa-robot"></i> OpenAI / Gemini / OpenRouter</span>
+            <span class="skill-chip"><i class="fas fa-microchip"></i> LLMs locales (Ollama)</span>
           </div>
         </div>
 
@@ -333,7 +386,8 @@
             <span class="skill-chip"><i class="fas fa-sitemap"></i> Diagramación UML</span>
             <span class="skill-chip"><i class="fas fa-list-check"></i> Casos de Uso</span>
             <span class="skill-chip"><i class="fas fa-shield-alt"></i> Clean Code</span>
-            <span class="skill-chip"><i class="fas fa-vial"></i> Pruebas y Análisis</span>
+            <span class="skill-chip"><i class="fas fa-vial"></i> Vitest / JUnit / Testing Library</span>
+            <span class="skill-chip"><i class="fas fa-broom"></i> ESLint / Prettier</span>
           </div>
         </div>
 
@@ -354,6 +408,7 @@
         <button class="filter-btn" data-filter="fullstack" data-i18n="projects.filterFullstack">Full Stack & Backend</button>
         <button class="filter-btn" data-filter="ai" data-i18n="projects.filterAI">IA & RAG</button>
         <button class="filter-btn" data-filter="frontend" data-i18n="projects.filterFrontend">Web & Frontend</button>
+        <button class="filter-btn" data-filter="mobile" data-i18n="projects.filterMobile">Mobile</button>
       </div>
 
       <div class="projects-grid">
@@ -362,7 +417,11 @@
         <article class="project-card featured-badge-card" data-category="ai" data-aos="zoom-in" data-aos-delay="100">
           <div class="project-inner">
             <div class="project-top">
-              <span class="project-category-tag">IA & RAG / Python</span>
+              <div class="project-meta-strip">
+                <span class="project-code">// PRJ-01</span>
+                <span class="project-status-dot"></span>
+                <span class="project-category-tag">IA & RAG / Python</span>
+              </div>
               <div class="project-actions">
                 <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Ver repositorio en GitHub"><i class="fab fa-github"></i></a>
               </div>
@@ -396,7 +455,11 @@
         <article class="project-card" data-category="fullstack" data-aos="zoom-in" data-aos-delay="150">
           <div class="project-inner">
             <div class="project-top">
-              <span class="project-category-tag">Full Stack / Java & Angular</span>
+              <div class="project-meta-strip">
+                <span class="project-code">// PRJ-02</span>
+                <span class="project-status-dot"></span>
+                <span class="project-category-tag">Full Stack / Java & Angular</span>
+              </div>
               <div class="project-actions">
                 <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Ver repositorio"><i class="fab fa-github"></i></a>
               </div>
@@ -430,7 +493,11 @@
         <article class="project-card" data-category="fullstack" data-aos="zoom-in" data-aos-delay="200">
           <div class="project-inner">
             <div class="project-top">
-              <span class="project-category-tag">Gestión & Scrum / Backend</span>
+              <div class="project-meta-strip">
+                <span class="project-code">// PRJ-03</span>
+                <span class="project-status-dot"></span>
+                <span class="project-category-tag">Full Stack / Spring Boot 4 & Angular 21</span>
+              </div>
               <div class="project-actions">
                 <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Ver repositorio"><i class="fab fa-github"></i></a>
               </div>
@@ -442,19 +509,19 @@
             </p>
 
             <ul class="project-highlights">
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p3.h1">Gestión de Product Backlog, Sprints y diagramas UML de casos de uso.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p3.h2">Módulo administrativo con control de accesos basado en roles.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p3.h3">Integración con agente inteligente y validación de reglas de negocio.</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="projects.p3.h1">API REST en Spring Boot 4 + Java 21 con JWT, Flyway y PostgreSQL.</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="projects.p3.h2">Frontend Angular 21 con WebSockets (STOMP), escaneo QR y dashboards Chart.js.</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="projects.p3.h3">Reportes PDF/CSV, correo transaccional y Scrum con UML y backlog.</span></li>
             </ul>
 
             <footer>
               <div class="project-tech">
-                <span>Scrum</span>
-                <span>UML</span>
-                <span>Spring Boot</span>
-                <span>SQL</span>
-                <span>POO</span>
-                <span>RAG</span>
+                <span>Spring Boot 4</span>
+                <span>Angular 21</span>
+                <span>PostgreSQL</span>
+                <span>JWT</span>
+                <span>WebSockets</span>
+                <span>Docker</span>
               </div>
             </footer>
           </div>
@@ -464,7 +531,11 @@
         <article class="project-card" data-category="fullstack" data-aos="zoom-in" data-aos-delay="250">
           <div class="project-inner">
             <div class="project-top">
-              <span class="project-category-tag">Java 21 / POO & IA</span>
+              <div class="project-meta-strip">
+                <span class="project-code">// PRJ-04</span>
+                <span class="project-status-dot"></span>
+                <span class="project-category-tag">Java 21 / POO & IA</span>
+              </div>
               <div class="project-actions">
                 <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Ver repositorio"><i class="fab fa-github"></i></a>
               </div>
@@ -497,7 +568,11 @@
         <article class="project-card" data-category="frontend" data-aos="zoom-in" data-aos-delay="300">
           <div class="project-inner">
             <div class="project-top">
-              <span class="project-category-tag">SPA / API REST</span>
+              <div class="project-meta-strip">
+                <span class="project-code">// PRJ-05</span>
+                <span class="project-status-dot"></span>
+                <span class="project-category-tag">SPA / API REST</span>
+              </div>
               <div class="project-actions">
                 <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Ver código"><i class="fab fa-github"></i></a>
               </div>
@@ -530,7 +605,11 @@
         <article class="project-card" data-category="frontend" data-aos="zoom-in" data-aos-delay="350">
           <div class="project-inner">
             <div class="project-top">
-              <span class="project-category-tag">E-commerce / Web App</span>
+              <div class="project-meta-strip">
+                <span class="project-code">// PRJ-06</span>
+                <span class="project-status-dot"></span>
+                <span class="project-category-tag">E-commerce / Web App</span>
+              </div>
               <div class="project-actions">
                 <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Código"><i class="fab fa-github"></i></a>
                 <a href="https://maiver4.github.io/Luxury-Distillates/" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Demo en vivo"><i class="fas fa-external-link-alt"></i></a>
@@ -555,6 +634,146 @@
                 <span>JavaScript</span>
                 <span>Node.js</span>
                 <span>MySQL</span>
+              </div>
+            </footer>
+          </div>
+        </article>
+
+        <!-- Proyecto 7: Carvajal Wishlist API -->
+        <article class="project-card" data-category="fullstack" data-aos="zoom-in" data-aos-delay="100">
+          <div class="project-inner">
+            <div class="project-top">
+              <div class="project-meta-strip">
+                <span class="project-code">// PRJ-07</span>
+                <span class="project-status-dot"></span>
+                <span class="project-category-tag">Backend / API Segura</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Ver repositorio"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h4 data-i18n="projects.p7.title">Wishlist API (Prueba Técnica)</h4>
+            <p data-i18n="projects.p7.desc">API REST para gestión de listas de deseos de usuarios, construida con estándares empresariales: seguridad stateless, documentación interactiva y pruebas automatizadas.</p>
+            <ul class="project-highlights">
+              <li><i class="fas fa-check"></i> <span data-i18n="projects.p7.h1">Autenticación con Spring Security + JWT (jjwt) y validación de DTOs.</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="projects.p7.h2">Documentación OpenAPI/Swagger y monitoreo con Actuator.</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="projects.p7.h3">Tests con H2 en memoria y despliegue con Docker + PostgreSQL 16.</span></li>
+            </ul>
+            <footer>
+              <div class="project-tech">
+                <span>Java 21</span><span>Spring Boot 3.4</span><span>Spring Security</span><span>PostgreSQL</span><span>Swagger</span><span>Docker</span>
+              </div>
+            </footer>
+          </div>
+        </article>
+
+        <!-- Proyecto 8: DEALER -->
+        <article class="project-card" data-category="fullstack" data-aos="zoom-in" data-aos-delay="150">
+          <div class="project-inner">
+            <div class="project-top">
+              <div class="project-meta-strip">
+                <span class="project-code">// PRJ-08</span>
+                <span class="project-status-dot"></span>
+                <span class="project-category-tag">Full Stack / Next.js PWA</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Ver repositorio"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h4 data-i18n="projects.p8.title">DEALER (Chat Anónimo en Tiempo Real)</h4>
+            <p data-i18n="projects.p8.desc">Plataforma de chat privado muchos-a-uno con usuarios anónimos y sistema de fidelización, instalable como PWA y con notificaciones push.</p>
+            <ul class="project-highlights">
+              <li><i class="fas fa-check"></i> <span data-i18n="projects.p8.h1">Mensajería en tiempo real con Pusher y notificaciones Web Push.</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="projects.p8.h2">Prisma + PostgreSQL, almacenamiento de archivos en MinIO (Docker Compose).</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="projects.p8.h3">NextAuth, JWT (jose), internacionalización con next-intl y mapas Leaflet.</span></li>
+            </ul>
+            <footer>
+              <div class="project-tech">
+                <span>Next.js</span><span>TypeScript</span><span>Prisma</span><span>PostgreSQL</span><span>Pusher</span><span>Tailwind</span>
+              </div>
+            </footer>
+          </div>
+        </article>
+
+        <!-- Proyecto 9: Music App -->
+        <article class="project-card" data-category="mobile" data-aos="zoom-in" data-aos-delay="200">
+          <div class="project-inner">
+            <div class="project-top">
+              <div class="project-meta-strip">
+                <span class="project-code">// PRJ-09</span>
+                <span class="project-status-dot"></span>
+                <span class="project-category-tag">Mobile / React Native</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Ver repositorio"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h4 data-i18n="projects.p9.title">Music App (Móvil + API)</h4>
+            <p data-i18n="projects.p9.desc">Aplicación móvil de streaming musical con backend propio en Node.js/Express que actúa como proxy hacia servicios externos de música.</p>
+            <ul class="project-highlights">
+              <li><i class="fas fa-check"></i> <span data-i18n="projects.p9.h1">App con Expo Router, navegación por pestañas y reproducción con expo-av.</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="projects.p9.h2">Login con Google Sign-In y persistencia de usuarios en Supabase.</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="projects.p9.h3">API en Express + TypeScript con Axios, CORS y variables de entorno.</span></li>
+            </ul>
+            <footer>
+              <div class="project-tech">
+                <span>React Native</span><span>Expo</span><span>Supabase</span><span>Express</span><span>TypeScript</span>
+              </div>
+            </footer>
+          </div>
+        </article>
+
+        <!-- Proyecto 10: FocusOS -->
+        <article class="project-card" data-category="ai" data-aos="zoom-in" data-aos-delay="250">
+          <div class="project-inner">
+            <div class="project-top">
+              <div class="project-meta-strip">
+                <span class="project-code">// PRJ-10</span>
+                <span class="project-status-dot"></span>
+                <span class="project-category-tag">React / IA Generativa</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Ver repositorio"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h4 data-i18n="projects.p10.title">FocusOS (Productividad con IA)</h4>
+            <p data-i18n="projects.p10.desc">Sistema de productividad basado en bloques de tiempo obligatorios para eliminar la procrastinación, con métricas reales y asistencia de IA.</p>
+            <ul class="project-highlights">
+              <li><i class="fas fa-check"></i> <span data-i18n="projects.p10.h1">SPA en React + Vite + TypeScript estilizada con Tailwind CSS 4.</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="projects.p10.h2">Autenticación y datos en tiempo real con Firebase.</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="projects.p10.h3">Integración con Google Gemini para análisis y recomendaciones.</span></li>
+            </ul>
+            <footer>
+              <div class="project-tech">
+                <span>React</span><span>Vite</span><span>Tailwind</span><span>Firebase</span><span>Gemini API</span>
+              </div>
+            </footer>
+          </div>
+        </article>
+
+        <!-- Proyecto 11: Desk -->
+        <article class="project-card" data-category="frontend" data-aos="zoom-in" data-aos-delay="300">
+          <div class="project-inner">
+            <div class="project-top">
+              <div class="project-meta-strip">
+                <span class="project-code">// PRJ-11</span>
+                <span class="project-status-dot"></span>
+                <span class="project-category-tag">Angular / Help Desk</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Ver repositorio"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h4 data-i18n="projects.p11.title">Desk (Gestión de Tickets)</h4>
+            <p data-i18n="projects.p11.desc">Plataforma para centralizar la recepción, asignación, seguimiento y resolución de tickets de soporte técnico en equipos de trabajo.</p>
+            <ul class="project-highlights">
+              <li><i class="fas fa-check"></i> <span data-i18n="projects.p11.h1">Angular moderno con componentes standalone y Angular Material/CDK.</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="projects.p11.h2">Programación reactiva con RxJS y enrutamiento por módulos.</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="projects.p11.h3">Pruebas unitarias con Vitest + jsdom y formato con Prettier.</span></li>
+            </ul>
+            <footer>
+              <div class="project-tech">
+                <span>Angular</span><span>Material</span><span>RxJS</span><span>TypeScript</span><span>Vitest</span>
               </div>
             </footer>
           </div>
@@ -674,7 +893,7 @@
           <div class="contact-box">
             <i class="fab fa-whatsapp"></i>
             <span class="contact-box-title" data-i18n="contact.phoneLabel">WhatsApp / Celular</span>
-            <span class="contact-box-val">+57 321 939 5309</span>
+            <span class="contact-box-val">+57 324 612 7856</span>
           </div>
 
           <div class="contact-box">
@@ -704,7 +923,7 @@
       <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
       <a href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
       <a href="mailto:veramichael617@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://wa.me/573219395309" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://wa.me/573246127856" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
     <p data-i18n="footer.text">
       Diseñado y desarrollado por <span class="highlight">Maicol Vera</span> • ADSO SENA © 2026
@@ -734,7 +953,7 @@
           <div class="cv-contact-list">
             <p>📍 Armenia, Quindío, Colombia</p>
             <p>✉️ veramichael617@gmail.com</p>
-            <p>📞 +57 321 939 5309</p>
+            <p>📞 +57 324 612 7856</p>
             <p>🔗 github.com/MaiVer4</p>
           </div>
         </section>
@@ -745,28 +964,28 @@
           <div class="cv-skills-group">
             <h5>Backend:</h5>
             <div class="cv-skills-chips">
-              <span>Java 21</span><span>Spring Boot</span><span>APIs REST</span><span>JPA</span><span>Node.js</span>
+              <span>Java 21</span><span>Spring Boot</span><span>Spring Security/JWT</span><span>APIs REST</span><span>JPA</span><span>Node.js/Express</span>
             </div>
           </div>
 
           <div class="cv-skills-group">
-            <h5>Frontend:</h5>
+            <h5>Frontend & Mobile:</h5>
             <div class="cv-skills-chips">
-              <span>Angular 17+</span><span>TypeScript</span><span>JavaScript</span><span>React</span><span>HTML5/CSS3</span>
+              <span>Angular</span><span>TypeScript</span><span>React</span><span>Next.js</span><span>React Native/Expo</span><span>Tailwind</span>
             </div>
           </div>
 
           <div class="cv-skills-group">
             <h5>Bases de Datos & DevOps:</h5>
             <div class="cv-skills-chips">
-              <span>MySQL</span><span>PostgreSQL</span><span>Docker</span><span>Git/GitHub</span><span>Linux</span>
+              <span>PostgreSQL</span><span>MySQL</span><span>Prisma</span><span>Supabase/Firebase</span><span>Docker</span><span>Git/GitHub</span><span>Linux</span>
             </div>
           </div>
 
           <div class="cv-skills-group">
             <h5>Innovación & Métodos:</h5>
             <div class="cv-skills-chips">
-              <span>RAG / ChromaDB</span><span>Scrum</span><span>UML</span><span>Depuración</span>
+              <span>RAG / ChromaDB</span><span>LangChain</span><span>LLM APIs</span><span>Scrum</span><span>UML</span><span>Vitest/JUnit</span>
             </div>
           </div>
         </section>
@@ -820,10 +1039,20 @@
           <div class="cv-item">
             <div class="cv-item-header">
               <span class="cv-item-title">Territorio de Niños (Gestión de Parque)</span>
-              <span class="cv-item-date">Scrum | UML | Spring Boot | SQL</span>
+              <span class="cv-item-date">Spring Boot 4 | Angular 21 | PostgreSQL</span>
             </div>
             <p class="cv-item-desc">
-              Liderazgo en especificación de requerimientos, diagramas UML y desarrollo de módulos de gestión y ventas bajo marco Scrum con integración de validación RAG.
+              Sistema full stack con API REST segura (JWT, Flyway), WebSockets, escaneo QR y reportes PDF/CSV. Especificación de requerimientos, UML y backlog bajo Scrum.
+            </p>
+          </div>
+
+          <div class="cv-item">
+            <div class="cv-item-header">
+              <span class="cv-item-title">Wishlist API & DEALER (Chat en Tiempo Real)</span>
+              <span class="cv-item-date">Spring Security | Next.js | Prisma</span>
+            </div>
+            <p class="cv-item-desc">
+              API REST con JWT, Swagger y Docker; y plataforma PWA en Next.js con Prisma/PostgreSQL, Pusher, Web Push y MinIO.
             </p>
           </div>
 
@@ -946,9 +1175,9 @@
 
         'projects.p3.title': 'Territorio de Niños',
         'projects.p3.desc': 'Solución de software para la gestión de operaciones, roles y ventas en parques infantiles. Diseñada bajo metodología Scrum con levantamiento de requerimientos y modelado de datos.',
-        'projects.p3.h1': 'Gestión de Product Backlog, Sprints y diagramas UML de casos de uso.',
-        'projects.p3.h2': 'Módulo administrativo con control de accesos basado en roles.',
-        'projects.p3.h3': 'Integración con agente inteligente y validación de reglas de negocio.',
+        'projects.p3.h1': 'API REST en Spring Boot 4 + Java 21 con JWT, Flyway y PostgreSQL.',
+        'projects.p3.h2': 'Frontend Angular 21 con WebSockets (STOMP), escaneo QR y dashboards Chart.js.',
+        'projects.p3.h3': 'Reportes PDF/CSV, correo transaccional y Scrum con UML y backlog.',
 
         'projects.p4.title': 'SmartLedger (Gestor Financiero)',
         'projects.p4.desc': 'Aplicación de gestión financiera en Java orientada al control y organización de transacciones, con estructuras de datos en memoria e integración con servicios de IA.',
@@ -967,6 +1196,34 @@
         'projects.p6.h1': 'Catálogo dinámico con carrito interactivo en tiempo real.',
         'projects.p6.h2': 'Optimización de bases de datos relacionales con campos ENUM y SET.',
         'projects.p6.h3': 'Interfaz 100% responsiva adaptada a dispositivos móviles.',
+
+        'projects.filterMobile': 'Mobile',
+        'skills.mobile': 'Mobile, PWA & Tiempo Real',
+        'projects.p7.title': 'Wishlist API (Prueba Técnica)',
+        'projects.p7.desc': 'API REST para gestión de listas de deseos de usuarios, construida con estándares empresariales: seguridad stateless, documentación interactiva y pruebas automatizadas.',
+        'projects.p7.h1': 'Autenticación con Spring Security + JWT (jjwt) y validación de DTOs.',
+        'projects.p7.h2': 'Documentación OpenAPI/Swagger y monitoreo con Actuator.',
+        'projects.p7.h3': 'Tests con H2 en memoria y despliegue con Docker + PostgreSQL 16.',
+        'projects.p8.title': 'DEALER (Chat Anónimo en Tiempo Real)',
+        'projects.p8.desc': 'Plataforma de chat privado muchos-a-uno con usuarios anónimos y sistema de fidelización, instalable como PWA y con notificaciones push.',
+        'projects.p8.h1': 'Mensajería en tiempo real con Pusher y notificaciones Web Push.',
+        'projects.p8.h2': 'Prisma + PostgreSQL, almacenamiento de archivos en MinIO (Docker Compose).',
+        'projects.p8.h3': 'NextAuth, JWT (jose), internacionalización con next-intl y mapas Leaflet.',
+        'projects.p9.title': 'Music App (Móvil + API)',
+        'projects.p9.desc': 'Aplicación móvil de streaming musical con backend propio en Node.js/Express que actúa como proxy hacia servicios externos de música.',
+        'projects.p9.h1': 'App con Expo Router, navegación por pestañas y reproducción con expo-av.',
+        'projects.p9.h2': 'Login con Google Sign-In y persistencia de usuarios en Supabase.',
+        'projects.p9.h3': 'API en Express + TypeScript con Axios, CORS y variables de entorno.',
+        'projects.p10.title': 'FocusOS (Productividad con IA)',
+        'projects.p10.desc': 'Sistema de productividad basado en bloques de tiempo obligatorios para eliminar la procrastinación, con métricas reales y asistencia de IA.',
+        'projects.p10.h1': 'SPA en React + Vite + TypeScript estilizada con Tailwind CSS 4.',
+        'projects.p10.h2': 'Autenticación y datos en tiempo real con Firebase.',
+        'projects.p10.h3': 'Integración con Google Gemini para análisis y recomendaciones.',
+        'projects.p11.title': 'Desk (Gestión de Tickets)',
+        'projects.p11.desc': 'Plataforma para centralizar la recepción, asignación, seguimiento y resolución de tickets de soporte técnico en equipos de trabajo.',
+        'projects.p11.h1': 'Angular moderno con componentes standalone y Angular Material/CDK.',
+        'projects.p11.h2': 'Programación reactiva con RxJS y enrutamiento por módulos.',
+        'projects.p11.h3': 'Pruebas unitarias con Vitest + jsdom y formato con Prettier.',
 
         'exp.tag': '<i class="fas fa-graduation-cap"></i> Trayectoria & Método',
         'exp.title': 'Formación & Metodología',
@@ -1072,9 +1329,9 @@
 
         'projects.p3.title': 'Territorio de Niños',
         'projects.p3.desc': 'Software solution for theme park operations, role-based access, and ticket sales. Designed under Scrum with requirement modeling and UML diagrams.',
-        'projects.p3.h1': 'Product Backlog, Sprint management, and UML use case diagrams.',
-        'projects.p3.h2': 'Administrative module with role-based access control (RBAC).',
-        'projects.p3.h3': 'AI assistant integration with local RAG validation.',
+        'projects.p3.h1': 'REST API with Spring Boot 4 + Java 21, JWT, Flyway, and PostgreSQL.',
+        'projects.p3.h2': 'Angular 21 frontend with WebSockets (STOMP), QR scanning, and Chart.js dashboards.',
+        'projects.p3.h3': 'PDF/CSV reports, transactional email, and Scrum with UML and backlog.',
 
         'projects.p4.title': 'SmartLedger (Finance & AI)',
         'projects.p4.desc': 'Java financial management application for transaction tracking and organization, utilizing in-memory data structures and AI API integration.',
@@ -1093,6 +1350,34 @@
         'projects.p6.h1': 'Dynamic catalog with real-time reactive shopping cart.',
         'projects.p6.h2': 'Relational database optimization using MySQL ENUM and SET types.',
         'projects.p6.h3': '100% responsive interface optimized for mobile devices.',
+
+        'projects.filterMobile': 'Mobile',
+        'skills.mobile': 'Mobile, PWA & Real-Time',
+        'projects.p7.title': 'Wishlist API (Technical Test)',
+        'projects.p7.desc': 'REST API for managing user wishlists, built to enterprise standards: stateless security, interactive documentation, and automated tests.',
+        'projects.p7.h1': 'Authentication with Spring Security + JWT (jjwt) and DTO validation.',
+        'projects.p7.h2': 'OpenAPI/Swagger documentation and Actuator monitoring.',
+        'projects.p7.h3': 'In-memory H2 tests and deployment with Docker + PostgreSQL 16.',
+        'projects.p8.title': 'DEALER (Real-Time Anonymous Chat)',
+        'projects.p8.desc': 'Many-to-one private chat platform with anonymous users and a loyalty system, installable as a PWA with push notifications.',
+        'projects.p8.h1': 'Real-time messaging with Pusher and Web Push notifications.',
+        'projects.p8.h2': 'Prisma + PostgreSQL, file storage on MinIO (Docker Compose).',
+        'projects.p8.h3': 'NextAuth, JWT (jose), i18n with next-intl, and Leaflet maps.',
+        'projects.p9.title': 'Music App (Mobile + API)',
+        'projects.p9.desc': 'Music streaming mobile app with a custom Node.js/Express backend acting as a proxy to external music services.',
+        'projects.p9.h1': 'Expo Router app with tab navigation and playback via expo-av.',
+        'projects.p9.h2': 'Google Sign-In login and user persistence on Supabase.',
+        'projects.p9.h3': 'Express + TypeScript API with Axios, CORS, and environment config.',
+        'projects.p10.title': 'FocusOS (AI Productivity)',
+        'projects.p10.desc': 'Productivity system based on mandatory time blocks to eliminate procrastination, with real metrics and AI assistance.',
+        'projects.p10.h1': 'React + Vite + TypeScript SPA styled with Tailwind CSS 4.',
+        'projects.p10.h2': 'Authentication and real-time data with Firebase.',
+        'projects.p10.h3': 'Google Gemini integration for analysis and recommendations.',
+        'projects.p11.title': 'Desk (Ticket Management)',
+        'projects.p11.desc': 'Platform to centralize intake, assignment, tracking, and resolution of technical support tickets for teams.',
+        'projects.p11.h1': 'Modern Angular with standalone components and Angular Material/CDK.',
+        'projects.p11.h2': 'Reactive programming with RxJS and feature-based routing.',
+        'projects.p11.h3': 'Unit tests with Vitest + jsdom and Prettier formatting.',
 
         'exp.tag': '<i class="fas fa-graduation-cap"></i> Journey & Standards',
         'exp.title': 'Education & Methodology',
@@ -1157,14 +1442,31 @@
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
 
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-controls', 'navLinks');
+
+    function setMenu(open) {
+      navLinks.classList.toggle('active', open);
+      document.body.classList.toggle('menu-open', open);
+      navToggle.setAttribute('aria-expanded', String(open));
+      navToggle.innerHTML = open ? '<i class="fas fa-xmark"></i>' : '<i class="fas fa-bars"></i>';
+    }
+
     navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+      setMenu(!navLinks.classList.contains('active'));
     });
+
+    // Cerrar con Escape, al hacer clic fuera o al pasar a escritorio
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+    document.addEventListener('click', e => {
+      if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !navToggle.contains(e.target)) setMenu(false);
+    });
+    window.matchMedia('(min-width: 769px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
 
     // Close mobile nav when clicking a link
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
+        setMenu(false);
       });
     });
 
@@ -1221,23 +1523,49 @@
   <span class="type">boolean</span> eagerToLearn = <span class="boolean">true</span>;
   <span class="type">boolean</span> methodicalDebugging = <span class="boolean">true</span>;
 }`;
-      } else {
+      } else if (lang === 'ts') {
         tabBtns[1].classList.add('active');
         codeFileName.textContent = 'stack.ts';
         codeSnippet.innerHTML = `<span class="keyword">interface</span> <span class="class-name">DevStack</span> {
   backend: <span class="type">string</span>[];
   frontend: <span class="type">string</span>[];
+  mobile: <span class="type">string</span>[];
   database: <span class="type">string</span>[];
   devops: <span class="type">string</span>[];
 }
 
 <span class="keyword">const</span> <span class="class-name">myProfile</span>: <span class="type">DevStack</span> = {
   backend: [<span class="string">"Java"</span>, <span class="string">"Spring Boot"</span>, <span class="string">"Node.js"</span>],
-  frontend: [<span class="string">"Angular 17+"</span>, <span class="string">"TypeScript"</span>, <span class="string">"React"</span>],
-  database: [<span class="string">"MySQL"</span>, <span class="string">"PostgreSQL"</span>, <span class="string">"ChromaDB"</span>],
+  frontend: [<span class="string">"Angular"</span>, <span class="string">"React"</span>, <span class="string">"Next.js"</span>],
+  mobile: [<span class="string">"React Native"</span>, <span class="string">"Expo"</span>],
+  database: [<span class="string">"PostgreSQL"</span>, <span class="string">"MySQL"</span>, <span class="string">"ChromaDB"</span>],
   devops: [<span class="string">"Docker"</span>, <span class="string">"Linux"</span>, <span class="string">"Git"</span>]
 };`;
+      } else if (lang === 'sh') {
+        tabBtns[2].classList.add('active');
+        codeFileName.textContent = 'pipeline.sh';
+        codeSnippet.innerHTML = `<span class="comment"># Telemetría de despliegue y testing</span>
+<span class="keyword">$</span> ./mvnw test -Dtest=SuiteIntegracion
+<span class="string">[INFO]</span> Tests run: <span class="number">28</span>, Failures: <span class="number">0</span>, Errors: <span class="number">0</span>, Skipped: <span class="number">0</span>
+<span class="string">[INFO]</span> BUILD SUCCESS in <span class="number">1.18s</span>
+
+<span class="keyword">$</span> docker compose -f compose.prod.yml config --quiet
+<span class="string">[INFO]</span> Services: <span class="type">api-gateway</span>, <span class="type">postgres-16</span>, <span class="type">rag-engine</span>
+<span class="class-name">[STATUS]</span> Healthcheck: <span class="boolean">ALL SYSTEMS OPERATIONAL</span>`;
       }
+    }
+
+    // Copy Code Snippet
+    function copySnippet() {
+      const code = document.querySelector('#codeSnippet code').innerText;
+      const copyBtn = document.getElementById('copyCodeBtn');
+      navigator.clipboard.writeText(code).then(() => {
+        copyBtn.innerHTML = '<i class="fas fa-check" style="color:var(--accent)"></i>';
+        showToast(currentLang === 'es' ? '¡Código copiado al portapapeles!' : 'Code snippet copied!');
+        setTimeout(() => {
+          copyBtn.innerHTML = '<i class="far fa-copy"></i>';
+        }, 2000);
+      });
     }
 
     // Projects Filtering
