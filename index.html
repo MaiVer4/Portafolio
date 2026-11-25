@@ -3,96 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maicol Vera | Desarrollador de Software Full Stack & Backend</title>
-  <meta name="description" content="Portafolio profesional de Maicol Vera. Desarrollador de Software Full Stack & Backend (ADSO SENA). Java, Spring Boot, TypeScript, Angular, SQL, Docker y soluciones con IA/RAG." />
-  
-  <!-- Google Fonts: Inter, Space Grotesk, Poppins & Fira Code -->
+  <title>Maicol Vera | Desarrollador de Software Full Stack &amp; Pentester Jr.</title>
+  <meta name="description" content="Portafolio profesional de Maicol Vera. Desarrollador de Software Full Stack & Backend (ADSO SENA) y Pentester Junior Avanzado. Java, Spring Boot, TypeScript, Angular, SQL, Docker, IA/RAG y OWASP Top 10." />
+
+  <!-- Google Fonts: Space Grotesk, Inter & Fira Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  
+
   <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
-  <!-- Librería para generar PDF -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
 
-  <!-- Scroll Progress Indicator -->
-  <div id="scroll-progress"></div>
+  <a href="#main-content" class="skip-link" data-i18n="nav.skip">Saltar al contenido principal</a>
 
-  <!-- Fondo animado con orbes sutiles -->
-  <div class="background-globes">
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Fondo atmosférico con paralaje ligado al scroll -->
+  <div class="background-globes" aria-hidden="true">
     <div class="globe globe-1"></div>
     <div class="globe globe-2"></div>
     <div class="globe globe-3"></div>
   </div>
 
   <!-- Barra de navegación -->
-  <nav class="navbar" id="navbar">
-    <a href="#" class="logo">MV<span class="dot">.</span></a>
-    
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación">
-      <i class="fas fa-bars"></i>
+  <nav class="navbar" id="navbar" aria-label="Navegación principal" data-i18n-aria="nav.aria">
+    <a href="#hero" class="logo" aria-label="Maicol Vera, ir al inicio" data-i18n-aria="nav.logoAria">MV<span class="dot" aria-hidden="true">.</span></a>
+
+    <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navLinks">
+      <i class="fas fa-bars" aria-hidden="true"></i>
     </button>
 
     <ul class="nav-links" id="navLinks">
       <li><a href="#about" class="nav-item" data-i18n="nav.about">Sobre mí</a></li>
       <li><a href="#skills" class="nav-item" data-i18n="nav.skills">Habilidades</a></li>
       <li><a href="#projects" class="nav-item" data-i18n="nav.projects">Proyectos</a></li>
-      <li><a href="#experience" class="nav-item" data-i18n="nav.experience">Formación & Metodología</a></li>
+      <li><a href="#experience" class="nav-item" data-i18n="nav.experience">Formación</a></li>
       <li><a href="#contact" class="nav-item" data-i18n="nav.contact">Contacto</a></li>
     </ul>
 
     <div class="nav-actions">
-      <button onclick="generatePDF()" class="btn-small" title="Descargar Hoja de Vida en PDF">
-        <i class="fas fa-file-pdf"></i> <span data-i18n="nav.cv">CV PDF</span>
+      <button type="button" id="cvNavBtn" onclick="generatePDF()" class="btn-small" data-cv-trigger aria-label="Descargar hoja de vida en PDF">
+        <i class="fas fa-file-pdf" aria-hidden="true"></i> <span data-i18n="nav.cv">CV PDF</span>
       </button>
-      <button id="translateBtn" class="btn-small translate-btn" title="Cambiar idioma">ENG</button>
+      <button type="button" id="translateBtn" class="btn-small translate-btn" aria-label="Cambiar idioma a inglés">ENG</button>
     </div>
   </nav>
+  <div class="nav-backdrop" id="navBackdrop" hidden></div>
 
-  <main class="container">
-    
-    <!-- Hero Section (Inicio Preservado y Elevado) -->
+  <main class="container" id="main-content" tabindex="-1">
+
+    <!-- Hero Section -->
     <header class="hero" id="hero">
       <div class="hero-content" data-aos="fade-up">
-        
-        <div class="badge-status">
-          <span class="status-pulse"></span>
-          <span data-i18n="hero.status">🟢 Disponible para Prácticas SENA / Oportunidades Junior</span>
-        </div>
 
         <span class="greeting" data-i18n="hero.greeting">Hola, soy</span>
         <h1 data-i18n="hero.name">Maicol Vera</h1>
-        <h2 data-i18n="hero.title">Desarrollador <span class="highlight" data-i18n="hero.highlight">Full Stack &amp; Pentester Jr. Avanzado</span></h2>
-        
+        <p class="hero-role">
+          <span data-i18n="hero.titlePrefix">Desarrollador</span>
+          <span class="highlight" data-i18n="hero.highlight">Full Stack &amp; Pentester Jr. Avanzado</span>
+        </p>
+
         <p class="hero-text" data-i18n="hero.description">
-          Aprendiz de <strong>Tecnología en Análisis y Desarrollo de Software (ADSO)</strong> en el SENA y <strong>Pentester / Hacker Ético Junior Avanzado</strong>. Construyo arquitecturas backend robustas y blindadas con <strong>Java &amp; Spring Boot</strong>, interfaces ágiles con <strong>Angular &amp; TypeScript</strong>, integraciones con IA y flujos de auditoría ofensiva/defensiva en <strong>Kali Linux</strong> bajo directrices <strong>OWASP Top 10</strong>.
+          Aprendiz de <strong>ADSO en el SENA</strong> con foco en <strong>Java, Spring Boot y Angular</strong>. Diseño APIs por capas, interfaces modulares e integraciones con IA/RAG, combinando ingeniería de software con auditoría ofensiva en <strong>Kali Linux</strong> bajo directrices <strong>OWASP Top 10</strong>.
         </p>
 
         <div class="hero-actions">
           <a href="#projects" class="btn primary" data-i18n="hero.portfolio">
-            <i class="fas fa-folder-open"></i> Ver Proyectos
+            <i class="fas fa-folder-open" aria-hidden="true"></i> Ver Proyectos
           </a>
           <a href="#contact" class="btn secondary" data-i18n="hero.contact">
-            <i class="fas fa-paper-plane"></i> Contáctame
+            <i class="fas fa-paper-plane" aria-hidden="true"></i> Contáctame
           </a>
-          <button onclick="generatePDF()" class="btn secondary" data-i18n="hero.cvBtn">
-            <i class="fas fa-download"></i> Descargar CV
+          <button type="button" onclick="generatePDF()" class="btn secondary" data-cv-trigger data-i18n="hero.cvBtn">
+            <i class="fas fa-download" aria-hidden="true"></i> Descargar CV
           </button>
         </div>
-        
+
         <div class="social-hero">
-          <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="mailto:veramichael617@gmail.com" title="Enviar correo"><i class="fas fa-envelope"></i></a>
-          <a href="https://wa.me/573246127856" target="_blank" rel="noopener noreferrer" title="WhatsApp (+57 3246127856)"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Maicol Vera" title="GitHub">
+            <i class="fab fa-github" aria-hidden="true"></i>
+          </a>
+          <!-- TODO: Agregar enlace real de LinkedIn cuando el usuario proporcione su URL -->
+          <a href="mailto:veramichael617@gmail.com" aria-label="Enviar correo a veramichael617@gmail.com" title="Enviar correo">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+          </a>
+          <a href="https://wa.me/573246127856" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp (+57 324 612 7856)" title="WhatsApp (+57 3246127856)">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
 
@@ -100,35 +105,35 @@
       <div class="hero-visual" data-aos="fade-left">
         <div class="code-window">
           <div class="window-header">
-            <div class="window-dots">
+            <div class="window-dots" aria-hidden="true">
               <span class="dot red"></span>
               <span class="dot yellow"></span>
               <span class="dot green"></span>
             </div>
             <div class="window-title">
-              <i class="fas fa-terminal"></i> <span id="codeFileName">Developer.java</span>
+              <i class="fas fa-terminal" aria-hidden="true"></i> <span id="codeFileName">Developer.java</span>
             </div>
-            <button class="window-copy-btn" id="copyCodeBtn" onclick="copySnippet()" title="Copiar código al portapapeles" aria-label="Copiar código">
-              <i class="far fa-copy"></i>
-            </button>
-          </div>
-          
-          <div class="window-tabs">
-            <button class="tab-btn active" onclick="switchCodeTab('java')">
-              <i class="fab fa-java"></i> Developer.java
-            </button>
-            <button class="tab-btn" onclick="switchCodeTab('ts')">
-              <i class="fab fa-js-square"></i> stack.ts
-            </button>
-            <button class="tab-btn" onclick="switchCodeTab('sh')">
-              <i class="fas fa-play"></i> pipeline.sh
+            <button type="button" class="window-copy-btn" id="copyCodeBtn" onclick="copySnippet()" title="Copiar código al portapapeles" aria-label="Copiar código al portapapeles">
+              <i class="far fa-copy" aria-hidden="true"></i>
             </button>
           </div>
 
-          <div class="code-body">
+          <div class="window-tabs" role="tablist" aria-label="Archivos del perfil" data-i18n-aria="code.tablistAria">
+            <button type="button" class="tab-btn active" id="tab-java" role="tab" aria-selected="true" aria-controls="codePanel" tabindex="0" onclick="switchCodeTab('java')">
+              <i class="fab fa-java" aria-hidden="true"></i> Developer.java
+            </button>
+            <button type="button" class="tab-btn" id="tab-ts" role="tab" aria-selected="false" aria-controls="codePanel" tabindex="-1" onclick="switchCodeTab('ts')">
+              <i class="fab fa-js-square" aria-hidden="true"></i> stack.ts
+            </button>
+            <button type="button" class="tab-btn" id="tab-sec" role="tab" aria-selected="false" aria-controls="codePanel" tabindex="-1" onclick="switchCodeTab('sec')">
+              <i class="fas fa-shield-halved" aria-hidden="true"></i> security.md
+            </button>
+          </div>
+
+          <div class="code-body" id="codePanel" role="tabpanel" aria-labelledby="tab-java" tabindex="0">
             <pre id="codeSnippet"><code><span class="keyword">public class</span> <span class="class-name">Developer</span> {
   <span class="type">String</span> name = <span class="string">"Maicol Vera"</span>;
-  <span class="type">String</span> role = <span class="string">"Full Stack & Jr. Adv. Pentester"</span>;
+  <span class="type">String</span> role = <span class="string">"Full Stack &amp; Jr. Adv. Pentester"</span>;
   <span class="type">String</span> education = <span class="string">"Tecnólogo ADSO - SENA"</span>;
   <span class="type">String</span>[] coreStack = {
     <span class="string">"Java"</span>, <span class="string">"Spring Boot"</span>, <span class="string">"Angular"</span>,
@@ -145,109 +150,118 @@
       </div>
     </header>
 
-    <!-- Metrics Quick Strip -->
-    <section class="metrics-strip" data-aos="fade-up">
-      <div class="metric-box">
-        <span class="metric-idx">// 01</span>
-        <span class="metric-num">ADSO</span>
-        <span class="metric-label" data-i18n="metrics.adso">SENA en Formación</span>
-      </div>
-      <div class="metric-box">
-        <span class="metric-idx">// 02</span>
-        <span class="metric-num">+12</span>
-        <span class="metric-label" data-i18n="metrics.projects">Proyectos Construidos</span>
-      </div>
-      <div class="metric-box">
-        <span class="metric-idx">// 03</span>
-        <span class="metric-num">Core</span>
-        <span class="metric-label" data-i18n="metrics.stack">Java • Spring • Angular</span>
-      </div>
-      <div class="metric-box">
-        <span class="metric-idx">// 04</span>
-        <span class="metric-num">100%</span>
-        <span class="metric-label" data-i18n="metrics.commitment">Compromiso & Clean Code</span>
-      </div>
+    <!-- Profile Highlights Strip (Interactive Anchor Cards) -->
+    <section class="metrics-strip" data-aos="fade-up" aria-label="Resumen del perfil" data-i18n-aria="metrics.aria">
+      <a href="#experience" class="metric-box">
+        <div class="metric-top">
+          <span class="metric-idx">01</span>
+          <i class="fas fa-graduation-cap metric-icon" aria-hidden="true"></i>
+        </div>
+        <span class="metric-num" data-i18n="metrics.m1Title">ADSO · SENA</span>
+        <span class="metric-label" data-i18n="metrics.m1Desc">Tecnólogo en formación · UML, SQL y Scrum</span>
+      </a>
+      <a href="#projects" class="metric-box">
+        <div class="metric-top">
+          <span class="metric-idx">02</span>
+          <i class="fas fa-cubes metric-icon" aria-hidden="true"></i>
+        </div>
+        <span class="metric-num" data-i18n="metrics.m2Title">11 Proyectos</span>
+        <span class="metric-label" data-i18n="metrics.m2Desc">Backend Java, IA/RAG, Angular, React y Mobile</span>
+      </a>
+      <a href="#skills" class="metric-box">
+        <div class="metric-top">
+          <span class="metric-idx">03</span>
+          <i class="fas fa-layer-group metric-icon" aria-hidden="true"></i>
+        </div>
+        <span class="metric-num" data-i18n="metrics.m3Title">Full Stack Core</span>
+        <span class="metric-label" data-i18n="metrics.m3Desc">Java 21 · Spring Boot · Angular · Docker</span>
+      </a>
+      <a href="#about" class="metric-box">
+        <div class="metric-top">
+          <span class="metric-idx">04</span>
+          <i class="fas fa-shield-halved metric-icon" aria-hidden="true"></i>
+        </div>
+        <span class="metric-num" data-i18n="metrics.m4Title">Security-First</span>
+        <span class="metric-label" data-i18n="metrics.m4Desc">Kali Linux · OWASP Top 10 · Burp Suite · JWT</span>
+      </a>
     </section>
 
     <!-- Sobre mí (About Me) -->
     <section id="about" class="section about">
       <div class="section-header" data-aos="fade-up">
-        <span class="section-tag" data-i18n="about.tag"><i class="fas fa-user"></i> Conoce mi enfoque</span>
-        <h3 class="section-title" data-i18n="about.title">Sobre mí</h3>
-        <p class="section-subtitle" data-i18n="about.subtitle">Desarrollo soluciones de software confiables, escalables y orientadas a resultados</p>
+        <span class="section-tag" data-i18n="about.tag"><i class="fas fa-user" aria-hidden="true"></i> Conoce mi enfoque</span>
+        <h2 class="section-title" data-i18n="about.title">Sobre mí</h2>
+        <p class="section-subtitle" data-i18n="about.subtitle">Cómo paso de los requerimientos a software probado, mantenible y seguro</p>
       </div>
-      
+
       <div class="about-grid">
         <div class="about-narrative" data-aos="fade-right">
           <p data-i18n="about.text1">
-            Soy aprendiz del programa <strong>Tecnólogo en Análisis y Desarrollo de Software (ADSO)</strong> del <strong>SENA</strong>. Cuento con una sólida formación práctica en la arquitectura y desarrollo de aplicaciones web y servicios backend.
+            Soy aprendiz del programa <strong>Tecnólogo en Análisis y Desarrollo de Software (ADSO)</strong> en el <strong>SENA</strong>, con práctica directa diseñando aplicaciones web, modelos relacionales en MySQL/PostgreSQL y APIs REST por capas con Java y Spring Boot.
           </p>
           <p data-i18n="about.text2">
-            Me destaco por mi capacidad para analizar requerimientos técnicos, estructurar bases de datos relacionales, diseñar APIs REST bajo arquitecturas por capas y construir interfaces frontend modulares. Además, he explorado proyectos de innovación integrando <strong>RAG (Retrieval-Augmented Generation)</strong> y modelos de Inteligencia Artificial.
+            Complemento el desarrollo Full Stack con proyectos de <strong>IA aplicada (RAG sobre ChromaDB y Notion API)</strong> y formación activa en <strong>Ciberseguridad y Pentesting Junior Avanzado</strong> en <strong>Kali Linux</strong> (Burp Suite, Nmap, Wireshark y Metasploit bajo <strong>OWASP Top 10</strong>), cuidando validación, autenticación y permisos desde el código.
           </p>
           <p data-i18n="about.text3">
-            Mi experiencia previa en atención al cliente y soporte técnico complementa mi perfil, brindándome una gran empatía hacia las necesidades del usuario final y facilidad para comunicarme eficazmente en equipos ágiles.
-          </p>
-          <p data-i18n="about.text4">
-            Paralelamente, cuento con formación y práctica activa en <strong>Ciberseguridad y Hacking Ético en nivel Junior Avanzado</strong>, desenvolviéndome con soltura en entornos de auditoría como <strong>Kali Linux</strong>. Domino herramientas de reconocimiento, intercepción y análisis de vulnerabilidades como <strong>Burp Suite, Nmap, Wireshark y Metasploit</strong>, aplicando las directrices del <strong>OWASP Top 10</strong>. Esta perspectiva me permite adoptar un enfoque <em>Security-First</em>, blindando APIs y arquitecturas contra vectores de ataque comunes desde su concepción.
+            Mi experiencia previa en atención al cliente y soporte técnico me dio criterio para escuchar al usuario final, documentar incidencias con precisión y colaborar de forma clara en equipos ágiles bajo Scrum y Git.
           </p>
 
           <div class="highlight-box">
-            <h5><i class="fas fa-bug"></i> <span data-i18n="about.debugTitle">Filosofía de Depuración & Resolución</span></h5>
+            <h3><i class="fas fa-bug" aria-hidden="true"></i> <span data-i18n="about.debugTitle">Filosofía de Depuración &amp; Resolución</span></h3>
             <p data-i18n="about.debugDesc">
-              Afronto los errores de forma metódica: análisis riguroso mediante DevTools y consola, pruebas sobre bloques de código y aislamiento progresivo hasta erradicar la causa raíz.
+              Afronto los errores de forma metódica: inspección en DevTools y logs, pruebas sobre bloques aislados y trazabilidad paso a paso hasta eliminar la causa raíz.
             </p>
           </div>
         </div>
-        
+
         <div class="about-pillars" data-aos="fade-left">
           <div class="pillar-card">
-            <div class="pillar-icon">
+            <div class="pillar-icon" aria-hidden="true">
               <i class="fas fa-server"></i>
             </div>
             <div class="pillar-info">
-              <h4 data-i18n="about.pillar1.title">Backend & Arquitectura</h4>
-              <p data-i18n="about.pillar1.desc">Servicios robustos con Java, Spring Boot, APIs REST, POO, JPA/Hibernate y persistencia en MySQL y PostgreSQL.</p>
+              <h3 data-i18n="about.pillar1.title">Backend &amp; Arquitectura</h3>
+              <p data-i18n="about.pillar1.desc">APIs REST en Java 21 y Spring Boot con arquitectura en capas, JPA/Hibernate, Flyway y persistencia en MySQL y PostgreSQL.</p>
             </div>
           </div>
 
           <div class="pillar-card">
-            <div class="pillar-icon blue">
+            <div class="pillar-icon blue" aria-hidden="true">
               <i class="fab fa-angular"></i>
             </div>
             <div class="pillar-info">
-              <h4 data-i18n="about.pillar2.title">Frontend Dinámico</h4>
-              <p data-i18n="about.pillar2.desc">Single Page Applications con Angular (v17+), TypeScript, React, componentes modulares y formularios reactivos.</p>
+              <h3 data-i18n="about.pillar2.title">Frontend Dinámico</h3>
+              <p data-i18n="about.pillar2.desc">SPAs con Angular (v17+), TypeScript y React mediante componentes standalone, RxJS y formularios reactivos validados.</p>
             </div>
           </div>
 
           <div class="pillar-card">
-            <div class="pillar-icon purple">
+            <div class="pillar-icon purple" aria-hidden="true">
               <i class="fas fa-brain"></i>
             </div>
             <div class="pillar-info">
-              <h4 data-i18n="about.pillar3.title">Innovación & IA Aplicada</h4>
-              <p data-i18n="about.pillar3.desc">Desarrollo de pipelines RAG, bases vectoriales (ChromaDB), Notion API e integración con LLMs.</p>
+              <h3 data-i18n="about.pillar3.title">Innovación &amp; IA Aplicada</h3>
+              <p data-i18n="about.pillar3.desc">Pipelines RAG en Python con chunking semántico, embeddings en ChromaDB, Notion API e integración con modelos LLM.</p>
             </div>
           </div>
 
           <div class="pillar-card">
-            <div class="pillar-icon amber">
+            <div class="pillar-icon amber" aria-hidden="true">
               <i class="fas fa-tasks"></i>
             </div>
             <div class="pillar-info">
-              <h4 data-i18n="about.pillar4.title">Metodologías Ágiles & Scrum</h4>
-              <p data-i18n="about.pillar4.desc">Planificación de Sprints, Product Backlog, historias de usuario, diagramas UML y control con Git/GitHub.</p>
+              <h3 data-i18n="about.pillar4.title">Metodologías Ágiles &amp; Scrum</h3>
+              <p data-i18n="about.pillar4.desc">Planificación de Sprints, Product Backlog, historias de usuario, diagramación UML y flujo colaborativo con Git/GitHub.</p>
             </div>
           </div>
 
           <div class="pillar-card">
-            <div class="pillar-icon red">
+            <div class="pillar-icon red" aria-hidden="true">
               <i class="fas fa-user-secret"></i>
             </div>
             <div class="pillar-info">
-              <h4 data-i18n="about.pillar5.title">Ciberseguridad & Pentesting Jr. Avanzado</h4>
-              <p data-i18n="about.pillar5.desc">Seguridad ofensiva y defensiva en Kali Linux, auditorías con Burp Suite, reconocimiento con Nmap y mitigación OWASP Top 10.</p>
+              <h3 data-i18n="about.pillar5.title">Ciberseguridad &amp; Pentesting Jr. Avanzado</h3>
+              <p data-i18n="about.pillar5.desc">Auditoría web y de red en Kali Linux con Burp Suite, Nmap y Wireshark, endurecimiento JWT y mitigación OWASP Top 10.</p>
             </div>
           </div>
         </div>
@@ -257,162 +271,162 @@
     <!-- Habilidades Técnicas (Skills) -->
     <section id="skills" class="section skills">
       <div class="section-header" data-aos="fade-up">
-        <span class="section-tag" data-i18n="skills.tag"><i class="fas fa-laptop-code"></i> Stack & Tecnologías</span>
-        <h3 class="section-title" data-i18n="skills.title">Habilidades Técnicas</h3>
-        <p class="section-subtitle" data-i18n="skills.subtitle">Herramientas y tecnologías que aplico con criterio técnico y solvencia práctica</p>
+        <span class="section-tag" data-i18n="skills.tag"><i class="fas fa-laptop-code" aria-hidden="true"></i> Stack &amp; Tecnologías</span>
+        <h2 class="section-title" data-i18n="skills.title">Habilidades Técnicas</h2>
+        <p class="section-subtitle" data-i18n="skills.subtitle">Stack principal resaltado (Java, Spring, Angular, SQL y Seguridad) junto a tecnologías complementarias usadas en proyectos</p>
       </div>
 
       <div class="skills-container">
-        
+
         <!-- Backend -->
         <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
           <div class="skill-cat-header">
-            <div class="skill-cat-icon"><i class="fas fa-server"></i></div>
-            <h4 data-i18n="skills.backend">Backend & APIs</h4>
+            <div class="skill-cat-icon" aria-hidden="true"><i class="fas fa-server"></i></div>
+            <h3 data-i18n="skills.backend">Backend &amp; APIs</h3>
           </div>
           <div class="skills-grid">
-            <span class="skill-chip featured"><i class="fab fa-java"></i> Java 21 (POO)</span>
-            <span class="skill-chip featured"><i class="fas fa-leaf"></i> Spring Boot 3 / 4</span>
-            <span class="skill-chip"><i class="fas fa-network-wired"></i> APIs RESTful</span>
-            <span class="skill-chip"><i class="fas fa-user-shield"></i> Spring Security + JWT</span>
-            <span class="skill-chip"><i class="fas fa-database"></i> JPA / Hibernate</span>
-            <span class="skill-chip"><i class="fas fa-code-branch"></i> Flyway (Migraciones)</span>
-            <span class="skill-chip"><i class="fas fa-book-open"></i> OpenAPI / Swagger</span>
-            <span class="skill-chip"><i class="fab fa-node-js"></i> Node.js / Express (TS)</span>
-            <span class="skill-chip"><i class="fas fa-shapes"></i> Prisma ORM</span>
-            <span class="skill-chip"><i class="fab fa-php"></i> PHP / Laravel</span>
-            <span class="skill-chip"><i class="fas fa-layer-group"></i> Arquitectura en Capas</span>
+            <span class="skill-chip featured"><i class="fab fa-java" aria-hidden="true"></i> Java 21 (POO)</span>
+            <span class="skill-chip featured"><i class="fas fa-leaf" aria-hidden="true"></i> Spring Boot 3 / 4</span>
+            <span class="skill-chip"><i class="fas fa-network-wired" aria-hidden="true"></i> APIs RESTful</span>
+            <span class="skill-chip"><i class="fas fa-user-shield" aria-hidden="true"></i> Spring Security + JWT</span>
+            <span class="skill-chip"><i class="fas fa-database" aria-hidden="true"></i> JPA / Hibernate</span>
+            <span class="skill-chip"><i class="fas fa-code-branch" aria-hidden="true"></i> Flyway (Migraciones)</span>
+            <span class="skill-chip"><i class="fas fa-book-open" aria-hidden="true"></i> OpenAPI / Swagger</span>
+            <span class="skill-chip"><i class="fab fa-node-js" aria-hidden="true"></i> Node.js / Express (TS)</span>
+            <span class="skill-chip"><i class="fas fa-shapes" aria-hidden="true"></i> Prisma ORM</span>
+            <span class="skill-chip"><i class="fab fa-php" aria-hidden="true"></i> PHP / Laravel</span>
+            <span class="skill-chip"><i class="fas fa-layer-group" aria-hidden="true"></i> Arquitectura en Capas</span>
           </div>
         </div>
 
         <!-- Frontend -->
         <div class="skill-category" data-aos="fade-up" data-aos-delay="150">
           <div class="skill-cat-header">
-            <div class="skill-cat-icon"><i class="fas fa-desktop"></i></div>
-            <h4 data-i18n="skills.frontend">Frontend Moderno</h4>
+            <div class="skill-cat-icon" aria-hidden="true"><i class="fas fa-desktop"></i></div>
+            <h3 data-i18n="skills.frontend">Frontend Moderno</h3>
           </div>
           <div class="skills-grid">
-            <span class="skill-chip featured"><i class="fab fa-angular"></i> Angular (v17 – v21)</span>
-            <span class="skill-chip featured"><i class="fab fa-js"></i> TypeScript</span>
-            <span class="skill-chip featured"><i class="fab fa-react"></i> React + Vite</span>
-            <span class="skill-chip"><i class="fas fa-n"></i> Next.js (App Router)</span>
-            <span class="skill-chip"><i class="fab fa-js-square"></i> JavaScript (ES6+)</span>
-            <span class="skill-chip"><i class="fas fa-water"></i> RxJS</span>
-            <span class="skill-chip"><i class="fas fa-palette"></i> Angular Material</span>
-            <span class="skill-chip"><i class="fas fa-wind"></i> Tailwind CSS</span>
-            <span class="skill-chip"><i class="fab fa-html5"></i> HTML5 Semántico</span>
-            <span class="skill-chip"><i class="fab fa-css3-alt"></i> CSS3 / Flexbox / Grid</span>
-            <span class="skill-chip"><i class="fas fa-chart-line"></i> Chart.js / Recharts</span>
-            <span class="skill-chip"><i class="fas fa-mobile-alt"></i> Diseño Responsive</span>
+            <span class="skill-chip featured"><i class="fab fa-angular" aria-hidden="true"></i> Angular (v17 - v21)</span>
+            <span class="skill-chip featured"><i class="fab fa-js" aria-hidden="true"></i> TypeScript</span>
+            <span class="skill-chip featured"><i class="fab fa-react" aria-hidden="true"></i> React + Vite</span>
+            <span class="skill-chip"><i class="fas fa-n" aria-hidden="true"></i> Next.js (App Router)</span>
+            <span class="skill-chip"><i class="fab fa-js-square" aria-hidden="true"></i> JavaScript (ES6+)</span>
+            <span class="skill-chip"><i class="fas fa-water" aria-hidden="true"></i> RxJS</span>
+            <span class="skill-chip"><i class="fas fa-palette" aria-hidden="true"></i> Angular Material</span>
+            <span class="skill-chip"><i class="fas fa-wind" aria-hidden="true"></i> Tailwind CSS</span>
+            <span class="skill-chip"><i class="fab fa-html5" aria-hidden="true"></i> HTML5 Semántico</span>
+            <span class="skill-chip"><i class="fab fa-css3-alt" aria-hidden="true"></i> CSS3 / Flexbox / Grid</span>
+            <span class="skill-chip"><i class="fas fa-chart-line" aria-hidden="true"></i> Chart.js / Recharts</span>
+            <span class="skill-chip"><i class="fas fa-mobile-alt" aria-hidden="true"></i> Diseño Responsive</span>
           </div>
         </div>
 
         <!-- Bases de Datos -->
         <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
           <div class="skill-cat-header">
-            <div class="skill-cat-icon"><i class="fas fa-database"></i></div>
-            <h4 data-i18n="skills.databases">Bases de Datos & Cloud</h4>
+            <div class="skill-cat-icon" aria-hidden="true"><i class="fas fa-database"></i></div>
+            <h3 data-i18n="skills.databases">Bases de Datos &amp; Cloud</h3>
           </div>
           <div class="skills-grid">
-            <span class="skill-chip featured"><i class="fas fa-database"></i> MySQL</span>
-            <span class="skill-chip featured"><i class="fas fa-database"></i> PostgreSQL</span>
-            <span class="skill-chip"><i class="fas fa-code"></i> Consultas SQL / CRUD</span>
-            <span class="skill-chip"><i class="fas fa-bolt"></i> Supabase</span>
-            <span class="skill-chip"><i class="fas fa-fire"></i> Firebase</span>
-            <span class="skill-chip"><i class="fas fa-table"></i> MariaDB / SQLite / H2</span>
-            <span class="skill-chip"><i class="fas fa-box-archive"></i> MinIO (Object Storage)</span>
-            <span class="skill-chip"><i class="fas fa-project-diagram"></i> Modelado Relacional</span>
+            <span class="skill-chip featured"><i class="fas fa-database" aria-hidden="true"></i> MySQL</span>
+            <span class="skill-chip featured"><i class="fas fa-database" aria-hidden="true"></i> PostgreSQL</span>
+            <span class="skill-chip"><i class="fas fa-code" aria-hidden="true"></i> Consultas SQL / CRUD</span>
+            <span class="skill-chip"><i class="fas fa-bolt" aria-hidden="true"></i> Supabase</span>
+            <span class="skill-chip"><i class="fas fa-fire" aria-hidden="true"></i> Firebase</span>
+            <span class="skill-chip"><i class="fas fa-table" aria-hidden="true"></i> MariaDB / SQLite / H2</span>
+            <span class="skill-chip"><i class="fas fa-box-archive" aria-hidden="true"></i> MinIO (Object Storage)</span>
+            <span class="skill-chip"><i class="fas fa-project-diagram" aria-hidden="true"></i> Modelado Relacional</span>
           </div>
         </div>
 
         <!-- DevOps & Entorno -->
         <div class="skill-category" data-aos="fade-up" data-aos-delay="250">
           <div class="skill-cat-header">
-            <div class="skill-cat-icon"><i class="fas fa-tools"></i></div>
-            <h4 data-i18n="skills.tools">DevOps & Herramientas</h4>
+            <div class="skill-cat-icon" aria-hidden="true"><i class="fas fa-tools"></i></div>
+            <h3 data-i18n="skills.tools">DevOps &amp; Herramientas</h3>
           </div>
           <div class="skills-grid">
-            <span class="skill-chip featured"><i class="fab fa-git-alt"></i> Git & GitHub</span>
-            <span class="skill-chip featured"><i class="fab fa-docker"></i> Docker & Compose</span>
-            <span class="skill-chip"><i class="fab fa-linux"></i> Linux (Bash / Terminal)</span>
-            <span class="skill-chip"><i class="fas fa-paper-plane"></i> Postman / Swagger</span>
-            <span class="skill-chip"><i class="fas fa-code"></i> VS Code & Neovim</span>
-            <span class="skill-chip"><i class="fas fa-cube"></i> Distrobox</span>
-            <span class="skill-chip"><i class="fas fa-heart-pulse"></i> Spring Actuator</span>
-            <span class="skill-chip"><i class="fab fa-github"></i> GitHub Pages</span>
+            <span class="skill-chip featured"><i class="fab fa-git-alt" aria-hidden="true"></i> Git &amp; GitHub</span>
+            <span class="skill-chip featured"><i class="fab fa-docker" aria-hidden="true"></i> Docker &amp; Compose</span>
+            <span class="skill-chip"><i class="fab fa-linux" aria-hidden="true"></i> Linux (Bash / Terminal)</span>
+            <span class="skill-chip"><i class="fas fa-paper-plane" aria-hidden="true"></i> Postman / Swagger</span>
+            <span class="skill-chip"><i class="fas fa-code" aria-hidden="true"></i> VS Code &amp; Neovim</span>
+            <span class="skill-chip"><i class="fas fa-cube" aria-hidden="true"></i> Distrobox</span>
+            <span class="skill-chip"><i class="fas fa-heart-pulse" aria-hidden="true"></i> Spring Actuator</span>
+            <span class="skill-chip"><i class="fab fa-github" aria-hidden="true"></i> GitHub Pages</span>
           </div>
         </div>
 
         <!-- Ciberseguridad & Pentesting -->
         <div class="skill-category" data-aos="fade-up" data-aos-delay="260">
           <div class="skill-cat-header">
-            <div class="skill-cat-icon"><i class="fas fa-shield-halved"></i></div>
-            <h4 data-i18n="skills.security">Ciberseguridad & Pentesting</h4>
+            <div class="skill-cat-icon" aria-hidden="true"><i class="fas fa-shield-halved"></i></div>
+            <h3 data-i18n="skills.security">Ciberseguridad &amp; Pentesting</h3>
           </div>
           <div class="skills-grid">
-            <span class="skill-chip featured"><i class="fab fa-linux"></i> Kali Linux</span>
-            <span class="skill-chip featured"><i class="fas fa-user-secret"></i> Pentester / Hacker Ético (Jr. Av.)</span>
-            <span class="skill-chip featured"><i class="fas fa-bug-slash"></i> OWASP Top 10</span>
-            <span class="skill-chip"><i class="fas fa-spider"></i> Burp Suite (Proxy & Intercepción)</span>
-            <span class="skill-chip"><i class="fas fa-network-wired"></i> Nmap (Reconocimiento & Puertos)</span>
-            <span class="skill-chip"><i class="fas fa-ethernet"></i> Wireshark (Análisis de Tráfico)</span>
-            <span class="skill-chip"><i class="fas fa-terminal"></i> Metasploit Framework</span>
-            <span class="skill-chip"><i class="fas fa-lock"></i> Seguridad en APIs & JWT Hardening</span>
-            <span class="skill-chip"><i class="fas fa-shield-virus"></i> Análisis de Vulnerabilidades</span>
-            <span class="skill-chip"><i class="fas fa-code"></i> Sanitización & Validación Estricta</span>
+            <span class="skill-chip featured"><i class="fab fa-linux" aria-hidden="true"></i> Kali Linux</span>
+            <span class="skill-chip featured"><i class="fas fa-user-secret" aria-hidden="true"></i> Pentester / Hacker Ético (Jr. Av.)</span>
+            <span class="skill-chip featured"><i class="fas fa-bug-slash" aria-hidden="true"></i> OWASP Top 10</span>
+            <span class="skill-chip"><i class="fas fa-spider" aria-hidden="true"></i> Burp Suite (Proxy &amp; Intercepción)</span>
+            <span class="skill-chip"><i class="fas fa-network-wired" aria-hidden="true"></i> Nmap (Reconocimiento &amp; Puertos)</span>
+            <span class="skill-chip"><i class="fas fa-ethernet" aria-hidden="true"></i> Wireshark (Análisis de Tráfico)</span>
+            <span class="skill-chip"><i class="fas fa-terminal" aria-hidden="true"></i> Metasploit Framework</span>
+            <span class="skill-chip"><i class="fas fa-lock" aria-hidden="true"></i> Seguridad en APIs &amp; JWT Hardening</span>
+            <span class="skill-chip"><i class="fas fa-shield-virus" aria-hidden="true"></i> Análisis de Vulnerabilidades</span>
+            <span class="skill-chip"><i class="fas fa-code" aria-hidden="true"></i> Sanitización &amp; Validación Estricta</span>
           </div>
         </div>
 
         <!-- Mobile & Tiempo Real -->
         <div class="skill-category" data-aos="fade-up" data-aos-delay="275">
           <div class="skill-cat-header">
-            <div class="skill-cat-icon"><i class="fas fa-mobile-screen-button"></i></div>
-            <h4 data-i18n="skills.mobile">Mobile, PWA &amp; Tiempo Real</h4>
+            <div class="skill-cat-icon" aria-hidden="true"><i class="fas fa-mobile-screen-button"></i></div>
+            <h3 data-i18n="skills.mobile">Mobile, PWA &amp; Tiempo Real</h3>
           </div>
           <div class="skills-grid">
-            <span class="skill-chip featured"><i class="fab fa-react"></i> React Native + Expo</span>
-            <span class="skill-chip"><i class="fas fa-route"></i> Expo Router / React Navigation</span>
-            <span class="skill-chip"><i class="fas fa-plug"></i> WebSockets (STOMP / SockJS)</span>
-            <span class="skill-chip"><i class="fas fa-bolt"></i> Pusher (Realtime)</span>
-            <span class="skill-chip"><i class="fas fa-bell"></i> PWA + Web Push</span>
-            <span class="skill-chip"><i class="fas fa-key"></i> OAuth / Google Sign-In</span>
-            <span class="skill-chip"><i class="fas fa-qrcode"></i> QR (generación y escaneo)</span>
-            <span class="skill-chip"><i class="fas fa-map-location-dot"></i> Leaflet (Mapas)</span>
+            <span class="skill-chip featured"><i class="fab fa-react" aria-hidden="true"></i> React Native + Expo</span>
+            <span class="skill-chip"><i class="fas fa-route" aria-hidden="true"></i> Expo Router / React Navigation</span>
+            <span class="skill-chip"><i class="fas fa-plug" aria-hidden="true"></i> WebSockets (STOMP / SockJS)</span>
+            <span class="skill-chip"><i class="fas fa-bolt" aria-hidden="true"></i> Pusher (Realtime)</span>
+            <span class="skill-chip"><i class="fas fa-bell" aria-hidden="true"></i> PWA + Web Push</span>
+            <span class="skill-chip"><i class="fas fa-key" aria-hidden="true"></i> OAuth / Google Sign-In</span>
+            <span class="skill-chip"><i class="fas fa-qrcode" aria-hidden="true"></i> QR (generación y escaneo)</span>
+            <span class="skill-chip"><i class="fas fa-map-location-dot" aria-hidden="true"></i> Leaflet (Mapas)</span>
           </div>
         </div>
 
         <!-- Innovación & IA -->
         <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
           <div class="skill-cat-header">
-            <div class="skill-cat-icon"><i class="fas fa-brain"></i></div>
-            <h4 data-i18n="skills.ai">Innovación & IA (RAG)</h4>
+            <div class="skill-cat-icon" aria-hidden="true"><i class="fas fa-brain"></i></div>
+            <h3 data-i18n="skills.ai">Innovación &amp; IA (RAG)</h3>
           </div>
           <div class="skills-grid">
-            <span class="skill-chip featured"><i class="fas fa-diagram-project"></i> RAG Pipelines</span>
-            <span class="skill-chip featured"><i class="fas fa-database"></i> ChromaDB (Vector DB)</span>
-            <span class="skill-chip"><i class="fab fa-python"></i> Python</span>
-            <span class="skill-chip"><i class="fas fa-link"></i> LangChain / LangGraph</span>
-            <span class="skill-chip"><i class="fas fa-vector-square"></i> Sentence-Transformers</span>
-            <span class="skill-chip"><i class="fas fa-file-lines"></i> Notion API</span>
-            <span class="skill-chip"><i class="fas fa-robot"></i> OpenAI / Gemini / OpenRouter</span>
-            <span class="skill-chip"><i class="fas fa-microchip"></i> LLMs locales (Ollama)</span>
+            <span class="skill-chip featured"><i class="fas fa-diagram-project" aria-hidden="true"></i> RAG Pipelines</span>
+            <span class="skill-chip featured"><i class="fas fa-database" aria-hidden="true"></i> ChromaDB (Vector DB)</span>
+            <span class="skill-chip"><i class="fab fa-python" aria-hidden="true"></i> Python</span>
+            <span class="skill-chip"><i class="fas fa-link" aria-hidden="true"></i> LangChain / LangGraph</span>
+            <span class="skill-chip"><i class="fas fa-vector-square" aria-hidden="true"></i> Sentence-Transformers</span>
+            <span class="skill-chip"><i class="fas fa-file-lines" aria-hidden="true"></i> Notion API</span>
+            <span class="skill-chip"><i class="fas fa-robot" aria-hidden="true"></i> OpenAI / Gemini / OpenRouter</span>
+            <span class="skill-chip"><i class="fas fa-microchip" aria-hidden="true"></i> LLMs locales (Ollama)</span>
           </div>
         </div>
 
         <!-- Metodologías & Prácticas -->
         <div class="skill-category" data-aos="fade-up" data-aos-delay="350">
           <div class="skill-cat-header">
-            <div class="skill-cat-icon"><i class="fas fa-clipboard-check"></i></div>
-            <h4 data-i18n="skills.practices">Metodologías & Prácticas</h4>
+            <div class="skill-cat-icon" aria-hidden="true"><i class="fas fa-clipboard-check"></i></div>
+            <h3 data-i18n="skills.practices">Metodologías &amp; Prácticas</h3>
           </div>
           <div class="skills-grid">
-            <span class="skill-chip featured"><i class="fas fa-users-cog"></i> Scrum & Agile</span>
-            <span class="skill-chip featured"><i class="fas fa-bug"></i> Depuración Metódica</span>
-            <span class="skill-chip"><i class="fas fa-sitemap"></i> Diagramación UML</span>
-            <span class="skill-chip"><i class="fas fa-list-check"></i> Casos de Uso</span>
-            <span class="skill-chip"><i class="fas fa-shield-alt"></i> Clean Code</span>
-            <span class="skill-chip"><i class="fas fa-vial"></i> Vitest / JUnit / Testing Library</span>
-            <span class="skill-chip"><i class="fas fa-broom"></i> ESLint / Prettier</span>
+            <span class="skill-chip featured"><i class="fas fa-users-cog" aria-hidden="true"></i> Scrum &amp; Agile</span>
+            <span class="skill-chip featured"><i class="fas fa-bug" aria-hidden="true"></i> Depuración Metódica</span>
+            <span class="skill-chip"><i class="fas fa-sitemap" aria-hidden="true"></i> Diagramación UML</span>
+            <span class="skill-chip"><i class="fas fa-list-check" aria-hidden="true"></i> Casos de Uso</span>
+            <span class="skill-chip"><i class="fas fa-shield-alt" aria-hidden="true"></i> Clean Code</span>
+            <span class="skill-chip"><i class="fas fa-vial" aria-hidden="true"></i> Vitest / JUnit / Testing Library</span>
+            <span class="skill-chip"><i class="fas fa-broom" aria-hidden="true"></i> ESLint / Prettier</span>
           </div>
         </div>
 
@@ -422,48 +436,57 @@
     <!-- Proyectos Destacados (Projects) -->
     <section id="projects" class="section projects">
       <div class="section-header" data-aos="fade-up">
-        <span class="section-tag" data-i18n="projects.tag"><i class="fas fa-cubes"></i> Experiencia Práctica</span>
-        <h3 class="section-title" data-i18n="projects.title">Proyectos Destacados</h3>
-        <p class="section-subtitle" data-i18n="projects.subtitle">Soluciones de software donde aplico arquitectura limpia, buenas prácticas e integración de tecnologías modernas</p>
+        <span class="section-tag" data-i18n="projects.tag"><i class="fas fa-cubes" aria-hidden="true"></i> Experiencia Práctica</span>
+        <h2 class="section-title" data-i18n="projects.title">Proyectos Destacados</h2>
+        <p class="section-subtitle" data-i18n="projects.subtitle">11 proyectos reales entre backend Java/Spring, RAG con Python, Angular, React y desarrollo móvil</p>
       </div>
 
       <!-- Filtros de Proyectos -->
-      <div class="projects-filters" data-aos="fade-up">
-        <button class="filter-btn active" data-filter="all" data-i18n="projects.filterAll">Todos</button>
-        <button class="filter-btn" data-filter="fullstack" data-i18n="projects.filterFullstack">Full Stack & Backend</button>
-        <button class="filter-btn" data-filter="ai" data-i18n="projects.filterAI">IA & RAG</button>
-        <button class="filter-btn" data-filter="frontend" data-i18n="projects.filterFrontend">Web & Frontend</button>
-        <button class="filter-btn" data-filter="mobile" data-i18n="projects.filterMobile">Mobile</button>
+      <div class="projects-filters" data-aos="fade-up" role="group" aria-label="Filtrar proyectos por categoría" data-i18n-aria="projects.filterGroup">
+        <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true" data-i18n="projects.filterAll">Todos</button>
+        <button type="button" class="filter-btn" data-filter="fullstack" aria-pressed="false" data-i18n="projects.filterFullstack">Full Stack &amp; Backend</button>
+        <button type="button" class="filter-btn" data-filter="ai" aria-pressed="false" data-i18n="projects.filterAI">IA &amp; RAG</button>
+        <button type="button" class="filter-btn" data-filter="frontend" aria-pressed="false" data-i18n="projects.filterFrontend">Web &amp; Frontend</button>
+        <button type="button" class="filter-btn" data-filter="mobile" aria-pressed="false" data-i18n="projects.filterMobile">Mobile</button>
+      </div>
+
+      <p class="projects-count" id="projectsStatus" role="status" aria-live="polite">Mostrando 11 de 11 proyectos</p>
+
+      <div class="projects-empty" id="projectsEmpty" hidden>
+        <p data-i18n="projects.emptyText">No hay proyectos en esta categoría todavía.</p>
+        <button type="button" class="btn secondary" id="resetFiltersBtn" data-i18n="projects.resetFilters">Ver todos los proyectos</button>
       </div>
 
       <div class="projects-grid">
-        
+
         <!-- Proyecto 1: Mentor-IA -->
-        <article class="project-card featured-badge-card" data-category="ai" data-aos="zoom-in" data-aos-delay="100">
+        <article class="project-card project-card--featured" data-category="ai" data-aos="zoom-in" data-aos-delay="100">
           <div class="project-inner">
             <div class="project-top">
               <div class="project-meta-strip">
-                <span class="project-code">// PRJ-01</span>
-                <span class="project-status-dot"></span>
-                <span class="project-category-tag">IA & RAG / Python</span>
+                <span class="project-code">PRJ-01</span>
+                <span class="project-category-tag">IA &amp; RAG / Python</span>
+                <span class="project-featured-badge" data-i18n="projects.featured">Destacado</span>
               </div>
               <div class="project-actions">
-                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Ver repositorio en GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Ver repositorio de Mentor-IA en GitHub" title="Ver repositorio de Mentor-IA">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
-            
-            <h4 data-i18n="projects.p1.title">Mentor-IA (Motor RAG)</h4>
+
+            <h3 data-i18n="projects.p1.title">Mentor-IA (Motor RAG)</h3>
             <p data-i18n="projects.p1.desc">
-              Arquitectura de recuperación aumentada de información (RAG) construida sobre bases de conocimiento en Notion. Permite consultas semánticas precisas con ranking de relevancia y diagnósticos del índice.
+              Motor de recuperación aumentada (RAG) conectado a bases de conocimiento en Notion. Reconstruye jerarquías, fragmenta documentos por contexto y responde consultas semánticas con ranking de relevancia.
             </p>
 
             <ul class="project-highlights">
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p1.h1">Ingestión jerárquica vía Notion API y chunking semántico.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p1.h2">Almacenamiento vectorial en ChromaDB y búsqueda semántica.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p1.h3">CLI interactivo con diagnósticos y benchmarks de consulta.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p1.h1">Ingestión jerárquica vía Notion API y chunking semántico.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p1.h2">Indexación vectorial en ChromaDB con búsqueda por similitud.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p1.h3">CLI interactivo con diagnóstico de índice y benchmarks de consulta.</span></li>
             </ul>
 
-            <footer>
+            <div class="project-footer">
               <div class="project-tech">
                 <span>Python</span>
                 <span>ChromaDB</span>
@@ -472,7 +495,7 @@
                 <span>Embeddings</span>
                 <span>CLI</span>
               </div>
-            </footer>
+            </div>
           </div>
         </article>
 
@@ -481,27 +504,28 @@
           <div class="project-inner">
             <div class="project-top">
               <div class="project-meta-strip">
-                <span class="project-code">// PRJ-02</span>
-                <span class="project-status-dot"></span>
-                <span class="project-category-tag">Full Stack / Java & Angular</span>
+                <span class="project-code">PRJ-02</span>
+                <span class="project-category-tag">Full Stack / Java &amp; Angular</span>
               </div>
               <div class="project-actions">
-                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Ver repositorio"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Ver repositorio de Sistema de Gestión Empresarial en GitHub" title="Ver repositorio de Sistema de Gestión Empresarial">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
-            
-            <h4 data-i18n="projects.p2.title">Sistema de Gestión Empresarial</h4>
+
+            <h3 data-i18n="projects.p2.title">Sistema de Gestión Empresarial</h3>
             <p data-i18n="projects.p2.desc">
-              Plataforma modular para la administración integral de productos e inventario. Backend desacoplado con operaciones CRUD y persistencia relacional; frontend reactivo con componentes standalone.
+              Plataforma modular para administración de inventario y catálogo. Backend desacoplado con persistencia relacional y frontend reactivo en Angular listo para despliegue en contenedores.
             </p>
 
             <ul class="project-highlights">
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p2.h1">Backend RESTful robusto en Spring Boot con arquitectura en capas.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p2.h2">Frontend dinámico en Angular v17+ con Reactive Forms y validación.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p2.h3">Despliegue orquestado con Docker Compose (builds multi-etapa).</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p2.h1">API REST en Spring Boot por capas (controller, service, repository).</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p2.h2">Frontend en Angular v17+ con componentes standalone y Reactive Forms.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p2.h3">Orquestación con Docker Compose y builds multi-etapa.</span></li>
             </ul>
 
-            <footer>
+            <div class="project-footer">
               <div class="project-tech">
                 <span>Java</span>
                 <span>Spring Boot</span>
@@ -510,36 +534,38 @@
                 <span>MySQL</span>
                 <span>Docker</span>
               </div>
-            </footer>
+            </div>
           </div>
         </article>
 
         <!-- Proyecto 3: Territorio de Niños -->
-        <article class="project-card" data-category="fullstack" data-aos="zoom-in" data-aos-delay="200">
+        <article class="project-card project-card--featured" data-category="fullstack" data-aos="zoom-in" data-aos-delay="200">
           <div class="project-inner">
             <div class="project-top">
               <div class="project-meta-strip">
-                <span class="project-code">// PRJ-03</span>
-                <span class="project-status-dot"></span>
-                <span class="project-category-tag">Full Stack / Spring Boot 4 & Angular 21</span>
+                <span class="project-code">PRJ-03</span>
+                <span class="project-category-tag">Full Stack / Spring Boot 4 &amp; Angular 21</span>
+                <span class="project-featured-badge" data-i18n="projects.featured">Destacado</span>
               </div>
               <div class="project-actions">
-                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Ver repositorio"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Ver repositorio de Territorio de Niños en GitHub" title="Ver repositorio de Territorio de Niños">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
-            
-            <h4 data-i18n="projects.p3.title">Territorio de Niños</h4>
+
+            <h3 data-i18n="projects.p3.title">Territorio de Niños</h3>
             <p data-i18n="projects.p3.desc">
-              Solución de software para la gestión de operaciones, roles y ventas en parques infantiles. Diseñada bajo metodología Scrum con levantamiento de requerimientos y modelado de datos.
+              Sistema integral para operación, control de acceso por roles y ventas en parques infantiles. Especificado bajo Scrum con UML, migraciones versionadas y eventos en tiempo real.
             </p>
 
             <ul class="project-highlights">
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p3.h1">API REST en Spring Boot 4 + Java 21 con JWT, Flyway y PostgreSQL.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p3.h2">Frontend Angular 21 con WebSockets (STOMP), escaneo QR y dashboards Chart.js.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p3.h3">Reportes PDF/CSV, correo transaccional y Scrum con UML y backlog.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p3.h1">API REST en Spring Boot 4 + Java 21 con JWT, Flyway y PostgreSQL.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p3.h2">Frontend Angular 21 con WebSockets (STOMP), escaneo QR y Chart.js.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p3.h3">Exportación PDF/CSV, correo transaccional y artefactos Scrum/UML.</span></li>
             </ul>
 
-            <footer>
+            <div class="project-footer">
               <div class="project-tech">
                 <span>Spring Boot 4</span>
                 <span>Angular 21</span>
@@ -548,7 +574,7 @@
                 <span>WebSockets</span>
                 <span>Docker</span>
               </div>
-            </footer>
+            </div>
           </div>
         </article>
 
@@ -557,27 +583,28 @@
           <div class="project-inner">
             <div class="project-top">
               <div class="project-meta-strip">
-                <span class="project-code">// PRJ-04</span>
-                <span class="project-status-dot"></span>
-                <span class="project-category-tag">Java 21 / POO & IA</span>
+                <span class="project-code">PRJ-04</span>
+                <span class="project-category-tag">Java 21 / POO &amp; IA</span>
               </div>
               <div class="project-actions">
-                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Ver repositorio"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Ver repositorio de SmartLedger en GitHub" title="Ver repositorio de SmartLedger">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
-            
-            <h4 data-i18n="projects.p4.title">SmartLedger (Gestor Financiero)</h4>
+
+            <h3 data-i18n="projects.p4.title">SmartLedger (Gestor Financiero)</h3>
             <p data-i18n="projects.p4.desc">
-              Aplicación de gestión financiera en Java orientada al control y organización de transacciones, con estructuras de datos en memoria e integración con servicios de IA.
+              Aplicación en Java 21 para registro y clasificación de movimientos financieros, diseñada con programación orientada a objetos, estructuras HashMap e informes asistidos por IA.
             </p>
 
             <ul class="project-highlights">
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p4.h1">POO pura, encapsulamiento, colecciones y manejo de HashMap.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p4.h2">Integración con OpenRouter API para resúmenes financieros inteligentes.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p4.h3">Autenticación, organización por categorías y control de saldos.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p4.h1">POO, encapsulamiento, colecciones y modelado respaldado por UML.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p4.h2">Consumo de OpenRouter API para generar resúmenes de gastos.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p4.h3">Autenticación de usuarios, categorías y balance en tiempo real.</span></li>
             </ul>
 
-            <footer>
+            <div class="project-footer">
               <div class="project-tech">
                 <span>Java 21</span>
                 <span>POO</span>
@@ -585,7 +612,7 @@
                 <span>APIs REST</span>
                 <span>OpenRouter AI</span>
               </div>
-            </footer>
+            </div>
           </div>
         </article>
 
@@ -594,27 +621,28 @@
           <div class="project-inner">
             <div class="project-top">
               <div class="project-meta-strip">
-                <span class="project-code">// PRJ-05</span>
-                <span class="project-status-dot"></span>
+                <span class="project-code">PRJ-05</span>
                 <span class="project-category-tag">SPA / API REST</span>
               </div>
               <div class="project-actions">
-                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Ver código"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Ver código de Movie Explorer en GitHub" title="Ver código de Movie Explorer">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
-            
-            <h4 data-i18n="projects.p5.title">Movie Explorer (TVMaze SPA)</h4>
+
+            <h3 data-i18n="projects.p5.title">Movie Explorer (TVMaze SPA)</h3>
             <p data-i18n="projects.p5.desc">
-              Single Page Application para consulta de series y películas mediante consumo asíncrono de API externa, con renderizado dinámico y persistencia en LocalStorage.
+              Single Page Application para búsqueda y consulta de series y películas vía API REST externa, con paginación en cliente, filtros por género y favoritos persistentes.
             </p>
 
             <ul class="project-highlights">
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p5.h1">Consumo asíncrono de API REST (Fetch/HTTP) y manejo de estados.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p5.h2">Paginación del lado del cliente y filtrado dinámico por géneros.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p5.h3">Persistencia de favoritos en LocalStorage y manipulación del DOM.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p5.h1">Consumo asíncrono con Fetch/HTTP y manejo de errores de red.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p5.h2">Paginación del lado del cliente y filtrado dinámico por género.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p5.h3">Persistencia de favoritos en LocalStorage y DOM modular.</span></li>
             </ul>
 
-            <footer>
+            <div class="project-footer">
               <div class="project-tech">
                 <span>JavaScript</span>
                 <span>HTML5</span>
@@ -622,7 +650,7 @@
                 <span>API REST</span>
                 <span>LocalStorage</span>
               </div>
-            </footer>
+            </div>
           </div>
         </article>
 
@@ -631,28 +659,31 @@
           <div class="project-inner">
             <div class="project-top">
               <div class="project-meta-strip">
-                <span class="project-code">// PRJ-06</span>
-                <span class="project-status-dot"></span>
+                <span class="project-code">PRJ-06</span>
                 <span class="project-category-tag">E-commerce / Web App</span>
               </div>
               <div class="project-actions">
-                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Código"><i class="fab fa-github"></i></a>
-                <a href="https://maiver4.github.io/Luxury-Distillates/" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Demo en vivo"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Ver código de Luxury Distillates en GitHub" title="Ver código de Luxury Distillates">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://maiver4.github.io/Luxury-Distillates/" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Abrir demo en vivo de Luxury Distillates" title="Demo en vivo de Luxury Distillates">
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
-            
-            <h4 data-i18n="projects.p6.title">Luxury Distillates & Barber Network</h4>
+
+            <h3 data-i18n="projects.p6.title">Luxury Distillates &amp; Barber Network</h3>
             <p data-i18n="projects.p6.desc">
-              Tienda online interactiva con catálogo dinámico de productos y carrito de compras funcional, complementada con arquitectura de agendamiento de citas y optimización en MySQL.
+              Tienda web con catálogo interactivo y carrito funcional desplegada en GitHub Pages, complementada con backend de agendamiento y esquema MySQL optimizado.
             </p>
 
             <ul class="project-highlights">
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p6.h1">Catálogo dinámico con carrito interactivo en tiempo real.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p6.h2">Optimización de bases de datos relacionales con campos ENUM y SET.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p6.h3">Interfaz 100% responsiva adaptada a dispositivos móviles.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p6.h1">Catálogo dinámico con cálculo de carrito en tiempo real.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p6.h2">Esquema relacional MySQL optimizado con tipos ENUM y SET.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p6.h3">Demo pública en producción adaptada a pantallas móviles.</span></li>
             </ul>
 
-            <footer>
+            <div class="project-footer">
               <div class="project-tech">
                 <span>HTML5</span>
                 <span>CSS3</span>
@@ -660,7 +691,7 @@
                 <span>Node.js</span>
                 <span>MySQL</span>
               </div>
-            </footer>
+            </div>
           </div>
         </article>
 
@@ -669,26 +700,27 @@
           <div class="project-inner">
             <div class="project-top">
               <div class="project-meta-strip">
-                <span class="project-code">// PRJ-07</span>
-                <span class="project-status-dot"></span>
+                <span class="project-code">PRJ-07</span>
                 <span class="project-category-tag">Backend / API Segura</span>
               </div>
               <div class="project-actions">
-                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Ver repositorio"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Ver repositorio de Wishlist API en GitHub" title="Ver repositorio de Wishlist API">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
-            <h4 data-i18n="projects.p7.title">Wishlist API (Prueba Técnica)</h4>
-            <p data-i18n="projects.p7.desc">API REST para gestión de listas de deseos de usuarios, construida con estándares empresariales: seguridad stateless, documentación interactiva y pruebas automatizadas.</p>
+            <h3 data-i18n="projects.p7.title">Wishlist API (Prueba Técnica)</h3>
+            <p data-i18n="projects.p7.desc">API REST para gestión de listas de deseos de usuarios bajo enfoque Security-First: autenticación stateless con JWT, contratos OpenAPI y suite de pruebas.</p>
             <ul class="project-highlights">
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p7.h1">Autenticación con Spring Security + JWT (jjwt) y validación de DTOs.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p7.h2">Documentación OpenAPI/Swagger y monitoreo con Actuator.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p7.h3">Tests con H2 en memoria y despliegue con Docker + PostgreSQL 16.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p7.h1">Spring Security + JWT (jjwt) con validación estricta de DTOs.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p7.h2">Documentación interactiva OpenAPI/Swagger y healthchecks Actuator.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p7.h3">Tests automatizados en H2 y despliegue con Docker + PostgreSQL 16.</span></li>
             </ul>
-            <footer>
+            <div class="project-footer">
               <div class="project-tech">
                 <span>Java 21</span><span>Spring Boot 3.4</span><span>Spring Security</span><span>PostgreSQL</span><span>Swagger</span><span>Docker</span>
               </div>
-            </footer>
+            </div>
           </div>
         </article>
 
@@ -697,26 +729,27 @@
           <div class="project-inner">
             <div class="project-top">
               <div class="project-meta-strip">
-                <span class="project-code">// PRJ-08</span>
-                <span class="project-status-dot"></span>
+                <span class="project-code">PRJ-08</span>
                 <span class="project-category-tag">Full Stack / Next.js PWA</span>
               </div>
               <div class="project-actions">
-                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Ver repositorio"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Ver repositorio de DEALER en GitHub" title="Ver repositorio de DEALER">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
-            <h4 data-i18n="projects.p8.title">DEALER (Chat Anónimo en Tiempo Real)</h4>
-            <p data-i18n="projects.p8.desc">Plataforma de chat privado muchos-a-uno con usuarios anónimos y sistema de fidelización, instalable como PWA y con notificaciones push.</p>
+            <h3 data-i18n="projects.p8.title">DEALER (Chat Anónimo en Tiempo Real)</h3>
+            <p data-i18n="projects.p8.desc">Plataforma PWA de mensajería privada muchos-a-uno con sesiones anónimas, notificaciones Web Push, almacenamiento de archivos en MinIO y mapas interactivos.</p>
             <ul class="project-highlights">
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p8.h1">Mensajería en tiempo real con Pusher y notificaciones Web Push.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p8.h2">Prisma + PostgreSQL, almacenamiento de archivos en MinIO (Docker Compose).</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p8.h3">NextAuth, JWT (jose), internacionalización con next-intl y mapas Leaflet.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p8.h1">Mensajería en tiempo real con Pusher y suscripciones Web Push.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p8.h2">Prisma + PostgreSQL y object storage en MinIO vía Docker Compose.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p8.h3">NextAuth, tokens JWT (jose), i18n con next-intl y mapas Leaflet.</span></li>
             </ul>
-            <footer>
+            <div class="project-footer">
               <div class="project-tech">
                 <span>Next.js</span><span>TypeScript</span><span>Prisma</span><span>PostgreSQL</span><span>Pusher</span><span>Tailwind</span>
               </div>
-            </footer>
+            </div>
           </div>
         </article>
 
@@ -725,26 +758,27 @@
           <div class="project-inner">
             <div class="project-top">
               <div class="project-meta-strip">
-                <span class="project-code">// PRJ-09</span>
-                <span class="project-status-dot"></span>
+                <span class="project-code">PRJ-09</span>
                 <span class="project-category-tag">Mobile / React Native</span>
               </div>
               <div class="project-actions">
-                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Ver repositorio"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Ver repositorio de Music App en GitHub" title="Ver repositorio de Music App">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
-            <h4 data-i18n="projects.p9.title">Music App (Móvil + API)</h4>
-            <p data-i18n="projects.p9.desc">Aplicación móvil de streaming musical con backend propio en Node.js/Express que actúa como proxy hacia servicios externos de música.</p>
+            <h3 data-i18n="projects.p9.title">Music App (Móvil + API)</h3>
+            <p data-i18n="projects.p9.desc">Aplicación móvil de reproducción de audio con backend propio en Express/TypeScript que actúa como proxy autenticado hacia APIs externas.</p>
             <ul class="project-highlights">
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p9.h1">App con Expo Router, navegación por pestañas y reproducción con expo-av.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p9.h2">Login con Google Sign-In y persistencia de usuarios en Supabase.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p9.h3">API en Express + TypeScript con Axios, CORS y variables de entorno.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p9.h1">Expo Router con navegación por pestañas y audio con expo-av.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p9.h2">Google Sign-In y persistencia de perfiles en Supabase.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p9.h3">Proxy API en Express + TypeScript con Axios y control CORS.</span></li>
             </ul>
-            <footer>
+            <div class="project-footer">
               <div class="project-tech">
                 <span>React Native</span><span>Expo</span><span>Supabase</span><span>Express</span><span>TypeScript</span>
               </div>
-            </footer>
+            </div>
           </div>
         </article>
 
@@ -753,26 +787,27 @@
           <div class="project-inner">
             <div class="project-top">
               <div class="project-meta-strip">
-                <span class="project-code">// PRJ-10</span>
-                <span class="project-status-dot"></span>
+                <span class="project-code">PRJ-10</span>
                 <span class="project-category-tag">React / IA Generativa</span>
               </div>
               <div class="project-actions">
-                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Ver repositorio"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Ver repositorio de FocusOS en GitHub" title="Ver repositorio de FocusOS">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
-            <h4 data-i18n="projects.p10.title">FocusOS (Productividad con IA)</h4>
-            <p data-i18n="projects.p10.desc">Sistema de productividad basado en bloques de tiempo obligatorios para eliminar la procrastinación, con métricas reales y asistencia de IA.</p>
+            <h3 data-i18n="projects.p10.title">FocusOS (Productividad con IA)</h3>
+            <p data-i18n="projects.p10.desc">Aplicación web de gestión de enfoque por bloques de tiempo obligatorios, con sincronización en Firebase y recomendaciones contextuales mediante Google Gemini.</p>
             <ul class="project-highlights">
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p10.h1">SPA en React + Vite + TypeScript estilizada con Tailwind CSS 4.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p10.h2">Autenticación y datos en tiempo real con Firebase.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p10.h3">Integración con Google Gemini para análisis y recomendaciones.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p10.h1">SPA en React + Vite + TypeScript estilizada con Tailwind CSS 4.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p10.h2">Autenticación y sincronización en tiempo real con Firebase.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p10.h3">Asistente con Gemini API para análisis de bloques y hábitos.</span></li>
             </ul>
-            <footer>
+            <div class="project-footer">
               <div class="project-tech">
                 <span>React</span><span>Vite</span><span>Tailwind</span><span>Firebase</span><span>Gemini API</span>
               </div>
-            </footer>
+            </div>
           </div>
         </article>
 
@@ -781,26 +816,27 @@
           <div class="project-inner">
             <div class="project-top">
               <div class="project-meta-strip">
-                <span class="project-code">// PRJ-11</span>
-                <span class="project-status-dot"></span>
+                <span class="project-code">PRJ-11</span>
                 <span class="project-category-tag">Angular / Help Desk</span>
               </div>
               <div class="project-actions">
-                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Ver repositorio"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Ver repositorio de Desk en GitHub" title="Ver repositorio de Desk">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
-            <h4 data-i18n="projects.p11.title">Desk (Gestión de Tickets)</h4>
-            <p data-i18n="projects.p11.desc">Plataforma para centralizar la recepción, asignación, seguimiento y resolución de tickets de soporte técnico en equipos de trabajo.</p>
+            <h3 data-i18n="projects.p11.title">Desk (Gestión de Tickets)</h3>
+            <p data-i18n="projects.p11.desc">Mesa de ayuda para centralizar recepción, asignación y trazabilidad de tickets de soporte técnico, probada con pruebas unitarias automatizadas.</p>
             <ul class="project-highlights">
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p11.h1">Angular moderno con componentes standalone y Angular Material/CDK.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p11.h2">Programación reactiva con RxJS y enrutamiento por módulos.</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="projects.p11.h3">Pruebas unitarias con Vitest + jsdom y formato con Prettier.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p11.h1">Angular con componentes standalone y Angular Material/CDK.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p11.h2">Estado reactivo con RxJS y enrutamiento por módulos.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="projects.p11.h3">Tests unitarios en Vitest + jsdom y reglas de formato Prettier.</span></li>
             </ul>
-            <footer>
+            <div class="project-footer">
               <div class="project-tech">
                 <span>Angular</span><span>Material</span><span>RxJS</span><span>TypeScript</span><span>Vitest</span>
               </div>
-            </footer>
+            </div>
           </div>
         </article>
 
@@ -810,46 +846,46 @@
     <!-- Formación & Metodología (Experience / Education) -->
     <section id="experience" class="section experience">
       <div class="section-header" data-aos="fade-up">
-        <span class="section-tag" data-i18n="exp.tag"><i class="fas fa-graduation-cap"></i> Trayectoria & Método</span>
-        <h3 class="section-title" data-i18n="exp.title">Formación & Metodología</h3>
-        <p class="section-subtitle" data-i18n="exp.subtitle">Estructura académica, estándares de calidad y forma de trabajo</p>
+        <span class="section-tag" data-i18n="exp.tag"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Trayectoria &amp; Método</span>
+        <h2 class="section-title" data-i18n="exp.title">Formación &amp; Metodología</h2>
+        <p class="section-subtitle" data-i18n="exp.subtitle">Base académica en el SENA y hábitos diarios de calidad técnica</p>
       </div>
 
       <div class="exp-grid">
-        
+
         <!-- Columna 1: Formación Académica -->
         <div class="timeline-column" data-aos="fade-right">
-          <h4 class="timeline-column-title"><i class="fas fa-user-graduate"></i> <span data-i18n="exp.col1Title">Formación Académica</span></h4>
-          
+          <h3 class="timeline-column-title"><i class="fas fa-user-graduate" aria-hidden="true"></i> <span data-i18n="exp.col1Title">Formación Académica</span></h3>
+
           <div class="timeline-items">
-            
+
             <div class="timeline-item">
-              <span class="timeline-dot"></span>
-              <span class="timeline-date">2024 - Presente (En Formación)</span>
+              <span class="timeline-dot" aria-hidden="true"></span>
+              <span class="timeline-date" data-i18n="exp.edu1.date">2024 - Presente (En Formación)</span>
               <h4 data-i18n="exp.edu1.title">Tecnólogo en Análisis y Desarrollo de Software (ADSO)</h4>
-              <p class="timeline-institution">Servicio Nacional de Aprendizaje – SENA</p>
+              <p class="timeline-institution" data-i18n="exp.edu1.inst">Servicio Nacional de Aprendizaje (SENA)</p>
               <p class="timeline-desc" data-i18n="exp.edu1.desc">
-                Formación integral en análisis de requerimientos, diseño orientado a objetos, desarrollo web (frontend & backend), bases de datos relacionales, control de versiones con Git, metodologías ágiles (Scrum) y pruebas de software.
+                Formación práctica en análisis de requerimientos, POO, desarrollo web (frontend &amp; backend), bases de datos relacionales, control de versiones con Git, Scrum y pruebas de software.
               </p>
             </div>
 
             <div class="timeline-item">
-              <span class="timeline-dot"></span>
-              <span class="timeline-date">Secundaria Completa</span>
+              <span class="timeline-dot" aria-hidden="true"></span>
+              <span class="timeline-date" data-i18n="exp.edu2.date">Secundaria Completa</span>
               <h4 data-i18n="exp.edu2.title">Bachiller Académico / Técnico</h4>
-              <p class="timeline-institution">Instituto Técnico Industrial (ITI)</p>
+              <p class="timeline-institution" data-i18n="exp.edu2.inst">Instituto Técnico Industrial (ITI)</p>
               <p class="timeline-desc" data-i18n="exp.edu2.desc">
-                Bases sólidas en lógica, pensamiento analítico y resolución estructurada de problemas.
+                Bases en lógica matemática, pensamiento analítico y resolución estructurada de problemas técnicos.
               </p>
             </div>
 
             <div class="timeline-item">
-              <span class="timeline-dot"></span>
-              <span class="timeline-date">Competencia Continua</span>
+              <span class="timeline-dot" aria-hidden="true"></span>
+              <span class="timeline-date" data-i18n="exp.edu3.date">Competencia Continua</span>
               <h4 data-i18n="exp.edu3.title">Inglés Técnico para TI</h4>
-              <p class="timeline-institution">Lectura & Documentación Técnica</p>
+              <p class="timeline-institution" data-i18n="exp.edu3.inst">Lectura &amp; Documentación Técnica</p>
               <p class="timeline-desc" data-i18n="exp.edu3.desc">
-                Capacidad fluida para leer documentación técnica oficial, resolver incidencias en comunidades especializadas y redactar código bajo convenciones internacionales.
+                Lectura fluida de documentación oficial, resolución de incidencias en comunidades técnicas y escritura de código bajo convenciones internacionales.
               </p>
             </div>
 
@@ -858,37 +894,37 @@
 
         <!-- Columna 2: Filosofía & Estándares de Trabajo -->
         <div class="timeline-column" data-aos="fade-left">
-          <h4 class="timeline-column-title"><i class="fas fa-cogs"></i> <span data-i18n="exp.col2Title">Cómo Trabajo & Estándares</span></h4>
-          
+          <h3 class="timeline-column-title"><i class="fas fa-cogs" aria-hidden="true"></i> <span data-i18n="exp.col2Title">Cómo Trabajo &amp; Estándares</span></h3>
+
           <div class="timeline-items">
-            
+
             <div class="timeline-item">
-              <span class="timeline-dot"></span>
-              <span class="timeline-date">Enfoque Metódico</span>
+              <span class="timeline-dot" aria-hidden="true"></span>
+              <span class="timeline-date" data-i18n="exp.std1.date">Enfoque Metódico</span>
               <h4 data-i18n="exp.std1.title">Depuración Sistemática de Errores</h4>
-              <p class="timeline-institution">Diagnóstico & Resolución</p>
+              <p class="timeline-institution" data-i18n="exp.std1.inst">Diagnóstico &amp; Resolución</p>
               <p class="timeline-desc" data-i18n="exp.std1.desc">
-                No confío en parches rápidos: analizo logs, inspecciono peticiones de red y depuro línea por línea hasta aislar la causa raíz del fallo y garantizar estabilidad.
+                Evito parches rápidos: inspecciono logs, tráfico HTTP y estado de componentes hasta aislar la causa raíz y validar la corrección.
               </p>
             </div>
 
             <div class="timeline-item">
-              <span class="timeline-dot"></span>
-              <span class="timeline-date">Buenas Prácticas</span>
-              <h4 data-i18n="exp.std2.title">Arquitectura por Capas & Clean Code</h4>
-              <p class="timeline-institution">Mantenibilidad & Escalabilidad</p>
+              <span class="timeline-dot" aria-hidden="true"></span>
+              <span class="timeline-date" data-i18n="exp.std2.date">Buenas Prácticas</span>
+              <h4 data-i18n="exp.std2.title">Arquitectura por Capas &amp; Seguridad</h4>
+              <p class="timeline-institution" data-i18n="exp.std2.inst">Mantenibilidad &amp; Hardening</p>
               <p class="timeline-desc" data-i18n="exp.std2.desc">
-                Separación rigurosa de responsabilidades (controladores, servicios, repositorios, entidades) con nombres expresivos y código modular fácil de mantener y probar.
+                Separación estricta de responsabilidades (controladores, servicios, repositorios, DTOs) con validación de entradas y controles OWASP Top 10.
               </p>
             </div>
 
             <div class="timeline-item">
-              <span class="timeline-dot"></span>
-              <span class="timeline-date">Colaboración</span>
-              <h4 data-i18n="exp.std3.title">Scrum, Git & Comunicación Efectiva</h4>
-              <p class="timeline-institution">Trabajo en Equipo</p>
+              <span class="timeline-dot" aria-hidden="true"></span>
+              <span class="timeline-date" data-i18n="exp.std3.date">Colaboración</span>
+              <h4 data-i18n="exp.std3.title">Scrum, Git &amp; Comunicación Efectiva</h4>
+              <p class="timeline-institution" data-i18n="exp.std3.inst">Trabajo en Equipo</p>
               <p class="timeline-desc" data-i18n="exp.std3.desc">
-                Uso constante de ramas en Git, commits semánticos, gestión de backlog en Sprints y actitud constructiva para recibir retroalimentación técnica y evolucionar.
+                Flujo ordenado con ramas en Git, commits semánticos, backlog por Sprints y disposición para recibir y aplicar code reviews.
               </p>
             </div>
 
@@ -901,28 +937,28 @@
     <!-- Contacto (Contact) -->
     <section id="contact" class="section contact">
       <div class="contact-wrapper" data-aos="zoom-in">
-        <span class="section-tag" data-i18n="contact.tag"><i class="fas fa-comments"></i> Hablemos de oportunidades</span>
-        <h3 class="section-title" data-i18n="contact.title">¿Listo para construir software juntos?</h3>
+        <span class="section-tag" data-i18n="contact.tag"><i class="fas fa-comments" aria-hidden="true"></i> Hablemos de oportunidades</span>
+        <h2 class="section-title" data-i18n="contact.title">¿Listo para construir software juntos?</h2>
         <p class="contact-text" data-i18n="contact.subtitle">
-          Estoy activamente buscando oportunidades como <strong>Aprendiz de Desarrollo de Software</strong> (prácticas SENA) o <strong>Desarrollador Junior</strong>. Si tienes una vacante o proyecto en el que pueda aportar y aprender, ¡escríbeme!
+          Busco oportunidades como <strong>Aprendiz de Desarrollo de Software</strong> (etapa productiva SENA) o <strong>Desarrollador Junior</strong>. Si tu equipo necesita apoyo en backend, frontend o QA/seguridad, escríbeme.
         </p>
 
         <div class="contact-cards">
-          
-          <div class="contact-box">
-            <i class="fas fa-envelope"></i>
+
+          <a href="mailto:veramichael617@gmail.com" class="contact-box contact-box-link" aria-label="Enviar correo a veramichael617@gmail.com">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
             <span class="contact-box-title" data-i18n="contact.emailLabel">Correo Electrónico</span>
             <span class="contact-box-val">veramichael617@gmail.com</span>
-          </div>
+          </a>
 
-          <div class="contact-box">
-            <i class="fab fa-whatsapp"></i>
+          <a href="https://wa.me/573246127856" target="_blank" rel="noopener noreferrer" class="contact-box contact-box-link" aria-label="Contactar por WhatsApp al +57 324 612 7856">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
             <span class="contact-box-title" data-i18n="contact.phoneLabel">WhatsApp / Celular</span>
             <span class="contact-box-val">+57 324 612 7856</span>
-          </div>
+          </a>
 
           <div class="contact-box">
-            <i class="fas fa-map-marker-alt"></i>
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
             <span class="contact-box-title" data-i18n="contact.locLabel">Ubicación</span>
             <span class="contact-box-val">Armenia, Quindío, Colombia</span>
           </div>
@@ -931,10 +967,10 @@
 
         <div class="contact-actions">
           <a href="mailto:veramichael617@gmail.com" class="btn primary big-btn" data-i18n="contact.btnSend">
-            <i class="fas fa-paper-plane"></i> Enviar Correo Directo
+            <i class="fas fa-paper-plane" aria-hidden="true"></i> Enviar Correo Directo
           </a>
-          <button onclick="copyEmail()" class="btn secondary big-btn" id="copyEmailBtn" data-i18n="contact.btnCopy">
-            <i class="far fa-copy"></i> Copiar Correo
+          <button type="button" onclick="copyEmail()" class="btn secondary big-btn" id="copyEmailBtn" data-i18n="contact.btnCopy">
+            <i class="far fa-copy" aria-hidden="true"></i> Copiar Correo
           </button>
         </div>
       </div>
@@ -943,174 +979,185 @@
   </main>
 
   <!-- Footer -->
-  <footer>
+  <footer class="site-footer">
     <div class="footer-links">
-      <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      <a href="mailto:veramichael617@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://wa.me/573246127856" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://github.com/MaiVer4" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Maicol Vera" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      <!-- TODO: Agregar enlace real de LinkedIn cuando el usuario proporcione su URL -->
+      <a href="mailto:veramichael617@gmail.com" aria-label="Enviar correo a veramichael617@gmail.com" title="Email">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+      </a>
+      <a href="https://wa.me/573246127856" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" title="WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+      </a>
     </div>
     <p data-i18n="footer.text">
-      Diseñado y desarrollado por <span class="highlight">Maicol Vera</span> • ADSO SENA © 2026
+      Diseñado y desarrollado por <span class="highlight">Maicol Vera</span> · ADSO SENA © 2026
     </p>
   </footer>
 
   <!-- Back to top button -->
-  <button class="back-to-top" id="backToTop" title="Volver arriba" aria-label="Volver arriba">
-    <i class="fas fa-arrow-up"></i>
+  <button type="button" class="back-to-top" id="backToTop" title="Volver arriba" aria-label="Volver arriba">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
   </button>
 
-  <!-- Toast Notification -->
-  <div class="toast-msg" id="toastMsg">
-    <i class="fas fa-check-circle"></i> <span id="toastText">¡Correo copiado al portapapeles!</span>
+  <!-- Toast Notification (mounts empty for polite live announcements) -->
+  <div class="toast-msg" id="toastMsg" role="status" aria-live="polite" aria-atomic="true">
+    <i class="fas fa-check-circle" id="toastIcon" aria-hidden="true"></i>
+    <span id="toastText"></span>
   </div>
 
-  <!-- CV Hidden Printable Template for html2pdf.js -->
-  <div id="cv-hidden">
+  <!-- CV Hidden Printable Template (Single-page Letter 816x1056, bilingual ES/EN, hidden from a11y tree) -->
+  <div id="cv-hidden" aria-hidden="true" inert>
     <div id="cv-document" class="cv-page">
-      
+
       <!-- Sidebar -->
-      <aside class="cv-sidebar">
+      <div class="cv-sidebar">
         <div class="cv-profile-pic">MV</div>
-        
-        <section>
-          <h4 class="cv-sidebar-title">CONTACTO</h4>
+
+        <div class="cv-sidebar-block">
+          <p class="cv-sidebar-title" data-cv-i18n="cv.contactTitle">CONTACTO</p>
           <div class="cv-contact-list">
-            <p>📍 Armenia, Quindío, Colombia</p>
-            <p>✉️ veramichael617@gmail.com</p>
-            <p>📞 +57 324 612 7856</p>
-            <p>🔗 github.com/MaiVer4</p>
+            <p><strong data-cv-i18n="cv.locLabel">Ubicación:</strong> Armenia, Quindío, Colombia</p>
+            <p><strong data-cv-i18n="cv.emailLabel">Correo:</strong> veramichael617@gmail.com</p>
+            <p><strong data-cv-i18n="cv.phoneLabel">Teléfono:</strong> +57 324 612 7856</p>
+            <p><strong>GitHub:</strong> github.com/MaiVer4</p>
+            <p><strong data-cv-i18n="cv.webLabel">Portafolio:</strong> maiver4.github.io/Portafolio</p>
+            <!-- TODO: Agregar enlace real de LinkedIn cuando el usuario proporcione su URL -->
           </div>
-        </section>
+        </div>
 
-        <section>
-          <h4 class="cv-sidebar-title">HABILIDADES CLAVE</h4>
-          
+        <div class="cv-sidebar-block">
+          <p class="cv-sidebar-title" data-cv-i18n="cv.skillsTitle">STACK TÉCNICO</p>
+
           <div class="cv-skills-group">
-            <h5>Backend:</h5>
+            <p class="cv-skills-group-title" data-cv-i18n="cv.grpBackend">Backend &amp; Seguridad API:</p>
             <div class="cv-skills-chips">
-              <span>Java 21</span><span>Spring Boot</span><span>Spring Security/JWT</span><span>APIs REST</span><span>JPA</span><span>Node.js/Express</span>
+              <span>Java 21</span><span>Spring Boot 3/4</span><span>Spring Security</span><span>JWT</span><span>JPA/Hibernate</span><span>Flyway</span><span>Node.js/Express</span><span>Swagger</span>
             </div>
           </div>
 
           <div class="cv-skills-group">
-            <h5>Frontend & Mobile:</h5>
+            <p class="cv-skills-group-title" data-cv-i18n="cv.grpFrontend">Frontend &amp; Mobile:</p>
             <div class="cv-skills-chips">
-              <span>Angular</span><span>TypeScript</span><span>React</span><span>Next.js</span><span>React Native/Expo</span><span>Tailwind</span>
+              <span>Angular 17-21</span><span>TypeScript</span><span>React</span><span>Next.js</span><span>RxJS</span><span>React Native/Expo</span><span>Tailwind</span>
             </div>
           </div>
 
           <div class="cv-skills-group">
-            <h5>Bases de Datos & DevOps:</h5>
+            <p class="cv-skills-group-title" data-cv-i18n="cv.grpSecurity">Ciberseguridad (Jr. Av.):</p>
             <div class="cv-skills-chips">
-              <span>PostgreSQL</span><span>MySQL</span><span>Prisma</span><span>Supabase/Firebase</span><span>Docker</span><span>Git/GitHub</span><span>Linux</span>
+              <span>Kali Linux</span><span>OWASP Top 10</span><span>Burp Suite</span><span>Nmap</span><span>Wireshark</span><span>Metasploit</span>
             </div>
           </div>
 
           <div class="cv-skills-group">
-            <h5>Innovación & Métodos:</h5>
+            <p class="cv-skills-group-title" data-cv-i18n="cv.grpData">Datos, DevOps &amp; IA:</p>
             <div class="cv-skills-chips">
-              <span>RAG / ChromaDB</span><span>LangChain</span><span>LLM APIs</span><span>Scrum</span><span>UML</span><span>Vitest/JUnit</span>
+              <span>PostgreSQL</span><span>MySQL</span><span>Prisma</span><span>Docker</span><span>Git/GitHub</span><span>RAG / ChromaDB</span><span>Python</span>
             </div>
           </div>
-        </section>
+        </div>
 
-        <section>
-          <h4 class="cv-sidebar-title">IDIOMAS</h4>
-          <p class="cv-text-light"><strong>Español:</strong> Nativo</p>
-          <p class="cv-text-light"><strong>Inglés:</strong> B1 / Técnico (Lectura fluida de documentación)</p>
-        </section>
-      </aside>
+        <div class="cv-sidebar-block">
+          <p class="cv-sidebar-title" data-cv-i18n="cv.langTitle">IDIOMAS</p>
+          <p class="cv-text-light" data-cv-i18n="cv.langEs"><strong>Español:</strong> Nativo</p>
+          <p class="cv-text-light" data-cv-i18n="cv.langEn"><strong>Inglés:</strong> B1 / Técnico (Documentación y código)</p>
+        </div>
+
+        <div class="cv-sidebar-block">
+          <p class="cv-sidebar-title" data-cv-i18n="cv.methodsTitle">PRÁCTICAS</p>
+          <p class="cv-text-light" data-cv-i18n="cv.methodsBody">Scrum · UML · Clean Code · Depuración metódica · Vitest / JUnit</p>
+        </div>
+      </div>
 
       <!-- Main Column -->
-      <main class="cv-main">
-        <header class="cv-header">
-          <h1 class="cv-name">MAICOL VERA</h1>
-          <h2 class="cv-role">Desarrollador de Software Full Stack & Backend | ADSO SENA</h2>
-        </header>
+      <div class="cv-main">
+        <div class="cv-header">
+          <p class="cv-name">MAICOL VERA CUERVO</p>
+          <p class="cv-role" data-cv-i18n="cv.role">Desarrollador Full Stack (Java · Spring Boot · Angular) | Pentester Jr. Avanzado</p>
+        </div>
 
-        <!-- Perfil Profesional -->
-        <section class="cv-section-main">
-          <h3 class="cv-main-title">PERFIL PROFESIONAL</h3>
-          <p class="cv-profile-text">
-            Aprendiz del Tecnólogo en Análisis y Desarrollo de Software (ADSO) del SENA. Experiencia práctica en arquitectura y desarrollo de aplicaciones web y servicios backend con Java, Spring Boot, TypeScript, Angular, SQL y Docker. Especializado en APIs REST, persistencia de datos, metodologías ágiles (Scrum) y resolución metódica de errores.
+        <div class="cv-section-main">
+          <p class="cv-main-title" data-cv-i18n="cv.profileTitle">PERFIL PROFESIONAL</p>
+          <p class="cv-profile-text" data-cv-i18n="cv.profileText">
+            Aprendiz de Tecnología en Análisis y Desarrollo de Software (ADSO - SENA) con formación en Ciberseguridad Junior Avanzada. Experiencia práctica en arquitectura por capas, APIs REST seguras con Java 21 y Spring Boot, SPAs en Angular y TypeScript, bases de datos SQL, Docker y pipelines RAG con Python. Enfocado en código limpio, depuración metódica y criterios OWASP Top 10.
           </p>
-        </section>
+        </div>
 
-        <!-- Experiencia Práctica / Proyectos -->
-        <section class="cv-section-main">
-          <h3 class="cv-main-title">PROYECTOS DESTACADOS & EXPERIENCIA PRÁCTICA</h3>
-          
+        <div class="cv-section-main">
+          <p class="cv-main-title" data-cv-i18n="cv.projectsTitle">PROYECTOS DESTACADOS &amp; EXPERIENCIA PRÁCTICA</p>
+
           <div class="cv-item">
             <div class="cv-item-header">
-              <span class="cv-item-title">Mentor-IA (Arquitectura RAG & Búsqueda Semántica)</span>
+              <span class="cv-item-title" data-cv-i18n="cv.p1Title">Mentor-IA · Motor de Búsqueda Semántica (RAG)</span>
               <span class="cv-item-date">Python | ChromaDB | Notion API</span>
             </div>
-            <p class="cv-item-desc">
-              Desarrollo de motor de recuperación de información sobre bases de conocimiento en Notion con chunking semántico, almacenamiento vectorial en ChromaDB y CLI interactivo con diagnóstico de índices.
+            <p class="cv-item-desc" data-cv-i18n="cv.p1Desc">
+              Pipeline RAG sobre bases de conocimiento en Notion con reconstrucción jerárquica, chunking semántico, embeddings en ChromaDB y CLI con diagnóstico de índices.
             </p>
           </div>
 
           <div class="cv-item">
             <div class="cv-item-header">
-              <span class="cv-item-title">Sistema de Gestión Empresarial Unificado</span>
-              <span class="cv-item-date">Spring Boot | Angular 17+ | Docker</span>
-            </div>
-            <p class="cv-item-desc">
-              Plataforma para administración de inventario con backend RESTful en Spring Boot, frontend modular en Angular con formularios reactivos y despliegue contenedorizado con Docker Compose.
-            </p>
-          </div>
-
-          <div class="cv-item">
-            <div class="cv-item-header">
-              <span class="cv-item-title">Territorio de Niños (Gestión de Parque)</span>
+              <span class="cv-item-title" data-cv-i18n="cv.p2Title">Territorio de Niños · Plataforma Operativa Full Stack</span>
               <span class="cv-item-date">Spring Boot 4 | Angular 21 | PostgreSQL</span>
             </div>
-            <p class="cv-item-desc">
-              Sistema full stack con API REST segura (JWT, Flyway), WebSockets, escaneo QR y reportes PDF/CSV. Especificación de requerimientos, UML y backlog bajo Scrum.
+            <p class="cv-item-desc" data-cv-i18n="cv.p2Desc">
+              API REST con Java 21, JWT, Flyway y PostgreSQL; frontend Angular 21 con WebSockets (STOMP), escaneo QR, gráficos Chart.js y reportes PDF/CSV bajo metodología Scrum y UML.
             </p>
           </div>
 
           <div class="cv-item">
             <div class="cv-item-header">
-              <span class="cv-item-title">Wishlist API & DEALER (Chat en Tiempo Real)</span>
-              <span class="cv-item-date">Spring Security | Next.js | Prisma</span>
+              <span class="cv-item-title" data-cv-i18n="cv.p3Title">Wishlist API · Servicio REST Seguro (Prueba Técnica)</span>
+              <span class="cv-item-date">Spring Security | JWT | Docker</span>
             </div>
-            <p class="cv-item-desc">
-              API REST con JWT, Swagger y Docker; y plataforma PWA en Next.js con Prisma/PostgreSQL, Pusher, Web Push y MinIO.
+            <p class="cv-item-desc" data-cv-i18n="cv.p3Desc">
+              API stateless con Spring Security + JWT (jjwt), validación estricta de DTOs, documentación OpenAPI/Swagger, monitoreo con Actuator, tests en H2 y despliegue PostgreSQL 16.
             </p>
           </div>
 
           <div class="cv-item">
             <div class="cv-item-header">
-              <span class="cv-item-title">SmartLedger (Gestor Financiero con IA)</span>
-              <span class="cv-item-date">Java 21 | POO | OpenRouter API</span>
+              <span class="cv-item-title" data-cv-i18n="cv.p4Title">DEALER · Mensajería PWA en Tiempo Real</span>
+              <span class="cv-item-date">Next.js | Prisma | PostgreSQL</span>
             </div>
-            <p class="cv-item-desc">
-              Aplicación de control transaccional implementando POO avanzada, estructuras de datos HashMap e integración con APIs de IA para resúmenes automáticos.
+            <p class="cv-item-desc" data-cv-i18n="cv.p4Desc">
+              Plataforma PWA muchos-a-uno con sesiones anónimas, Pusher, notificaciones Web Push, almacenamiento en MinIO con Docker Compose, NextAuth e i18n.
             </p>
           </div>
-        </section>
 
-        <!-- Educación -->
-        <section class="cv-section-main">
-          <h3 class="cv-main-title">EDUCACIÓN</h3>
           <div class="cv-item">
             <div class="cv-item-header">
-              <span class="cv-item-title">Tecnólogo en Análisis y Desarrollo de Software (ADSO)</span>
-              <span class="cv-item-date">2024 - Presente (En Formación)</span>
+              <span class="cv-item-title" data-cv-i18n="cv.p5Title">Gestión Empresarial &amp; SmartLedger</span>
+              <span class="cv-item-date">Spring Boot | Angular | Java 21</span>
             </div>
-            <div class="cv-item-sub">Servicio Nacional de Aprendizaje – SENA</div>
+            <p class="cv-item-desc" data-cv-i18n="cv.p5Desc">
+              Sistema CRUD de inventario con Angular Reactive Forms y Docker Compose multi-etapa; y gestor financiero en Java 21 (POO, HashMap) integrado con OpenRouter AI.
+            </p>
+          </div>
+        </div>
+
+        <div class="cv-section-main cv-section-edu">
+          <p class="cv-main-title" data-cv-i18n="cv.eduTitle">EDUCACIÓN</p>
+          <div class="cv-item">
+            <div class="cv-item-header">
+              <span class="cv-item-title" data-cv-i18n="cv.edu1Title">Tecnólogo en Análisis y Desarrollo de Software (ADSO)</span>
+              <span class="cv-item-date" data-cv-i18n="cv.edu1Date">2024 - Presente (En Formación)</span>
+            </div>
+            <div class="cv-item-sub" data-cv-i18n="cv.edu1Sub">Servicio Nacional de Aprendizaje (SENA) · Disponible para etapa productiva</div>
           </div>
           <div class="cv-item">
             <div class="cv-item-header">
-              <span class="cv-item-title">Bachiller Académico / Técnico</span>
-              <span class="cv-item-date">Graduado</span>
+              <span class="cv-item-title" data-cv-i18n="cv.edu2Title">Bachiller Académico / Técnico</span>
+              <span class="cv-item-date" data-cv-i18n="cv.edu2Date">Graduado</span>
             </div>
             <div class="cv-item-sub">Instituto Técnico Industrial (ITI)</div>
           </div>
-        </section>
-      </main>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -1118,436 +1165,723 @@
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    // Inicializar AOS
-    AOS.init({
-      duration: 800,
-      once: true,
-      offset: 50
-    });
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const mobileNavQuery = window.matchMedia('(max-width: 980px)');
 
-    // Diccionario de Traducciones
+    // Inicializar AOS respetando prefers-reduced-motion
+    if (window.AOS) {
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 50,
+        disable: () => prefersReducedMotion.matches
+      });
+    }
+
+    // Diccionario de Traducciones (UI + CV PDF)
     const translations = {
       es: {
+        'page.title': 'Maicol Vera | Desarrollador de Software Full Stack & Pentester Jr.',
+        'nav.skip': 'Saltar al contenido principal',
+        'nav.aria': 'Navegación principal',
+        'nav.logoAria': 'Maicol Vera, ir al inicio',
         'nav.about': 'Sobre mí',
         'nav.skills': 'Habilidades',
         'nav.projects': 'Proyectos',
-        'nav.experience': 'Formación & Metodología',
+        'nav.experience': 'Formación',
         'nav.contact': 'Contacto',
         'nav.cv': 'CV PDF',
-        
-        'hero.status': '🟢 Disponible para Prácticas SENA / Oportunidades Junior',
+        'nav.cvAria': 'Descargar hoja de vida en PDF',
+        'nav.langAria': 'Cambiar idioma a inglés',
+        'code.tablistAria': 'Archivos del perfil',
+
         'hero.greeting': 'Hola, soy',
         'hero.name': 'Maicol Vera',
-        'hero.title': 'Desarrollador ',
+        'hero.titlePrefix': 'Desarrollador',
         'hero.highlight': 'Full Stack & Pentester Jr. Avanzado',
-        'hero.description': 'Aprendiz de <strong>Tecnología en Análisis y Desarrollo de Software (ADSO)</strong> en el SENA y <strong>Pentester / Hacker Ético Junior Avanzado</strong>. Construyo arquitecturas backend robustas y blindadas con <strong>Java & Spring Boot</strong>, interfaces ágiles con <strong>Angular & TypeScript</strong>, integraciones con IA y flujos de auditoría ofensiva/defensiva en <strong>Kali Linux</strong> bajo directrices <strong>OWASP Top 10</strong>.',
-        'hero.portfolio': '<i class="fas fa-folder-open"></i> Ver Proyectos',
-        'hero.contact': '<i class="fas fa-paper-plane"></i> Contáctame',
-        'hero.cvBtn': '<i class="fas fa-download"></i> Descargar CV',
+        'hero.description': 'Aprendiz de <strong>ADSO en el SENA</strong> con foco en <strong>Java, Spring Boot y Angular</strong>. Diseño APIs por capas, interfaces modulares e integraciones con IA/RAG, combinando ingeniería de software con auditoría ofensiva en <strong>Kali Linux</strong> bajo directrices <strong>OWASP Top 10</strong>.',
+        'hero.portfolio': '<i class="fas fa-folder-open" aria-hidden="true"></i> Ver Proyectos',
+        'hero.contact': '<i class="fas fa-paper-plane" aria-hidden="true"></i> Contáctame',
+        'hero.cvBtn': '<i class="fas fa-download" aria-hidden="true"></i> Descargar CV',
 
-        'metrics.adso': 'SENA en Formación',
-        'metrics.projects': 'Proyectos Construidos',
-        'metrics.stack': 'Java • Spring • Angular',
-        'metrics.commitment': 'Compromiso & Clean Code',
+        'metrics.aria': 'Resumen del perfil',
+        'metrics.m1Title': 'ADSO · SENA',
+        'metrics.m1Desc': 'Tecnólogo en formación · UML, SQL y Scrum',
+        'metrics.m2Title': '11 Proyectos',
+        'metrics.m2Desc': 'Backend Java, IA/RAG, Angular, React y Mobile',
+        'metrics.m3Title': 'Full Stack Core',
+        'metrics.m3Desc': 'Java 21 · Spring Boot · Angular · Docker',
+        'metrics.m4Title': 'Security-First',
+        'metrics.m4Desc': 'Kali Linux · OWASP Top 10 · Burp Suite · JWT',
 
-        'about.tag': '<i class="fas fa-user"></i> Conoce mi enfoque',
+        'about.tag': '<i class="fas fa-user" aria-hidden="true"></i> Conoce mi enfoque',
         'about.title': 'Sobre mí',
-        'about.subtitle': 'Desarrollo soluciones de software confiables, escalables y orientadas a resultados',
-        'about.text1': 'Soy aprendiz del programa <strong>Tecnólogo en Análisis y Desarrollo de Software (ADSO)</strong> del <strong>SENA</strong>. Cuento con una sólida formación práctica en la arquitectura y desarrollo de aplicaciones web y servicios backend.',
-        'about.text2': 'Me destaco por mi capacidad para analizar requerimientos técnicos, estructurar bases de datos relacionales, diseñar APIs REST bajo arquitecturas por capas y construir interfaces frontend modulares. Además, he explorado proyectos de innovación integrando <strong>RAG (Retrieval-Augmented Generation)</strong> y modelos de Inteligencia Artificial.',
-        'about.text3': 'Mi experiencia previa en atención al cliente y soporte técnico complementa mi perfil, brindándome una gran empatía hacia las necesidades del usuario final y facilidad para comunicarme eficazmente en equipos ágiles.',
-        'about.text4': 'Paralelamente, cuento con formación y práctica activa en <strong>Ciberseguridad y Hacking Ético en nivel Junior Avanzado</strong>, desenvolviéndome con soltura en entornos de auditoría como <strong>Kali Linux</strong>. Domino herramientas de reconocimiento, intercepción y análisis de vulnerabilidades como <strong>Burp Suite, Nmap, Wireshark y Metasploit</strong>, aplicando las directrices del <strong>OWASP Top 10</strong>. Esta perspectiva me permite adoptar un enfoque <em>Security-First</em>, blindando APIs y arquitecturas contra vectores de ataque comunes desde su concepción.',
-        'about.debugTitle': 'Filosofía de Depuración & Resolución',
-        'about.debugDesc': 'Afronto los errores de forma metódica: análisis riguroso mediante DevTools y consola, pruebas sobre bloques de código y aislamiento progresivo hasta erradicar la causa raíz.',
-        
-        'about.pillar1.title': 'Backend & Arquitectura',
-        'about.pillar1.desc': 'Servicios robustos con Java, Spring Boot, APIs REST, POO, JPA/Hibernate y persistencia en MySQL y PostgreSQL.',
+        'about.subtitle': 'Cómo paso de los requerimientos a software probado, mantenible y seguro',
+        'about.text1': 'Soy aprendiz del programa <strong>Tecnólogo en Análisis y Desarrollo de Software (ADSO)</strong> en el <strong>SENA</strong>, con práctica directa diseñando aplicaciones web, modelos relacionales en MySQL/PostgreSQL y APIs REST por capas con Java y Spring Boot.',
+        'about.text2': 'Complemento el desarrollo Full Stack con proyectos de <strong>IA aplicada (RAG sobre ChromaDB y Notion API)</strong> y formación activa en <strong>Ciberseguridad y Pentesting Junior Avanzado</strong> en <strong>Kali Linux</strong> (Burp Suite, Nmap, Wireshark y Metasploit bajo <strong>OWASP Top 10</strong>), cuidando validación, autenticación y permisos desde el código.',
+        'about.text3': 'Mi experiencia previa en atención al cliente y soporte técnico me dio criterio para escuchar al usuario final, documentar incidencias con precisión y colaborar de forma clara en equipos ágiles bajo Scrum y Git.',
+        'about.debugTitle': 'Filosofía de Depuración &amp; Resolución',
+        'about.debugDesc': 'Afronto los errores de forma metódica: inspección en DevTools y logs, pruebas sobre bloques aislados y trazabilidad paso a paso hasta eliminar la causa raíz.',
+
+        'about.pillar1.title': 'Backend &amp; Arquitectura',
+        'about.pillar1.desc': 'APIs REST en Java 21 y Spring Boot con arquitectura en capas, JPA/Hibernate, Flyway y persistencia en MySQL y PostgreSQL.',
         'about.pillar2.title': 'Frontend Dinámico',
-        'about.pillar2.desc': 'Single Page Applications con Angular (v17+), TypeScript, React, componentes modulares y formularios reactivos.',
-        'about.pillar3.title': 'Innovación & IA Aplicada',
-        'about.pillar3.desc': 'Desarrollo de pipelines RAG, bases vectoriales (ChromaDB), Notion API e integración con LLMs.',
-        'about.pillar4.title': 'Metodologías Ágiles & Scrum',
-        'about.pillar4.desc': 'Planificación de Sprints, Product Backlog, historias de usuario, diagramas UML y control con Git/GitHub.',
-        'about.pillar5.title': 'Ciberseguridad & Pentesting Jr. Avanzado',
-        'about.pillar5.desc': 'Seguridad ofensiva y defensiva en Kali Linux, auditorías con Burp Suite, reconocimiento con Nmap y mitigación OWASP Top 10.',
+        'about.pillar2.desc': 'SPAs con Angular (v17+), TypeScript y React mediante componentes standalone, RxJS y formularios reactivos validados.',
+        'about.pillar3.title': 'Innovación &amp; IA Aplicada',
+        'about.pillar3.desc': 'Pipelines RAG en Python con chunking semántico, embeddings en ChromaDB, Notion API e integración con modelos LLM.',
+        'about.pillar4.title': 'Metodologías Ágiles &amp; Scrum',
+        'about.pillar4.desc': 'Planificación de Sprints, Product Backlog, historias de usuario, diagramación UML y flujo colaborativo con Git/GitHub.',
+        'about.pillar5.title': 'Ciberseguridad &amp; Pentesting Jr. Avanzado',
+        'about.pillar5.desc': 'Auditoría web y de red en Kali Linux con Burp Suite, Nmap y Wireshark, endurecimiento JWT y mitigación OWASP Top 10.',
 
-        'skills.tag': '<i class="fas fa-laptop-code"></i> Stack & Tecnologías',
+        'skills.tag': '<i class="fas fa-laptop-code" aria-hidden="true"></i> Stack &amp; Tecnologías',
         'skills.title': 'Habilidades Técnicas',
-        'skills.subtitle': 'Herramientas y tecnologías que aplico con criterio técnico y solvencia práctica',
-        'skills.backend': 'Backend & APIs',
+        'skills.subtitle': 'Stack principal resaltado (Java, Spring, Angular, SQL y Seguridad) junto a tecnologías complementarias usadas en proyectos',
+        'skills.backend': 'Backend &amp; APIs',
         'skills.frontend': 'Frontend Moderno',
-        'skills.databases': 'Bases de Datos & Cloud',
-        'skills.tools': 'DevOps & Herramientas',
-        'skills.security': 'Ciberseguridad & Pentesting',
-        'skills.ai': 'Innovación & IA (RAG)',
-        'skills.practices': 'Metodologías & Prácticas',
+        'skills.databases': 'Bases de Datos &amp; Cloud',
+        'skills.tools': 'DevOps &amp; Herramientas',
+        'skills.security': 'Ciberseguridad &amp; Pentesting',
+        'skills.mobile': 'Mobile, PWA &amp; Tiempo Real',
+        'skills.ai': 'Innovación &amp; IA (RAG)',
+        'skills.practices': 'Metodologías &amp; Prácticas',
 
-        'projects.tag': '<i class="fas fa-cubes"></i> Experiencia Práctica',
+        'projects.tag': '<i class="fas fa-cubes" aria-hidden="true"></i> Experiencia Práctica',
         'projects.title': 'Proyectos Destacados',
-        'projects.subtitle': 'Soluciones de software donde aplico arquitectura limpia, buenas prácticas e integración de tecnologías modernas',
+        'projects.subtitle': '11 proyectos reales entre backend Java/Spring, RAG con Python, Angular, React y desarrollo móvil',
+        'projects.filterGroup': 'Filtrar proyectos por categoría',
         'projects.filterAll': 'Todos',
-        'projects.filterFullstack': 'Full Stack & Backend',
-        'projects.filterAI': 'IA & RAG',
-        'projects.filterFrontend': 'Web & Frontend',
+        'projects.filterFullstack': 'Full Stack &amp; Backend',
+        'projects.filterAI': 'IA &amp; RAG',
+        'projects.filterFrontend': 'Web &amp; Frontend',
+        'projects.filterMobile': 'Mobile',
+        'projects.featured': 'Destacado',
+        'projects.emptyText': 'No hay proyectos en esta categoría todavía.',
+        'projects.resetFilters': 'Ver todos los proyectos',
 
         'projects.p1.title': 'Mentor-IA (Motor RAG)',
-        'projects.p1.desc': 'Arquitectura de recuperación aumentada de información (RAG) construida sobre bases de conocimiento en Notion. Permite consultas semánticas precisas con ranking de relevancia y diagnósticos del índice.',
+        'projects.p1.desc': 'Motor de recuperación aumentada (RAG) conectado a bases de conocimiento en Notion. Reconstruye jerarquías, fragmenta documentos por contexto y responde consultas semánticas con ranking de relevancia.',
         'projects.p1.h1': 'Ingestión jerárquica vía Notion API y chunking semántico.',
-        'projects.p1.h2': 'Almacenamiento vectorial en ChromaDB y búsqueda semántica.',
-        'projects.p1.h3': 'CLI interactivo con diagnósticos y benchmarks de consulta.',
+        'projects.p1.h2': 'Indexación vectorial en ChromaDB con búsqueda por similitud.',
+        'projects.p1.h3': 'CLI interactivo con diagnóstico de índice y benchmarks de consulta.',
 
         'projects.p2.title': 'Sistema de Gestión Empresarial',
-        'projects.p2.desc': 'Plataforma modular para la administración integral de productos e inventario. Backend desacoplado con operaciones CRUD y persistencia relacional; frontend reactivo con componentes standalone.',
-        'projects.p2.h1': 'Backend RESTful robusto en Spring Boot con arquitectura en capas.',
-        'projects.p2.h2': 'Frontend dinámico en Angular v17+ con Reactive Forms y validación.',
-        'projects.p2.h3': 'Despliegue orquestado con Docker Compose (builds multi-etapa).',
+        'projects.p2.desc': 'Plataforma modular para administración de inventario y catálogo. Backend desacoplado con persistencia relacional y frontend reactivo en Angular listo para despliegue en contenedores.',
+        'projects.p2.h1': 'API REST en Spring Boot por capas (controller, service, repository).',
+        'projects.p2.h2': 'Frontend en Angular v17+ con componentes standalone y Reactive Forms.',
+        'projects.p2.h3': 'Orquestación con Docker Compose y builds multi-etapa.',
 
         'projects.p3.title': 'Territorio de Niños',
-        'projects.p3.desc': 'Solución de software para la gestión de operaciones, roles y ventas en parques infantiles. Diseñada bajo metodología Scrum con levantamiento de requerimientos y modelado de datos.',
+        'projects.p3.desc': 'Sistema integral para operación, control de acceso por roles y ventas en parques infantiles. Especificado bajo Scrum con UML, migraciones versionadas y eventos en tiempo real.',
         'projects.p3.h1': 'API REST en Spring Boot 4 + Java 21 con JWT, Flyway y PostgreSQL.',
-        'projects.p3.h2': 'Frontend Angular 21 con WebSockets (STOMP), escaneo QR y dashboards Chart.js.',
-        'projects.p3.h3': 'Reportes PDF/CSV, correo transaccional y Scrum con UML y backlog.',
+        'projects.p3.h2': 'Frontend Angular 21 con WebSockets (STOMP), escaneo QR y Chart.js.',
+        'projects.p3.h3': 'Exportación PDF/CSV, correo transaccional y artefactos Scrum/UML.',
 
         'projects.p4.title': 'SmartLedger (Gestor Financiero)',
-        'projects.p4.desc': 'Aplicación de gestión financiera en Java orientada al control y organización de transacciones, con estructuras de datos en memoria e integración con servicios de IA.',
-        'projects.p4.h1': 'POO pura, encapsulamiento, colecciones y manejo de HashMap.',
-        'projects.p4.h2': 'Integración con OpenRouter API para resúmenes financieros inteligentes.',
-        'projects.p4.h3': 'Autenticación, organización por categorías y control de saldos.',
+        'projects.p4.desc': 'Aplicación en Java 21 para registro y clasificación de movimientos financieros, diseñada con programación orientada a objetos, estructuras HashMap e informes asistidos por IA.',
+        'projects.p4.h1': 'POO, encapsulamiento, colecciones y modelado respaldado por UML.',
+        'projects.p4.h2': 'Consumo de OpenRouter API para generar resúmenes de gastos.',
+        'projects.p4.h3': 'Autenticación de usuarios, categorías y balance en tiempo real.',
 
         'projects.p5.title': 'Movie Explorer (TVMaze SPA)',
-        'projects.p5.desc': 'Single Page Application para consulta de series y películas mediante consumo asíncrono de API externa, con renderizado dinámico y persistencia en LocalStorage.',
-        'projects.p5.h1': 'Consumo asíncrono de API REST (Fetch/HTTP) y manejo de estados.',
-        'projects.p5.h2': 'Paginación del lado del cliente y filtrado dinámico por géneros.',
-        'projects.p5.h3': 'Persistencia de favoritos en LocalStorage y manipulación del DOM.',
+        'projects.p5.desc': 'Single Page Application para búsqueda y consulta de series y películas vía API REST externa, con paginación en cliente, filtros por género y favoritos persistentes.',
+        'projects.p5.h1': 'Consumo asíncrono con Fetch/HTTP y manejo de errores de red.',
+        'projects.p5.h2': 'Paginación del lado del cliente y filtrado dinámico por género.',
+        'projects.p5.h3': 'Persistencia de favoritos en LocalStorage y DOM modular.',
 
-        'projects.p6.title': 'Luxury Distillates & Barber Network',
-        'projects.p6.desc': 'Tienda online interactiva con catálogo dinámico de productos y carrito de compras funcional, complementada con arquitectura de agendamiento de citas y optimización en MySQL.',
-        'projects.p6.h1': 'Catálogo dinámico con carrito interactivo en tiempo real.',
-        'projects.p6.h2': 'Optimización de bases de datos relacionales con campos ENUM y SET.',
-        'projects.p6.h3': 'Interfaz 100% responsiva adaptada a dispositivos móviles.',
+        'projects.p6.title': 'Luxury Distillates &amp; Barber Network',
+        'projects.p6.desc': 'Tienda web con catálogo interactivo y carrito funcional desplegada en GitHub Pages, complementada con backend de agendamiento y esquema MySQL optimizado.',
+        'projects.p6.h1': 'Catálogo dinámico con cálculo de carrito en tiempo real.',
+        'projects.p6.h2': 'Esquema relacional MySQL optimizado con tipos ENUM y SET.',
+        'projects.p6.h3': 'Demo pública en producción adaptada a pantallas móviles.',
 
-        'projects.filterMobile': 'Mobile',
-        'skills.mobile': 'Mobile, PWA & Tiempo Real',
         'projects.p7.title': 'Wishlist API (Prueba Técnica)',
-        'projects.p7.desc': 'API REST para gestión de listas de deseos de usuarios, construida con estándares empresariales: seguridad stateless, documentación interactiva y pruebas automatizadas.',
-        'projects.p7.h1': 'Autenticación con Spring Security + JWT (jjwt) y validación de DTOs.',
-        'projects.p7.h2': 'Documentación OpenAPI/Swagger y monitoreo con Actuator.',
-        'projects.p7.h3': 'Tests con H2 en memoria y despliegue con Docker + PostgreSQL 16.',
+        'projects.p7.desc': 'API REST para gestión de listas de deseos de usuarios bajo enfoque Security-First: autenticación stateless con JWT, contratos OpenAPI y suite de pruebas.',
+        'projects.p7.h1': 'Spring Security + JWT (jjwt) con validación estricta de DTOs.',
+        'projects.p7.h2': 'Documentación interactiva OpenAPI/Swagger y healthchecks Actuator.',
+        'projects.p7.h3': 'Tests automatizados en H2 y despliegue con Docker + PostgreSQL 16.',
+
         'projects.p8.title': 'DEALER (Chat Anónimo en Tiempo Real)',
-        'projects.p8.desc': 'Plataforma de chat privado muchos-a-uno con usuarios anónimos y sistema de fidelización, instalable como PWA y con notificaciones push.',
-        'projects.p8.h1': 'Mensajería en tiempo real con Pusher y notificaciones Web Push.',
-        'projects.p8.h2': 'Prisma + PostgreSQL, almacenamiento de archivos en MinIO (Docker Compose).',
-        'projects.p8.h3': 'NextAuth, JWT (jose), internacionalización con next-intl y mapas Leaflet.',
+        'projects.p8.desc': 'Plataforma PWA de mensajería privada muchos-a-uno con sesiones anónimas, notificaciones Web Push, almacenamiento de archivos en MinIO y mapas interactivos.',
+        'projects.p8.h1': 'Mensajería en tiempo real con Pusher y suscripciones Web Push.',
+        'projects.p8.h2': 'Prisma + PostgreSQL y object storage en MinIO vía Docker Compose.',
+        'projects.p8.h3': 'NextAuth, tokens JWT (jose), i18n con next-intl y mapas Leaflet.',
+
         'projects.p9.title': 'Music App (Móvil + API)',
-        'projects.p9.desc': 'Aplicación móvil de streaming musical con backend propio en Node.js/Express que actúa como proxy hacia servicios externos de música.',
-        'projects.p9.h1': 'App con Expo Router, navegación por pestañas y reproducción con expo-av.',
-        'projects.p9.h2': 'Login con Google Sign-In y persistencia de usuarios en Supabase.',
-        'projects.p9.h3': 'API en Express + TypeScript con Axios, CORS y variables de entorno.',
+        'projects.p9.desc': 'Aplicación móvil de reproducción de audio con backend propio en Express/TypeScript que actúa como proxy autenticado hacia APIs externas.',
+        'projects.p9.h1': 'Expo Router con navegación por pestañas y audio con expo-av.',
+        'projects.p9.h2': 'Google Sign-In y persistencia de perfiles en Supabase.',
+        'projects.p9.h3': 'Proxy API en Express + TypeScript con Axios y control CORS.',
+
         'projects.p10.title': 'FocusOS (Productividad con IA)',
-        'projects.p10.desc': 'Sistema de productividad basado en bloques de tiempo obligatorios para eliminar la procrastinación, con métricas reales y asistencia de IA.',
+        'projects.p10.desc': 'Aplicación web de gestión de enfoque por bloques de tiempo obligatorios, con sincronización en Firebase y recomendaciones contextuales mediante Google Gemini.',
         'projects.p10.h1': 'SPA en React + Vite + TypeScript estilizada con Tailwind CSS 4.',
-        'projects.p10.h2': 'Autenticación y datos en tiempo real con Firebase.',
-        'projects.p10.h3': 'Integración con Google Gemini para análisis y recomendaciones.',
+        'projects.p10.h2': 'Autenticación y sincronización en tiempo real con Firebase.',
+        'projects.p10.h3': 'Asistente con Gemini API para análisis de bloques y hábitos.',
+
         'projects.p11.title': 'Desk (Gestión de Tickets)',
-        'projects.p11.desc': 'Plataforma para centralizar la recepción, asignación, seguimiento y resolución de tickets de soporte técnico en equipos de trabajo.',
-        'projects.p11.h1': 'Angular moderno con componentes standalone y Angular Material/CDK.',
-        'projects.p11.h2': 'Programación reactiva con RxJS y enrutamiento por módulos.',
-        'projects.p11.h3': 'Pruebas unitarias con Vitest + jsdom y formato con Prettier.',
+        'projects.p11.desc': 'Mesa de ayuda para centralizar recepción, asignación y trazabilidad de tickets de soporte técnico, probada con pruebas unitarias automatizadas.',
+        'projects.p11.h1': 'Angular con componentes standalone y Angular Material/CDK.',
+        'projects.p11.h2': 'Estado reactivo con RxJS y enrutamiento por módulos.',
+        'projects.p11.h3': 'Tests unitarios en Vitest + jsdom y reglas de formato Prettier.',
 
-        'exp.tag': '<i class="fas fa-graduation-cap"></i> Trayectoria & Método',
-        'exp.title': 'Formación & Metodología',
-        'exp.subtitle': 'Estructura académica, estándares de calidad y forma de trabajo',
+        'exp.tag': '<i class="fas fa-graduation-cap" aria-hidden="true"></i> Trayectoria &amp; Método',
+        'exp.title': 'Formación &amp; Metodología',
+        'exp.subtitle': 'Base académica en el SENA y hábitos diarios de calidad técnica',
         'exp.col1Title': 'Formación Académica',
-        'exp.col2Title': 'Cómo Trabajo & Estándares',
-        
+        'exp.col2Title': 'Cómo Trabajo &amp; Estándares',
+
+        'exp.edu1.date': '2024 - Presente (En Formación)',
         'exp.edu1.title': 'Tecnólogo en Análisis y Desarrollo de Software (ADSO)',
-        'exp.edu1.desc': 'Formación integral en análisis de requerimientos, diseño orientado a objetos, desarrollo web (frontend & backend), bases de datos relacionales, control de versiones con Git, metodologías ágiles (Scrum) y pruebas de software.',
+        'exp.edu1.inst': 'Servicio Nacional de Aprendizaje (SENA)',
+        'exp.edu1.desc': 'Formación práctica en análisis de requerimientos, POO, desarrollo web (frontend & backend), bases de datos relacionales, control de versiones con Git, Scrum y pruebas de software.',
+        'exp.edu2.date': 'Secundaria Completa',
         'exp.edu2.title': 'Bachiller Académico / Técnico',
-        'exp.edu2.desc': 'Bases sólidas en lógica, pensamiento analítico y resolución estructurada de problemas.',
+        'exp.edu2.inst': 'Instituto Técnico Industrial (ITI)',
+        'exp.edu2.desc': 'Bases en lógica matemática, pensamiento analítico y resolución estructurada de problemas técnicos.',
+        'exp.edu3.date': 'Competencia Continua',
         'exp.edu3.title': 'Inglés Técnico para TI',
-        'exp.edu3.desc': 'Capacidad fluida para leer documentación técnica oficial, resolver incidencias en comunidades especializadas y redactar código bajo convenciones internacionales.',
+        'exp.edu3.inst': 'Lectura &amp; Documentación Técnica',
+        'exp.edu3.desc': 'Lectura fluida de documentación oficial, resolución de incidencias en comunidades técnicas y escritura de código bajo convenciones internacionales.',
 
+        'exp.std1.date': 'Enfoque Metódico',
         'exp.std1.title': 'Depuración Sistemática de Errores',
-        'exp.std1.desc': 'No confío en parches rápidos: analizo logs, inspecciono peticiones de red y depuro línea por línea hasta aislar la causa raíz del fallo y garantizar estabilidad.',
-        'exp.std2.title': 'Arquitectura por Capas & Clean Code',
-        'exp.std2.desc': 'Separación rigurosa de responsabilidades (controladores, servicios, repositorios, entidades) con nombres expresivos y código modular fácil de mantener y probar.',
-        'exp.std3.title': 'Scrum, Git & Comunicación Efectiva',
-        'exp.std3.desc': 'Uso constante de ramas en Git, commits semánticos, gestión de backlog en Sprints y actitud constructiva para recibir retroalimentación técnica y evolucionar.',
+        'exp.std1.inst': 'Diagnóstico &amp; Resolución',
+        'exp.std1.desc': 'Evito parches rápidos: inspecciono logs, tráfico HTTP y estado de componentes hasta aislar la causa raíz y validar la corrección.',
+        'exp.std2.date': 'Buenas Prácticas',
+        'exp.std2.title': 'Arquitectura por Capas &amp; Seguridad',
+        'exp.std2.inst': 'Mantenibilidad &amp; Hardening',
+        'exp.std2.desc': 'Separación estricta de responsabilidades (controladores, servicios, repositorios, DTOs) con validación de entradas y controles OWASP Top 10.',
+        'exp.std3.date': 'Colaboración',
+        'exp.std3.title': 'Scrum, Git &amp; Comunicación Efectiva',
+        'exp.std3.inst': 'Trabajo en Equipo',
+        'exp.std3.desc': 'Flujo ordenado con ramas en Git, commits semánticos, backlog por Sprints y disposición para recibir y aplicar code reviews.',
 
-        'contact.tag': '<i class="fas fa-comments"></i> Hablemos de oportunidades',
+        'contact.tag': '<i class="fas fa-comments" aria-hidden="true"></i> Hablemos de oportunidades',
         'contact.title': '¿Listo para construir software juntos?',
-        'contact.subtitle': 'Estoy activamente buscando oportunidades como <strong>Aprendiz de Desarrollo de Software</strong> (prácticas SENA) o <strong>Desarrollador Junior</strong>. Si tienes una vacante o proyecto en el que pueda aportar y aprender, ¡escríbeme!',
+        'contact.subtitle': 'Busco oportunidades como <strong>Aprendiz de Desarrollo de Software</strong> (etapa productiva SENA) o <strong>Desarrollador Junior</strong>. Si tu equipo necesita apoyo en backend, frontend o QA/seguridad, escríbeme.',
         'contact.emailLabel': 'Correo Electrónico',
         'contact.phoneLabel': 'WhatsApp / Celular',
         'contact.locLabel': 'Ubicación',
-        'contact.btnSend': '<i class="fas fa-paper-plane"></i> Enviar Correo Directo',
-        'contact.btnCopy': '<i class="far fa-copy"></i> Copiar Correo',
+        'contact.btnSend': '<i class="fas fa-paper-plane" aria-hidden="true"></i> Enviar Correo Directo',
+        'contact.btnCopy': '<i class="far fa-copy" aria-hidden="true"></i> Copiar Correo',
 
-        'footer.text': 'Diseñado y desarrollado por <span class="highlight">Maicol Vera</span> • ADSO SENA © 2026'
+        'footer.text': 'Diseñado y desarrollado por <span class="highlight">Maicol Vera</span> · ADSO SENA © 2026',
+
+        // CV PDF ES
+        'cv.filename': 'HV_Maicol_Vera_FullStack_ADSO.pdf',
+        'cv.contactTitle': 'CONTACTO',
+        'cv.locLabel': 'Ubicación:',
+        'cv.emailLabel': 'Correo:',
+        'cv.phoneLabel': 'Teléfono:',
+        'cv.webLabel': 'Portafolio:',
+        'cv.skillsTitle': 'STACK TÉCNICO',
+        'cv.grpBackend': 'Backend &amp; Seguridad API:',
+        'cv.grpFrontend': 'Frontend &amp; Mobile:',
+        'cv.grpSecurity': 'Ciberseguridad (Jr. Av.):',
+        'cv.grpData': 'Datos, DevOps &amp; IA:',
+        'cv.langTitle': 'IDIOMAS',
+        'cv.langEs': '<strong>Español:</strong> Nativo',
+        'cv.langEn': '<strong>Inglés:</strong> B1 / Técnico (Documentación y código)',
+        'cv.methodsTitle': 'PRÁCTICAS',
+        'cv.methodsBody': 'Scrum · UML · Clean Code · Depuración metódica · Vitest / JUnit',
+        'cv.role': 'Desarrollador Full Stack (Java · Spring Boot · Angular) | Pentester Jr. Avanzado',
+        'cv.profileTitle': 'PERFIL PROFESIONAL',
+        'cv.profileText': 'Aprendiz de Tecnología en Análisis y Desarrollo de Software (ADSO - SENA) con formación en Ciberseguridad Junior Avanzada. Experiencia práctica en arquitectura por capas, APIs REST seguras con Java 21 y Spring Boot, SPAs en Angular y TypeScript, bases de datos SQL, Docker y pipelines RAG con Python. Enfocado en código limpio, depuración metódica y criterios OWASP Top 10.',
+        'cv.projectsTitle': 'PROYECTOS DESTACADOS &amp; EXPERIENCIA PRÁCTICA',
+        'cv.p1Title': 'Mentor-IA · Motor de Búsqueda Semántica (RAG)',
+        'cv.p1Desc': 'Pipeline RAG sobre bases de conocimiento en Notion con reconstrucción jerárquica, chunking semántico, embeddings en ChromaDB y CLI con diagnóstico de índices.',
+        'cv.p2Title': 'Territorio de Niños · Plataforma Operativa Full Stack',
+        'cv.p2Desc': 'API REST con Java 21, JWT, Flyway y PostgreSQL; frontend Angular 21 con WebSockets (STOMP), escaneo QR, gráficos Chart.js y reportes PDF/CSV bajo metodología Scrum y UML.',
+        'cv.p3Title': 'Wishlist API · Servicio REST Seguro (Prueba Técnica)',
+        'cv.p3Desc': 'API stateless con Spring Security + JWT (jjwt), validación estricta de DTOs, documentación OpenAPI/Swagger, monitoreo con Actuator, tests en H2 y despliegue PostgreSQL 16.',
+        'cv.p4Title': 'DEALER · Mensajería PWA en Tiempo Real',
+        'cv.p4Desc': 'Plataforma PWA muchos-a-uno con sesiones anónimas, Pusher, notificaciones Web Push, almacenamiento en MinIO con Docker Compose, NextAuth e i18n.',
+        'cv.p5Title': 'Gestión Empresarial &amp; SmartLedger',
+        'cv.p5Desc': 'Sistema CRUD de inventario con Angular Reactive Forms y Docker Compose multi-etapa; y gestor financiero en Java 21 (POO, HashMap) integrado con OpenRouter AI.',
+        'cv.eduTitle': 'EDUCACIÓN',
+        'cv.edu1Title': 'Tecnólogo en Análisis y Desarrollo de Software (ADSO)',
+        'cv.edu1Date': '2024 - Presente (En Formación)',
+        'cv.edu1Sub': 'Servicio Nacional de Aprendizaje (SENA) · Disponible para etapa productiva',
+        'cv.edu2Title': 'Bachiller Académico / Técnico',
+        'cv.edu2Date': 'Graduado'
       },
       en: {
+        'page.title': 'Maicol Vera | Full Stack Software Developer & Jr. Pentester',
+        'nav.skip': 'Skip to main content',
+        'nav.aria': 'Main navigation',
+        'nav.logoAria': 'Maicol Vera, go to top',
         'nav.about': 'About me',
         'nav.skills': 'Skills',
         'nav.projects': 'Projects',
-        'nav.experience': 'Education & Methods',
+        'nav.experience': 'Education',
         'nav.contact': 'Contact',
         'nav.cv': 'Resume PDF',
+        'nav.cvAria': 'Download resume as PDF',
+        'nav.langAria': 'Switch language to Spanish',
+        'code.tablistAria': 'Profile files',
 
-        'hero.status': '🟢 Available for SENA Internships / Junior Roles',
         'hero.greeting': 'Hi, I am',
         'hero.name': 'Maicol Vera',
-        'hero.title': 'Software Developer ',
+        'hero.titlePrefix': 'Software Developer',
         'hero.highlight': 'Full Stack & Jr. Adv. Pentester',
-        'hero.description': 'Student of <strong>Software Analysis and Development (ADSO)</strong> at SENA and <strong>Junior Advanced Pentester / Ethical Hacker</strong>. I build robust and secure backend architectures with <strong>Java & Spring Boot</strong>, dynamic interfaces with <strong>Angular & TypeScript</strong>, AI integrations, and offensive/defensive auditing workflows in <strong>Kali Linux</strong> adhering to <strong>OWASP Top 10</strong>.',
-        'hero.portfolio': '<i class="fas fa-folder-open"></i> View Projects',
-        'hero.contact': '<i class="fas fa-paper-plane"></i> Contact Me',
-        'hero.cvBtn': '<i class="fas fa-download"></i> Download CV',
+        'hero.description': '<strong>ADSO software student at SENA</strong> focused on <strong>Java, Spring Boot, and Angular</strong>. I build layered APIs, modular UIs, and AI/RAG integrations while applying offensive security workflows in <strong>Kali Linux</strong> under <strong>OWASP Top 10</strong> guidelines.',
+        'hero.portfolio': '<i class="fas fa-folder-open" aria-hidden="true"></i> View Projects',
+        'hero.contact': '<i class="fas fa-paper-plane" aria-hidden="true"></i> Contact Me',
+        'hero.cvBtn': '<i class="fas fa-download" aria-hidden="true"></i> Download CV',
 
-        'metrics.adso': 'SENA In Training',
-        'metrics.projects': 'Projects Built',
-        'metrics.stack': 'Java • Spring • Angular',
-        'metrics.commitment': 'Clean Code & Quality',
+        'metrics.aria': 'Profile summary',
+        'metrics.m1Title': 'ADSO · SENA',
+        'metrics.m1Desc': 'Software Technologist in training · UML, SQL & Scrum',
+        'metrics.m2Title': '11 Projects',
+        'metrics.m2Desc': 'Java Backends, AI/RAG, Angular, React & Mobile',
+        'metrics.m3Title': 'Full Stack Core',
+        'metrics.m3Desc': 'Java 21 · Spring Boot · Angular · Docker',
+        'metrics.m4Title': 'Security-First',
+        'metrics.m4Desc': 'Kali Linux · OWASP Top 10 · Burp Suite · JWT',
 
-        'about.tag': '<i class="fas fa-user"></i> My Background',
+        'about.tag': '<i class="fas fa-user" aria-hidden="true"></i> My Background',
         'about.title': 'About Me',
-        'about.subtitle': 'Building reliable, scalable, and results-driven software solutions',
-        'about.text1': 'I am a student of the <strong>Software Analysis and Development (ADSO)</strong> program at <strong>SENA</strong>, with solid practical training in software architecture, web applications, and backend services.',
-        'about.text2': 'I stand out for my ability to analyze technical requirements, model relational databases, design REST APIs using layered architectures, and build modular frontend interfaces. I have also built innovation projects integrating <strong>RAG (Retrieval-Augmented Generation)</strong> and AI models.',
-        'about.text3': 'My previous background in customer service and technical support complements my technical skills, giving me strong empathy for end users and clear communication in agile teams.',
-        'about.text4': 'Additionally, I hold solid training and active practice in <strong>Cybersecurity and Ethical Hacking at a Junior Advanced level</strong>, operating with agility in audit environments like <strong>Kali Linux</strong>. I leverage specialized tools such as <strong>Burp Suite, Nmap, Wireshark, and Metasploit</strong> for web audits, packet inspection, and ethical exploitation under <strong>OWASP Top 10</strong> standards, bringing a <em>Security-First</em> perspective to every architectural layer.',
+        'about.subtitle': 'Taking requirements to tested, maintainable, security-minded software',
+        'about.text1': 'I am a student of the <strong>Software Analysis and Development (ADSO)</strong> program at <strong>SENA</strong>, with hands-on experience designing web applications, relational schemas in MySQL/PostgreSQL, and layered REST APIs with Java and Spring Boot.',
+        'about.text2': 'I pair Full Stack development with <strong>applied AI (RAG pipelines on ChromaDB and Notion API)</strong> and active <strong>Cybersecurity and Junior Advanced Pentesting</strong> training in <strong>Kali Linux</strong> (Burp Suite, Nmap, Wireshark, and Metasploit under <strong>OWASP Top 10</strong>), securing validation, auth, and permissions from the ground up.',
+        'about.text3': 'My previous background in customer support shaped how I listen to end users, document bug reports clearly, and collaborate within agile Scrum and Git teams.',
         'about.debugTitle': 'Systematic Debugging Philosophy',
-        'about.debugDesc': 'I tackle bugs methodically: rigorous DevTools and console analysis, modular code inspection, and progressive isolation until eliminating the root cause.',
+        'about.debugDesc': 'I debug methodically: DevTools and log inspection, isolated block testing, and step-by-step tracing until eliminating the root cause.',
 
-        'about.pillar1.title': 'Backend & Architecture',
-        'about.pillar1.desc': 'Robust services with Java, Spring Boot, REST APIs, OOP, JPA/Hibernate, and persistence in MySQL and PostgreSQL.',
+        'about.pillar1.title': 'Backend &amp; Architecture',
+        'about.pillar1.desc': 'REST APIs in Java 21 and Spring Boot using layered architecture, JPA/Hibernate, Flyway, and persistence on MySQL and PostgreSQL.',
         'about.pillar2.title': 'Dynamic Frontend',
-        'about.pillar2.desc': 'Single Page Applications with Angular (v17+), TypeScript, React, modular components, and reactive forms.',
-        'about.pillar3.title': 'Applied AI & Innovation',
-        'about.pillar3.desc': 'RAG pipelines, vector databases (ChromaDB), Notion API, and integration with LLM providers.',
-        'about.pillar4.title': 'Agile & Scrum Practices',
-        'about.pillar4.desc': 'Sprint planning, Product Backlog management, user stories, UML diagramming, and Git/GitHub version control.',
-        'about.pillar5.title': 'Cybersecurity & Jr. Adv. Pentesting',
-        'about.pillar5.desc': 'Offensive & defensive security in Kali Linux, Burp Suite auditing, Nmap reconnaissance, and OWASP Top 10 mitigation.',
+        'about.pillar2.desc': 'SPAs with Angular (v17+), TypeScript, and React using standalone components, RxJS, and validated reactive forms.',
+        'about.pillar3.title': 'Applied AI &amp; Innovation',
+        'about.pillar3.desc': 'Python RAG pipelines with semantic chunking, ChromaDB embeddings, Notion API, and LLM provider integrations.',
+        'about.pillar4.title': 'Agile &amp; Scrum Practices',
+        'about.pillar4.desc': 'Sprint planning, Product Backlog management, user stories, UML diagramming, and Git/GitHub workflows.',
+        'about.pillar5.title': 'Cybersecurity &amp; Jr. Adv. Pentesting',
+        'about.pillar5.desc': 'Web and network auditing in Kali Linux with Burp Suite, Nmap, and Wireshark, JWT hardening, and OWASP Top 10 mitigation.',
 
-        'skills.tag': '<i class="fas fa-laptop-code"></i> Tech Stack',
+        'skills.tag': '<i class="fas fa-laptop-code" aria-hidden="true"></i> Tech Stack',
         'skills.title': 'Technical Skills',
-        'skills.subtitle': 'Tools and technologies I use with technical proficiency and solid understanding',
-        'skills.backend': 'Backend & APIs',
+        'skills.subtitle': 'Highlighted core stack (Java, Spring, Angular, SQL & Security) alongside complementary project technologies',
+        'skills.backend': 'Backend &amp; APIs',
         'skills.frontend': 'Modern Frontend',
-        'skills.databases': 'Databases & Cloud',
-        'skills.tools': 'DevOps & Tools',
-        'skills.security': 'Cybersecurity & Pentesting',
-        'skills.ai': 'Innovation & AI (RAG)',
-        'skills.practices': 'Methodologies & Practices',
+        'skills.databases': 'Databases &amp; Cloud',
+        'skills.tools': 'DevOps &amp; Tools',
+        'skills.security': 'Cybersecurity &amp; Pentesting',
+        'skills.mobile': 'Mobile, PWA &amp; Real-Time',
+        'skills.ai': 'Innovation &amp; AI (RAG)',
+        'skills.practices': 'Methodologies &amp; Practices',
 
-        'projects.tag': '<i class="fas fa-cubes"></i> Practical Work',
+        'projects.tag': '<i class="fas fa-cubes" aria-hidden="true"></i> Practical Work',
         'projects.title': 'Featured Projects',
-        'projects.subtitle': 'Software solutions showcasing clean architecture, best practices, and modern tech stacks',
+        'projects.subtitle': '11 real projects across Java/Spring backends, Python RAG, Angular, React, and mobile apps',
+        'projects.filterGroup': 'Filter projects by category',
         'projects.filterAll': 'All',
-        'projects.filterFullstack': 'Full Stack & Backend',
-        'projects.filterAI': 'AI & RAG',
-        'projects.filterFrontend': 'Web & Frontend',
+        'projects.filterFullstack': 'Full Stack &amp; Backend',
+        'projects.filterAI': 'AI &amp; RAG',
+        'projects.filterFrontend': 'Web &amp; Frontend',
+        'projects.filterMobile': 'Mobile',
+        'projects.featured': 'Featured',
+        'projects.emptyText': 'No projects match this category yet.',
+        'projects.resetFilters': 'Show all projects',
 
         'projects.p1.title': 'Mentor-IA (RAG Engine)',
-        'projects.p1.desc': 'Retrieval-Augmented Generation (RAG) architecture built on Notion knowledge bases. Enables precise semantic queries with relevance ranking and index health diagnostics.',
+        'projects.p1.desc': 'Retrieval-Augmented Generation engine connected to Notion knowledge bases. Reconstructs document trees, chunks content by context, and serves ranked semantic queries.',
         'projects.p1.h1': 'Hierarchical ingestion via Notion API and semantic chunking.',
-        'projects.p1.h2': 'Vector storage in ChromaDB with semantic search.',
+        'projects.p1.h2': 'Vector indexing in ChromaDB with similarity search.',
         'projects.p1.h3': 'Interactive CLI with index diagnostics and query benchmarks.',
 
         'projects.p2.title': 'Unified Business Management',
-        'projects.p2.desc': 'Modular platform for enterprise product and inventory management. Decoupled backend with CRUD operations and relational persistence; reactive frontend with standalone components.',
-        'projects.p2.h1': 'Robust RESTful backend with Spring Boot in layered architecture.',
-        'projects.p2.h2': 'Dynamic frontend with Angular 17+, Reactive Forms, and validation.',
-        'projects.p2.h3': 'Orchestrated deployment with Docker Compose (multi-stage builds).',
+        'projects.p2.desc': 'Modular platform for inventory and product catalog administration. Decoupled backend with relational persistence and reactive Angular frontend packaged for containers.',
+        'projects.p2.h1': 'Layered Spring Boot REST API (controller, service, repository).',
+        'projects.p2.h2': 'Angular v17+ frontend with standalone components and Reactive Forms.',
+        'projects.p2.h3': 'Orchestrated deployment with multi-stage Docker Compose builds.',
 
         'projects.p3.title': 'Territorio de Niños',
-        'projects.p3.desc': 'Software solution for theme park operations, role-based access, and ticket sales. Designed under Scrum with requirement modeling and UML diagrams.',
+        'projects.p3.desc': 'Operations, role-based access, and ticketing platform for amusement parks. Specified under Scrum with UML modeling, versioned migrations, and real-time events.',
         'projects.p3.h1': 'REST API with Spring Boot 4 + Java 21, JWT, Flyway, and PostgreSQL.',
-        'projects.p3.h2': 'Angular 21 frontend with WebSockets (STOMP), QR scanning, and Chart.js dashboards.',
-        'projects.p3.h3': 'PDF/CSV reports, transactional email, and Scrum with UML and backlog.',
+        'projects.p3.h2': 'Angular 21 frontend with WebSockets (STOMP), QR scanning, and Chart.js.',
+        'projects.p3.h3': 'PDF/CSV exports, transactional email, and Scrum/UML artifacts.',
 
-        'projects.p4.title': 'SmartLedger (Finance & AI)',
-        'projects.p4.desc': 'Java financial management application for transaction tracking and organization, utilizing in-memory data structures and AI API integration.',
-        'projects.p4.h1': 'Pure OOP, encapsulation, collections, and HashMap handling.',
-        'projects.p4.h2': 'OpenRouter API integration for automated smart financial summaries.',
-        'projects.p4.h3': 'User authentication, category breakdown, and balance management.',
+        'projects.p4.title': 'SmartLedger (Finance &amp; AI)',
+        'projects.p4.desc': 'Java 21 application for tracking and categorizing financial transactions, designed with OOP, HashMap structures, and AI-assisted expense summaries.',
+        'projects.p4.h1': 'OOP, encapsulation, collections, and UML-backed design.',
+        'projects.p4.h2': 'OpenRouter API integration for automated financial summaries.',
+        'projects.p4.h3': 'User authentication, category grouping, and real-time balances.',
 
         'projects.p5.title': 'Movie Explorer (TVMaze SPA)',
-        'projects.p5.desc': 'Single Page Application for browsing series and movies via asynchronous external REST API consumption, dynamic DOM rendering, and LocalStorage persistence.',
-        'projects.p5.h1': 'Asynchronous REST API consumption (Fetch/HTTP) and state handling.',
-        'projects.p5.h2': 'Client-side pagination and real-time category filtering.',
-        'projects.p5.h3': 'Favorites persistence in LocalStorage and dynamic rendering.',
+        'projects.p5.desc': 'Single Page Application for searching and browsing series and movies via external REST API, featuring client-side pagination, genre filters, and saved favorites.',
+        'projects.p5.h1': 'Asynchronous Fetch/HTTP consumption with network error handling.',
+        'projects.p5.h2': 'Client-side pagination and dynamic genre filtering.',
+        'projects.p5.h3': 'LocalStorage favorites persistence and modular DOM updates.',
 
-        'projects.p6.title': 'Luxury Distillates & Barber Network',
-        'projects.p6.desc': 'Interactive online store with dynamic product catalog and functional shopping cart, complemented by appointment scheduling architecture and MySQL optimization.',
-        'projects.p6.h1': 'Dynamic catalog with real-time reactive shopping cart.',
-        'projects.p6.h2': 'Relational database optimization using MySQL ENUM and SET types.',
-        'projects.p6.h3': '100% responsive interface optimized for mobile devices.',
+        'projects.p6.title': 'Luxury Distillates &amp; Barber Network',
+        'projects.p6.desc': 'Interactive e-commerce storefront and cart deployed on GitHub Pages, paired with appointment-scheduling backend architecture and optimized MySQL schema.',
+        'projects.p6.h1': 'Dynamic catalog with real-time shopping cart totals.',
+        'projects.p6.h2': 'Relational MySQL schema tuned with ENUM and SET column types.',
+        'projects.p6.h3': 'Live production demo adapted for mobile viewports.',
 
-        'projects.filterMobile': 'Mobile',
-        'skills.mobile': 'Mobile, PWA & Real-Time',
         'projects.p7.title': 'Wishlist API (Technical Test)',
-        'projects.p7.desc': 'REST API for managing user wishlists, built to enterprise standards: stateless security, interactive documentation, and automated tests.',
-        'projects.p7.h1': 'Authentication with Spring Security + JWT (jjwt) and DTO validation.',
-        'projects.p7.h2': 'OpenAPI/Swagger documentation and Actuator monitoring.',
-        'projects.p7.h3': 'In-memory H2 tests and deployment with Docker + PostgreSQL 16.',
+        'projects.p7.desc': 'Security-First REST API for user wishlists featuring stateless JWT auth, strict DTO validation, OpenAPI contracts, and automated test coverage.',
+        'projects.p7.h1': 'Spring Security + JWT (jjwt) with strict DTO validation.',
+        'projects.p7.h2': 'Interactive OpenAPI/Swagger docs and Actuator healthchecks.',
+        'projects.p7.h3': 'Automated H2 tests and Docker + PostgreSQL 16 deployment.',
+
         'projects.p8.title': 'DEALER (Real-Time Anonymous Chat)',
-        'projects.p8.desc': 'Many-to-one private chat platform with anonymous users and a loyalty system, installable as a PWA with push notifications.',
-        'projects.p8.h1': 'Real-time messaging with Pusher and Web Push notifications.',
-        'projects.p8.h2': 'Prisma + PostgreSQL, file storage on MinIO (Docker Compose).',
-        'projects.p8.h3': 'NextAuth, JWT (jose), i18n with next-intl, and Leaflet maps.',
+        'projects.p8.desc': 'Many-to-one private messaging PWA with anonymous sessions, Web Push notifications, MinIO file storage, and interactive maps.',
+        'projects.p8.h1': 'Real-time messaging with Pusher and Web Push subscriptions.',
+        'projects.p8.h2': 'Prisma + PostgreSQL and MinIO object storage via Docker Compose.',
+        'projects.p8.h3': 'NextAuth, JWT (jose), next-intl i18n, and Leaflet maps.',
+
         'projects.p9.title': 'Music App (Mobile + API)',
-        'projects.p9.desc': 'Music streaming mobile app with a custom Node.js/Express backend acting as a proxy to external music services.',
-        'projects.p9.h1': 'Expo Router app with tab navigation and playback via expo-av.',
-        'projects.p9.h2': 'Google Sign-In login and user persistence on Supabase.',
-        'projects.p9.h3': 'Express + TypeScript API with Axios, CORS, and environment config.',
+        'projects.p9.desc': 'Audio streaming mobile app backed by a custom Express/TypeScript API acting as an authenticated proxy to external music services.',
+        'projects.p9.h1': 'Expo Router tab navigation and audio playback with expo-av.',
+        'projects.p9.h2': 'Google Sign-In authentication and user persistence on Supabase.',
+        'projects.p9.h3': 'Express + TypeScript proxy API with Axios and CORS controls.',
+
         'projects.p10.title': 'FocusOS (AI Productivity)',
-        'projects.p10.desc': 'Productivity system based on mandatory time blocks to eliminate procrastination, with real metrics and AI assistance.',
+        'projects.p10.desc': 'Time-blocked focus web app built to cut procrastination, featuring real-time Firebase sync and contextual recommendations powered by Google Gemini.',
         'projects.p10.h1': 'React + Vite + TypeScript SPA styled with Tailwind CSS 4.',
-        'projects.p10.h2': 'Authentication and real-time data with Firebase.',
-        'projects.p10.h3': 'Google Gemini integration for analysis and recommendations.',
+        'projects.p10.h2': 'Authentication and real-time state sync with Firebase.',
+        'projects.p10.h3': 'Gemini API assistant for focus block and habit insights.',
+
         'projects.p11.title': 'Desk (Ticket Management)',
-        'projects.p11.desc': 'Platform to centralize intake, assignment, tracking, and resolution of technical support tickets for teams.',
-        'projects.p11.h1': 'Modern Angular with standalone components and Angular Material/CDK.',
-        'projects.p11.h2': 'Reactive programming with RxJS and feature-based routing.',
-        'projects.p11.h3': 'Unit tests with Vitest + jsdom and Prettier formatting.',
+        'projects.p11.desc': 'Help desk platform to centralize intake, assignment, and tracking of support tickets, verified with automated unit tests.',
+        'projects.p11.h1': 'Angular standalone components with Angular Material/CDK.',
+        'projects.p11.h2': 'Reactive state with RxJS and feature-based routing.',
+        'projects.p11.h3': 'Unit tests with Vitest + jsdom and Prettier code formatting.',
 
-        'exp.tag': '<i class="fas fa-graduation-cap"></i> Journey & Standards',
-        'exp.title': 'Education & Methodology',
-        'exp.subtitle': 'Academic foundation, quality standards, and workflow',
+        'exp.tag': '<i class="fas fa-graduation-cap" aria-hidden="true"></i> Journey &amp; Standards',
+        'exp.title': 'Education &amp; Methodology',
+        'exp.subtitle': 'Academic foundation at SENA and daily engineering habits',
         'exp.col1Title': 'Education',
-        'exp.col2Title': 'How I Work & Standards',
+        'exp.col2Title': 'How I Work &amp; Standards',
 
+        'exp.edu1.date': '2024 - Present (In Training)',
         'exp.edu1.title': 'Technologist in Software Analysis and Development (ADSO)',
-        'exp.edu1.desc': 'Comprehensive training in requirement engineering, object-oriented design, web development (frontend & backend), relational databases, Git version control, Scrum, and testing.',
+        'exp.edu1.inst': 'National Learning Service (SENA)',
+        'exp.edu1.desc': 'Practical training in requirement engineering, OOP, web development (frontend & backend), relational databases, Git version control, Scrum, and software testing.',
+        'exp.edu2.date': 'Completed High School',
         'exp.edu2.title': 'High School / Technical Diploma',
-        'exp.edu2.desc': 'Strong foundation in logic, analytical thinking, and structured problem solving.',
+        'exp.edu2.inst': 'Instituto Técnico Industrial (ITI)',
+        'exp.edu2.desc': 'Foundation in mathematical logic, analytical thinking, and structured technical problem solving.',
+        'exp.edu3.date': 'Continuous Skill',
         'exp.edu3.title': 'Technical English for IT',
-        'exp.edu3.desc': 'Fluent ability to read official technical documentation, debug via specialized tech communities, and write code following standard conventions.',
+        'exp.edu3.inst': 'Technical Reading &amp; Documentation',
+        'exp.edu3.desc': 'Fluent reading of official documentation, debugging across engineering communities, and code authored under international conventions.',
 
+        'exp.std1.date': 'Methodical Approach',
         'exp.std1.title': 'Systematic Debugging',
-        'exp.std1.desc': 'I do not rely on quick patches: I inspect logs, analyze network payloads, and debug line-by-line until isolating the root cause.',
-        'exp.std2.title': 'Layered Architecture & Clean Code',
-        'exp.std2.desc': 'Strict separation of concerns (controllers, services, repositories, entities) with expressive naming and maintainable, testable code.',
-        'exp.std3.title': 'Scrum, Git & Effective Communication',
-        'exp.std3.desc': 'Active Git branching, semantic commits, Sprint backlog management, and collaborative mindset to embrace feedback and grow.',
+        'exp.std1.inst': 'Diagnostics &amp; Resolution',
+        'exp.std1.desc': 'I avoid quick hacks: I inspect logs, HTTP payloads, and component state until isolating the root cause and verifying the fix.',
+        'exp.std2.date': 'Best Practices',
+        'exp.std2.title': 'Layered Architecture &amp; Security',
+        'exp.std2.inst': 'Maintainability &amp; Hardening',
+        'exp.std2.desc': 'Strict separation of concerns (controllers, services, repositories, DTOs) with input validation and OWASP Top 10 safeguards.',
+        'exp.std3.date': 'Collaboration',
+        'exp.std3.title': 'Scrum, Git &amp; Effective Communication',
+        'exp.std3.inst': 'Teamwork',
+        'exp.std3.desc': 'Clean Git branching, semantic commits, Sprint backlog discipline, and openness to applying code review feedback.',
 
-        'contact.tag': '<i class="fas fa-comments"></i> Get In Touch',
+        'contact.tag': '<i class="fas fa-comments" aria-hidden="true"></i> Get In Touch',
         'contact.title': 'Ready to build great software together?',
-        'contact.subtitle': 'I am actively looking for opportunities as a <strong>Software Development Intern</strong> (SENA practices) or <strong>Junior Developer</strong>. If you have an opening or project where I can contribute and learn, let\'s connect!',
+        'contact.subtitle': 'Actively seeking opportunities as a <strong>Software Development Intern</strong> (SENA productive stage) or <strong>Junior Developer</strong>. If your team needs support across backend, frontend, or security/QA, reach out.',
         'contact.emailLabel': 'Email Address',
         'contact.phoneLabel': 'WhatsApp / Phone',
         'contact.locLabel': 'Location',
-        'contact.btnSend': '<i class="fas fa-paper-plane"></i> Send Direct Email',
-        'contact.btnCopy': '<i class="far fa-copy"></i> Copy Email',
+        'contact.btnSend': '<i class="fas fa-paper-plane" aria-hidden="true"></i> Send Direct Email',
+        'contact.btnCopy': '<i class="far fa-copy" aria-hidden="true"></i> Copy Email',
 
-        'footer.text': 'Designed and developed by <span class="highlight">Maicol Vera</span> • ADSO SENA © 2026'
+        'footer.text': 'Designed and developed by <span class="highlight">Maicol Vera</span> · ADSO SENA © 2026',
+
+        // CV PDF EN
+        'cv.filename': 'Resume_Maicol_Vera_FullStack.pdf',
+        'cv.contactTitle': 'CONTACT',
+        'cv.locLabel': 'Location:',
+        'cv.emailLabel': 'Email:',
+        'cv.phoneLabel': 'Phone:',
+        'cv.webLabel': 'Portfolio:',
+        'cv.skillsTitle': 'TECH STACK',
+        'cv.grpBackend': 'Backend &amp; API Security:',
+        'cv.grpFrontend': 'Frontend &amp; Mobile:',
+        'cv.grpSecurity': 'Cybersecurity (Jr. Adv.):',
+        'cv.grpData': 'Data, DevOps &amp; AI:',
+        'cv.langTitle': 'LANGUAGES',
+        'cv.langEs': '<strong>Spanish:</strong> Native',
+        'cv.langEn': '<strong>English:</strong> B1 / Technical (Docs & code)',
+        'cv.methodsTitle': 'PRACTICES',
+        'cv.methodsBody': 'Scrum · UML · Clean Code · Systematic Debugging · Vitest / JUnit',
+        'cv.role': 'Full Stack Developer (Java · Spring Boot · Angular) | Jr. Adv. Pentester',
+        'cv.profileTitle': 'PROFESSIONAL PROFILE',
+        'cv.profileText': 'Software Analysis and Development (ADSO - SENA) technologist student with Junior Advanced Cybersecurity training. Hands-on experience building layered architectures, secure REST APIs with Java 21 & Spring Boot, Angular & TypeScript SPAs, SQL databases, Docker deployments, and Python RAG pipelines under OWASP Top 10 standards.',
+        'cv.projectsTitle': 'FEATURED PROJECTS &amp; PRACTICAL EXPERIENCE',
+        'cv.p1Title': 'Mentor-IA · Semantic Search Engine (RAG)',
+        'cv.p1Desc': 'RAG pipeline over Notion knowledge bases with hierarchical tree reconstruction, semantic chunking, ChromaDB vector indexing, and an interactive diagnostics CLI.',
+        'cv.p2Title': 'Territorio de Niños · Full Stack Operations Platform',
+        'cv.p2Desc': 'Java 21 REST API with JWT, Flyway, and PostgreSQL; Angular 21 frontend with WebSockets (STOMP), QR scanning, Chart.js dashboards, and PDF/CSV reporting under Scrum & UML.',
+        'cv.p3Title': 'Wishlist API · Secure REST Service (Technical Test)',
+        'cv.p3Desc': 'Stateless Spring Security + JWT (jjwt) API with strict DTO validation, interactive OpenAPI/Swagger docs, Actuator monitoring, H2 automated tests, and Docker + PostgreSQL 16.',
+        'cv.p4Title': 'DEALER · Real-Time PWA Messaging',
+        'cv.p4Desc': 'Many-to-one PWA with anonymous sessions, Pusher realtime events, Web Push notifications, MinIO storage via Docker Compose, NextAuth, and next-intl.',
+        'cv.p5Title': 'Business Management &amp; SmartLedger',
+        'cv.p5Desc': 'Inventory CRUD platform with Angular Reactive Forms and multi-stage Docker Compose; plus Java 21 finance app (OOP, HashMap) integrated with OpenRouter AI.',
+        'cv.eduTitle': 'EDUCATION',
+        'cv.edu1Title': 'Technologist in Software Analysis and Development (ADSO)',
+        'cv.edu1Date': '2024 - Present (In Training)',
+        'cv.edu1Sub': 'National Learning Service (SENA) · Available for internship / productive stage',
+        'cv.edu2Title': 'High School / Technical Diploma',
+        'cv.edu2Date': 'Graduated'
       }
     };
 
     let currentLang = 'es';
+    let toastTimer = null;
+    let html2pdfLoader = null;
 
-    function translatePage(lang) {
-      document.getElementById('html').lang = lang;
-      const elements = document.querySelectorAll('[data-i18n]');
-      elements.forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
-          el.innerHTML = translations[lang][key];
+    function updateProjectsCount(visibleCount, totalCount) {
+      const status = document.getElementById('projectsStatus');
+      const emptyBox = document.getElementById('projectsEmpty');
+      if (status) {
+        status.textContent = currentLang === 'es'
+          ? `Mostrando ${visibleCount} de ${totalCount} proyectos`
+          : `Showing ${visibleCount} of ${totalCount} projects`;
+      }
+      if (emptyBox) {
+        emptyBox.hidden = visibleCount > 0;
+      }
+    }
+
+    function applyProjectFilter(filterValue) {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      filterBtns.forEach(btn => {
+        const active = btn.getAttribute('data-filter') === filterValue;
+        btn.classList.toggle('active', active);
+        btn.setAttribute('aria-pressed', String(active));
+      });
+
+      let visibleCount = 0;
+      projectCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        const matches = filterValue === 'all' || category === filterValue;
+        card.hidden = !matches;
+        if (matches) {
+          visibleCount += 1;
+        }
+      });
+
+      updateProjectsCount(visibleCount, projectCards.length);
+      if (window.AOS && typeof AOS.refresh === 'function') {
+        AOS.refresh();
+      }
+    }
+
+    function syncCvLanguage(lang) {
+      const dict = translations[lang];
+      if (!dict) return;
+      document.querySelectorAll('[data-cv-i18n]').forEach(el => {
+        const key = el.getAttribute('data-cv-i18n');
+        if (dict[key]) {
+          el.innerHTML = dict[key];
         }
       });
     }
 
-    // Botón de Traducción
-    document.getElementById('translateBtn').addEventListener('click', () => {
-      if (currentLang === 'es') {
-        translatePage('en');
-        currentLang = 'en';
-        document.getElementById('translateBtn').textContent = 'ESP';
-      } else {
-        translatePage('es');
-        currentLang = 'es';
-        document.getElementById('translateBtn').textContent = 'ENG';
+    function translatePage(lang) {
+      document.getElementById('html').lang = lang;
+      const dict = translations[lang];
+      if (!dict) return;
+
+      document.title = dict['page.title'];
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          el.innerHTML = dict[key];
+        }
+      });
+
+      document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+        const key = el.getAttribute('data-i18n-aria');
+        if (dict[key]) {
+          el.setAttribute('aria-label', dict[key]);
+        }
+      });
+
+      const cvNavBtn = document.getElementById('cvNavBtn');
+      if (cvNavBtn && dict['nav.cvAria']) {
+        cvNavBtn.setAttribute('aria-label', dict['nav.cvAria']);
       }
+
+      const translateBtn = document.getElementById('translateBtn');
+      if (translateBtn) {
+        translateBtn.textContent = lang === 'es' ? 'ENG' : 'ESP';
+        translateBtn.setAttribute('aria-label', dict['nav.langAria']);
+      }
+
+      const navToggleEl = document.getElementById('navToggle');
+      if (navToggleEl) {
+        const isOpen = navLinks.classList.contains('active');
+        navToggleEl.setAttribute('aria-label', lang === 'es'
+          ? (isOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación')
+          : (isOpen ? 'Close navigation menu' : 'Open navigation menu'));
+      }
+
+      syncCvLanguage(lang);
+
+      const visibleCount = document.querySelectorAll('.project-card:not([hidden])').length;
+      const totalCount = document.querySelectorAll('.project-card').length;
+      updateProjectsCount(visibleCount, totalCount);
+    }
+
+    document.getElementById('translateBtn').addEventListener('click', () => {
+      currentLang = currentLang === 'es' ? 'en' : 'es';
+      translatePage(currentLang);
     });
 
-    // Mobile Navbar Toggle
+    // Mobile Navbar Toggle with Focus & Inert Management
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
+    const navBackdrop = document.getElementById('navBackdrop');
+    const mainContent = document.getElementById('main-content');
+    const siteFooter = document.querySelector('.site-footer');
 
-    navToggle.setAttribute('aria-expanded', 'false');
-    navToggle.setAttribute('aria-controls', 'navLinks');
-
-    function setMenu(open) {
-      navLinks.classList.toggle('active', open);
-      document.body.classList.toggle('menu-open', open);
-      navToggle.setAttribute('aria-expanded', String(open));
-      navToggle.innerHTML = open ? '<i class="fas fa-xmark"></i>' : '<i class="fas fa-bars"></i>';
+    function syncDrawerInertState(isOpen) {
+      const isMobile = mobileNavQuery.matches;
+      if (isMobile) {
+        navLinks.inert = !isOpen;
+        if (mainContent) mainContent.inert = isOpen;
+        if (siteFooter) siteFooter.inert = isOpen;
+      } else {
+        navLinks.inert = false;
+        if (mainContent) mainContent.inert = false;
+        if (siteFooter) siteFooter.inert = false;
+      }
     }
+
+    function setMenu(open, restoreFocus = false) {
+      const isMobile = mobileNavQuery.matches;
+      const nextOpen = Boolean(open && isMobile);
+      navLinks.classList.toggle('active', nextOpen);
+      document.body.classList.toggle('menu-open', nextOpen);
+      navToggle.setAttribute('aria-expanded', String(nextOpen));
+      navToggle.setAttribute('aria-label', currentLang === 'es'
+        ? (nextOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación')
+        : (nextOpen ? 'Close navigation menu' : 'Open navigation menu'));
+      navToggle.innerHTML = nextOpen
+        ? '<i class="fas fa-xmark" aria-hidden="true"></i>'
+        : '<i class="fas fa-bars" aria-hidden="true"></i>';
+
+      if (navBackdrop) {
+        navBackdrop.hidden = !nextOpen;
+      }
+
+      syncDrawerInertState(nextOpen);
+
+      if (nextOpen) {
+        const firstLink = navLinks.querySelector('a');
+        if (firstLink) firstLink.focus();
+      } else if (restoreFocus) {
+        navToggle.focus();
+      }
+    }
+
+    syncDrawerInertState(false);
 
     navToggle.addEventListener('click', () => {
       setMenu(!navLinks.classList.contains('active'));
     });
 
-    // Cerrar con Escape, al hacer clic fuera o al pasar a escritorio
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+    if (navBackdrop) {
+      navBackdrop.addEventListener('click', () => setMenu(false, true));
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+        setMenu(false, true);
+      }
+    });
+
     document.addEventListener('click', e => {
-      if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !navToggle.contains(e.target)) setMenu(false);
-    });
-    window.matchMedia('(min-width: 769px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
-
-    // Close mobile nav when clicking a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
+      if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !navToggle.contains(e.target)) {
         setMenu(false);
-      });
+      }
     });
 
-    // Scroll Progress & Navbar styling on scroll
+    mobileNavQuery.addEventListener('change', e => {
+      if (!e.matches) {
+        setMenu(false);
+      } else {
+        syncDrawerInertState(navLinks.classList.contains('active'));
+      }
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => setMenu(false));
+    });
+
+    // Unified Scroll Handler (Progress, Navbar, Back-to-top, Active Section)
     const scrollProgress = document.getElementById('scroll-progress');
     const navbar = document.getElementById('navbar');
     const backToTopBtn = document.getElementById('backToTop');
+    const trackableSections = document.querySelectorAll('section[id], header[id]');
 
-    window.addEventListener('scroll', () => {
-      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    function updateOnScroll() {
+      const winScroll = window.scrollY || document.documentElement.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
+      const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
       scrollProgress.style.width = scrolled + '%';
 
-      if (winScroll > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
+      navbar.classList.toggle('scrolled', winScroll > 50);
+      backToTopBtn.classList.toggle('visible', winScroll > 400);
 
-      if (winScroll > 400) {
-        backToTopBtn.classList.add('visible');
-      } else {
-        backToTopBtn.classList.remove('visible');
-      }
-    });
+      let currentSectionId = 'hero';
+      const scrollPosition = winScroll + 200;
 
-    // Back to top
+      trackableSections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          currentSectionId = section.getAttribute('id');
+        }
+      });
+
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        const targetId = link.getAttribute('href').slice(1);
+        const isCurrent = targetId === currentSectionId;
+        link.classList.toggle('active', isCurrent);
+        if (isCurrent) {
+          link.setAttribute('aria-current', 'location');
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateOnScroll, { passive: true });
+    updateOnScroll();
+
     backToTopBtn.addEventListener('click', () => {
       window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: prefersReducedMotion.matches ? 'auto' : 'smooth'
       });
     });
 
-    // Code Card Tab Switcher
+    // Code Card Tab Switcher with ARIA Roving Tabindex
     const codeSnippet = document.querySelector('#codeSnippet code');
     const codeFileName = document.getElementById('codeFileName');
-    const tabBtns = document.querySelectorAll('.tab-btn');
+    const codePanel = document.getElementById('codePanel');
+    const tabBtns = Array.from(document.querySelectorAll('.tab-btn'));
 
-    function switchCodeTab(lang) {
-      tabBtns.forEach(b => b.classList.remove('active'));
-      if (lang === 'java') {
-        tabBtns[0].classList.add('active');
-        codeFileName.textContent = 'Developer.java';
-        codeSnippet.innerHTML = `<span class="keyword">public class</span> <span class="class-name">Developer</span> {
+    const codeFiles = {
+      java: {
+        tabId: 'tab-java',
+        fileName: 'Developer.java',
+        html: `<span class="keyword">public class</span> <span class="class-name">Developer</span> {
   <span class="type">String</span> name = <span class="string">"Maicol Vera"</span>;
-  <span class="type">String</span> role = <span class="string">"Full Stack & Jr. Adv. Pentester"</span>;
+  <span class="type">String</span> role = <span class="string">"Full Stack &amp; Jr. Adv. Pentester"</span>;
   <span class="type">String</span> education = <span class="string">"Tecnólogo ADSO - SENA"</span>;
   <span class="type">String</span>[] coreStack = {
     <span class="string">"Java"</span>, <span class="string">"Spring Boot"</span>, <span class="string">"Angular"</span>,
@@ -1558,11 +1892,12 @@
   };
   <span class="type">boolean</span> securityFirst = <span class="boolean">true</span>;
   <span class="type">boolean</span> methodicalDebugging = <span class="boolean">true</span>;
-}`;
-      } else if (lang === 'ts') {
-        tabBtns[1].classList.add('active');
-        codeFileName.textContent = 'stack.ts';
-        codeSnippet.innerHTML = `<span class="keyword">interface</span> <span class="class-name">DevStack</span> {
+}`
+      },
+      ts: {
+        tabId: 'tab-ts',
+        fileName: 'stack.ts',
+        html: `<span class="keyword">interface</span> <span class="class-name">DevStack</span> {
   backend: <span class="type">string</span>[];
   frontend: <span class="type">string</span>[];
   security: <span class="type">string</span>[];
@@ -1578,128 +1913,197 @@
   mobile: [<span class="string">"React Native"</span>, <span class="string">"Expo"</span>],
   database: [<span class="string">"PostgreSQL"</span>, <span class="string">"MySQL"</span>, <span class="string">"ChromaDB"</span>],
   devops: [<span class="string">"Docker"</span>, <span class="string">"Linux"</span>, <span class="string">"Git"</span>]
-};`;
-      } else if (lang === 'sh') {
-        tabBtns[2].classList.add('active');
-        codeFileName.textContent = 'pipeline.sh';
-        codeSnippet.innerHTML = `<span class="comment"># Telemetría de despliegue y testing</span>
-<span class="keyword">$</span> ./mvnw test -Dtest=SuiteIntegracion
-<span class="string">[INFO]</span> Tests run: <span class="number">28</span>, Failures: <span class="number">0</span>, Errors: <span class="number">0</span>, Skipped: <span class="number">0</span>
-<span class="string">[INFO]</span> BUILD SUCCESS in <span class="number">1.18s</span>
+};`
+      },
+      sec: {
+        tabId: 'tab-sec',
+        fileName: 'security.md',
+        html: `<span class="class-name"># Security-First Checklist</span>
 
-<span class="keyword">$</span> docker compose -f compose.prod.yml config --quiet
-<span class="string">[INFO]</span> Services: <span class="type">api-gateway</span>, <span class="type">postgres-16</span>, <span class="type">rag-engine</span>
-<span class="class-name">[STATUS]</span> Healthcheck: <span class="boolean">ALL SYSTEMS OPERATIONAL</span>`;
+<span class="keyword">## Auditoría &amp; Reconocimiento</span>
+- <span class="type">Entorno:</span> <span class="string">Kali Linux</span>
+- <span class="type">Inspección:</span> <span class="string">Burp Suite</span>, <span class="string">Nmap</span>, <span class="string">Wireshark</span>
+- <span class="type">Guía base:</span> <span class="string">OWASP Top 10</span>
+
+<span class="keyword">## Hardening en Backend</span>
+- <span class="type">Auth:</span> <span class="string">Spring Security + JWT stateless</span>
+- <span class="type">Inputs:</span> <span class="string">Validación estricta de DTOs y sanitización</span>
+- <span class="type">Datos:</span> <span class="string">Consultas parametrizadas (JPA / Prisma)</span>
+- <span class="type">Meta:</span> <span class="boolean">Cero confianza implícita en el cliente</span>`
+      }
+    };
+
+    function switchCodeTab(lang) {
+      const entry = codeFiles[lang];
+      if (!entry) return;
+
+      tabBtns.forEach(btn => {
+        const selected = btn.id === entry.tabId;
+        btn.classList.toggle('active', selected);
+        btn.setAttribute('aria-selected', String(selected));
+        btn.setAttribute('tabindex', selected ? '0' : '-1');
+      });
+
+      codeFileName.textContent = entry.fileName;
+      codeSnippet.innerHTML = entry.html;
+      if (codePanel) {
+        codePanel.setAttribute('aria-labelledby', entry.tabId);
       }
     }
+
+    tabBtns.forEach((btn, idx) => {
+      btn.addEventListener('keydown', e => {
+        let nextIdx = null;
+        if (e.key === 'ArrowRight') nextIdx = (idx + 1) % tabBtns.length;
+        else if (e.key === 'ArrowLeft') nextIdx = (idx - 1 + tabBtns.length) % tabBtns.length;
+        else if (e.key === 'Home') nextIdx = 0;
+        else if (e.key === 'End') nextIdx = tabBtns.length - 1;
+
+        if (nextIdx !== null) {
+          e.preventDefault();
+          const nextTab = tabBtns[nextIdx];
+          switchCodeTab(nextTab.id.replace('tab-', ''));
+          nextTab.focus();
+        }
+      });
+    });
 
     // Copy Code Snippet
     function copySnippet() {
       const code = document.querySelector('#codeSnippet code').innerText;
       const copyBtn = document.getElementById('copyCodeBtn');
+      if (!navigator.clipboard) {
+        showToast(currentLang === 'es' ? 'No se pudo acceder al portapapeles.' : 'Clipboard access unavailable.', true);
+        return;
+      }
       navigator.clipboard.writeText(code).then(() => {
-        copyBtn.innerHTML = '<i class="fas fa-check" style="color:var(--accent)"></i>';
-        showToast(currentLang === 'es' ? '¡Código copiado al portapapeles!' : 'Code snippet copied!');
+        copyBtn.innerHTML = '<i class="fas fa-check" style="color:var(--accent)" aria-hidden="true"></i>';
+        showToast(currentLang === 'es' ? 'Código copiado al portapapeles.' : 'Code snippet copied to clipboard.');
         setTimeout(() => {
-          copyBtn.innerHTML = '<i class="far fa-copy"></i>';
+          copyBtn.innerHTML = '<i class="far fa-copy" aria-hidden="true"></i>';
         }, 2000);
+      }).catch(() => {
+        showToast(currentLang === 'es' ? 'No se pudo copiar el código. Copia manualmente desde el visor.' : 'Unable to copy code. Please copy manually from the viewer.', true);
       });
     }
 
     // Projects Filtering
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
-
-    filterBtns.forEach(btn => {
+    document.querySelectorAll('.filter-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        const filterValue = btn.getAttribute('data-filter');
-
-        projectCards.forEach(card => {
-          const category = card.getAttribute('data-category');
-          if (filterValue === 'all' || category === filterValue) {
-            card.style.display = 'flex';
-          } else {
-            card.style.display = 'none';
-          }
-        });
+        applyProjectFilter(btn.getAttribute('data-filter'));
       });
     });
+
+    const resetFiltersBtn = document.getElementById('resetFiltersBtn');
+    if (resetFiltersBtn) {
+      resetFiltersBtn.addEventListener('click', () => applyProjectFilter('all'));
+    }
 
     // Copy Email to Clipboard & Toast
     function copyEmail() {
       const email = 'veramichael617@gmail.com';
+      if (!navigator.clipboard) {
+        showToast(currentLang === 'es' ? `Copia este correo: ${email}` : `Copy this email: ${email}`, true);
+        return;
+      }
       navigator.clipboard.writeText(email).then(() => {
-        showToast(currentLang === 'es' ? '¡Correo copiado al portapapeles!' : 'Email copied to clipboard!');
+        showToast(currentLang === 'es' ? 'Correo copiado al portapapeles.' : 'Email copied to clipboard.');
       }).catch(() => {
-        showToast(email);
+        showToast(currentLang === 'es' ? `No se pudo copiar automáticamente. Usa: ${email}` : `Unable to copy automatically. Use: ${email}`, true);
       });
     }
 
-    function showToast(message) {
+    function showToast(message, isError = false) {
       const toast = document.getElementById('toastMsg');
       const toastText = document.getElementById('toastText');
+      const toastIcon = document.getElementById('toastIcon');
+
+      clearTimeout(toastTimer);
+      toast.classList.toggle('is-error', Boolean(isError));
+      if (toastIcon) {
+        toastIcon.className = isError ? 'fas fa-circle-exclamation' : 'fas fa-check-circle';
+      }
       toastText.textContent = message;
       toast.classList.add('show');
-      setTimeout(() => {
+
+      toastTimer = setTimeout(() => {
         toast.classList.remove('show');
-      }, 3000);
+      }, isError ? 4500 : 3000);
     }
 
-    // PDF Generation
-    function generatePDF() {
+    // On-demand html2pdf.js loader + Single-Page Letter PDF Generation
+    function loadHtml2Pdf() {
+      if (window.html2pdf) return Promise.resolve(window.html2pdf);
+      if (html2pdfLoader) return html2pdfLoader;
+
+      html2pdfLoader = new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+        script.async = true;
+        script.onload = () => {
+          if (window.html2pdf) {
+            resolve(window.html2pdf);
+          } else {
+            html2pdfLoader = null;
+            reject(new Error('html2pdf unavailable'));
+          }
+        };
+        script.onerror = () => {
+          html2pdfLoader = null;
+          reject(new Error('Failed to load html2pdf.js'));
+        };
+        document.body.appendChild(script);
+      });
+      return html2pdfLoader;
+    }
+
+    function setCvTriggersLoading(loading) {
+      document.querySelectorAll('[data-cv-trigger]').forEach(btn => {
+        btn.disabled = loading;
+        btn.setAttribute('aria-busy', String(loading));
+      });
+    }
+
+    async function generatePDF() {
       const element = document.getElementById('cv-document');
       const cvContainer = document.getElementById('cv-hidden');
-      
-      showToast(currentLang === 'es' ? 'Generando PDF de Hoja de Vida...' : 'Generating Resume PDF...');
 
-      cvContainer.style.display = 'block';
-      cvContainer.style.left = '0';
-      cvContainer.style.top = '0';
-      cvContainer.style.zIndex = '9999';
-      
-      const opt = {
-        margin:       [0.2, 0.2, 0.2, 0.2],
-        filename:     'HV_Maicol_Vera_ADSO.pdf',
-        image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2, useCORS: true, scrollY: 0 }, 
-        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-      };
+      syncCvLanguage(currentLang);
+      setCvTriggersLoading(true);
+      showToast(currentLang === 'es' ? 'Preparando hoja de vida en PDF...' : 'Preparing resume PDF...');
 
-      html2pdf().set(opt).from(element).save().then(() => {
-        cvContainer.style.left = '-9999px';
-        cvContainer.style.zIndex = '-1';
-        showToast(currentLang === 'es' ? '¡PDF descargado con éxito!' : 'PDF downloaded successfully!');
-      }).catch(err => {
+      try {
+        const pdfLib = await loadHtml2Pdf();
+
+        cvContainer.style.left = '0';
+        cvContainer.style.top = '0';
+        cvContainer.style.zIndex = '-10';
+        cvContainer.style.pointerEvents = 'none';
+
+        const opt = {
+          margin:       0,
+          filename:     translations[currentLang]['cv.filename'],
+          image:        { type: 'jpeg', quality: 0.98 },
+          html2canvas:  { scale: 2, useCORS: true, scrollY: 0, width: 816, height: 1056 },
+          jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+        };
+
+        await pdfLib().set(opt).from(element).save();
+        showToast(currentLang === 'es' ? 'Hoja de vida descargada.' : 'Resume PDF downloaded.');
+      } catch (err) {
         console.error(err);
+        showToast(
+          currentLang === 'es'
+            ? 'No se pudo generar el PDF. Verifica tu conexión e intenta de nuevo.'
+            : 'Unable to generate PDF. Check your connection and try again.',
+          true
+        );
+      } finally {
         cvContainer.style.left = '-9999px';
         cvContainer.style.zIndex = '-1';
-      });
+        setCvTriggersLoading(false);
+      }
     }
-
-    // Active link highlighting on scroll
-    const sections = document.querySelectorAll('section[id], header[id]');
-    window.addEventListener('scroll', () => {
-      let currentSectionId = '';
-      const scrollPosition = window.pageYOffset + 200;
-
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-          currentSectionId = section.getAttribute('id');
-        }
-      });
-
-      document.querySelectorAll('.nav-links a').forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + currentSectionId) {
-          link.classList.add('active');
-        }
-      });
-    });
   </script>
 </body>
 </html>
